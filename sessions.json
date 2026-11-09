@@ -1,499 +1,1373 @@
 {
+  "course": {
+    "code": "CE432P",
+    "short": "Hydraulics",
+    "title": "Hydraulic Engineering",
+    "instructor": "Dr Arpan Pradhan",
+    "email": "arpan.pradhan@christuniversity.in",
+    "programme": "BTech Civil Engineering",
+    "semester": "Odd semester 2026\u201327",
+    "classroom": "Room 214, Block II / Fluid Mechanics Lab",
+    "department": "Department of Civil Engineering, CHRIST (Deemed to be University), Kengeri Campus"
+  },
+  "units": [
+    {
+      "n": 1,
+      "roman": "I",
+      "short": "Boundary layer",
+      "title": "Boundary layer theory",
+      "co": "CO1",
+      "hours": 6,
+      "syllabus": "Boundary Layer Analysis \u2014 Assumption and concept of boundary layer theory. Boundary-layer thickness, displacement, momentum and energy thickness, laminar and turbulent boundary layers on a flat plate; Laminar sub-layer, smooth and rough boundaries. Local and average friction coefficients. Separation and Control."
+    },
+    {
+      "n": 2,
+      "roman": "II",
+      "short": "Open channel flow",
+      "title": "Open channel flow",
+      "co": "CO2",
+      "hours": 10,
+      "syllabus": "Introduction: Comparison between open channel flow and pipe flow, geometrical parameters of a channel, classification of open channels, classification of open channel flow, Velocity Distribution of channel section. Uniform Flow: Continuity, Energy and Momentum Equations, Chezy's and Manning's formulae, Most economical section, Normal depth computation. Non-Uniform Flow: Specific energy, critical flow, Specific force, Specific depth, Critical depth, Channel Transitions. Hydraulic Jump \u2014 Theory, elements, length and height, types and applications. Discharge measurement: Venturi flume, standing wave flume, Parshall flume, Broad crested weir. Gradually Varied Flow \u2014 Dynamic equation, surface profiles, profile computation."
+    },
+    {
+      "n": 3,
+      "roman": "III",
+      "short": "Impact of jets",
+      "title": "Impact of jets",
+      "co": "CO3",
+      "hours": 10,
+      "syllabus": "The force exerted by the jet on Stationary and Moving Plates and Vanes: Flat, Inclined and Curved. Force exerted on a series of radial vanes \u2014 Flat and Curved. Work done, power transmitted, and hydraulic efficiency. Applications to turbine runners."
+    },
+    {
+      "n": 4,
+      "roman": "IV",
+      "short": "Hydraulic machines",
+      "title": "Hydraulic machines",
+      "co": "CO4",
+      "hours": 11,
+      "syllabus": "Turbines: Introduction to hydraulic machines, Classification of turbines, impulse and reaction turbines. Design features, The efficiency of turbines, operating and main characteristic curves. Hydraulic Pumps: Introduction, Classification of pumps: centrifugal and reciprocating pumps, pumps in series and parallel, The efficiency of the pumps, characteristic curves, NPSH."
+    },
+    {
+      "n": 5,
+      "roman": "V",
+      "short": "CFD & modelling",
+      "title": "Computational fluid dynamics",
+      "co": "CO5",
+      "hours": 8,
+      "syllabus": "Basic Equations of fluid dynamics, Grid generation. Basics of modelling using OpenFOAM and ANSYS-Fluent. 3D Modelling of Open Channel Flow (Uniform/ Non-Uniform) on OpenFOAM and ANSYS-Fluent. Comparison of Experimental data with different CFD Models. Modelling using HEC-RAS 2D. Comparison of experimental flume data with numerical models."
+    }
+  ],
+  "pages": [
+    {
+      "id": "setup",
+      "ni": "\u2699",
+      "title": "Software setup",
+      "hook": "Install HEC-RAS and SimFlow / OpenFOAM before laboratory sessions.",
+      "file": "pages/setup.md"
+    },
+    {
+      "id": "project",
+      "ni": "P",
+      "title": "Mini-Project",
+      "hook": "3-Stage open channel modeling: Analytical -> Flume Data -> HEC-RAS 2D.",
+      "file": "pages/project.md"
+    },
+    {
+      "id": "assessment",
+      "ni": "A",
+      "title": "Assessment",
+      "hook": "CIA components, lab evaluation scheme, AI use log, and rubrics.",
+      "file": "pages/assessment.md"
+    },
+    {
+      "id": "references",
+      "ni": "R",
+      "title": "References",
+      "hook": "Textbooks (Modi & Seth, Bansal, Chow), standards, and lab references.",
+      "file": "pages/references.md"
+    }
+  ],
+  "software": [
+    {
+      "id": "hecras",
+      "ni": "R",
+      "title": "About HEC-RAS 2D",
+      "when": "FROM UNIT 2 \u00b7 LABS L12\u2013L13",
+      "hook": "USACE 2D hydrodynamic river modeling software with subgrid bathymetry.",
+      "color": "#1b4965",
+      "file": "software/hecras.md"
+    },
+    {
+      "id": "simflow",
+      "ni": "S",
+      "title": "About SimFlow / OpenFOAM",
+      "when": "UNIT 5 CFD DEMONSTRATION",
+      "hook": "Intuitive GUI for OpenFOAM; Volume of Fluid (VOF) free surface tracking.",
+      "color": "#2d6a4f",
+      "file": "software/simflow.md"
+    },
+    {
+      "id": "spreadsheets",
+      "ni": "E",
+      "title": "Hydraulic Spreadsheets",
+      "when": "UNITS 1\u20134",
+      "hook": "Normal depth Newton-Raphson solvers, GVF Direct Step, and pump matching.",
+      "color": "#c8973a",
+      "file": "software/spreadsheets.md"
+    }
+  ],
+  "links": [
+    [
+      "NPTEL Hydraulics",
+      "https://nptel.ac.in/courses/105103096",
+      "#4cc9f0"
+    ],
+    [
+      "Virtual Labs (Fluid Mechanics)",
+      "https://www.vlab.co.in",
+      "#57cc99"
+    ],
+    [
+      "HEC-RAS Download (USACE)",
+      "https://www.hec.usace.army.mil/software/hec-ras/download.aspx",
+      "#e0a46a"
+    ],
+    [
+      "SimFlow (OpenFOAM GUI)",
+      "https://sim-flow.com/",
+      "#9d4edd"
+    ],
+    [
+      "GitHub Repository",
+      "https://github.com/PradhanArpan/hydraulics",
+      "#57cc99"
+    ],
+    [
+      "Google Classroom",
+      "https://classroom.google.com",
+      "#4cc9f0"
+    ]
+  ],
+  "labs": [
+    {
+      "id": "L01",
+      "unit": 1,
+      "title": "Lab Orientation, Safety Briefing & Uncertainty",
+      "goal": "Lab conduct, safety protocols for pumps/turbines, observation book format, and uncertainty propagation in measurements.",
+      "software": [
+        "Observation"
+      ],
+      "sessions": [
+        "S01",
+        "S07"
+      ],
+      "minutes": 45,
+      "file": "labs/L01.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L02",
+      "unit": 2,
+      "title": "Exp 1: Calibration of V-Notch (90\u00b0 Triangular Notch)",
+      "goal": "Determine discharge coefficient Cd for a 90\u00b0 notch; verify Q proportional to H^(5/2).",
+      "software": [
+        "Flume",
+        "Spreadsheet"
+      ],
+      "sessions": [
+        "S15"
+      ],
+      "minutes": 50,
+      "file": "labs/L02.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L03",
+      "unit": 2,
+      "title": "Exp 2: Calibration of Rectangular / Trapezoidal Notch",
+      "goal": "Determine discharge coefficient Cd for a rectangular notch with Francis end contraction correction.",
+      "software": [
+        "Flume",
+        "Spreadsheet"
+      ],
+      "sessions": [
+        "S15"
+      ],
+      "minutes": 50,
+      "file": "labs/L03.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L04",
+      "unit": 2,
+      "title": "Exp 3: Calibration of Ogee Spillway Crest",
+      "goal": "Head-discharge rating curve of an ogee spillway and observation of negative pressures at excessive heads.",
+      "software": [
+        "Flume",
+        "Spreadsheet"
+      ],
+      "sessions": [
+        "S15"
+      ],
+      "minutes": 50,
+      "file": "labs/L04.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L05",
+      "unit": 2,
+      "title": "Exp 4: Calibration of Broad-Crested Weir",
+      "goal": "Establish critical flow on weir crest; determine Cd and modular submergence limit.",
+      "software": [
+        "Flume",
+        "Spreadsheet"
+      ],
+      "sessions": [
+        "S12",
+        "S15"
+      ],
+      "minutes": 50,
+      "file": "labs/L05.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L06",
+      "unit": 2,
+      "title": "Exp 5: Venturi Meter & Orifice Meter in Pipes",
+      "goal": "Differential manometer readings, piezometric lines, and head loss comparison across constriction meters.",
+      "software": [
+        "Apparatus"
+      ],
+      "sessions": [
+        "S15"
+      ],
+      "minutes": 50,
+      "file": "labs/L06.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L07",
+      "unit": 2,
+      "title": "Exp 6: Hydraulic Coefficients of Vertical Orifice",
+      "goal": "Determination of contraction coefficient (Cc), velocity coefficient (Cv), and discharge coefficient (Cd).",
+      "software": [
+        "Apparatus"
+      ],
+      "sessions": [
+        "S15"
+      ],
+      "minutes": 50,
+      "file": "labs/L07.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L08",
+      "unit": 1,
+      "title": "Exp 7: Darcy Friction Factor in Straight Pipe",
+      "goal": "Measure frictional head loss across pipe lengths; calculate friction factor f vs Reynolds number on Moody chart.",
+      "software": [
+        "Pipe Network"
+      ],
+      "sessions": [
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "minutes": 50,
+      "file": "labs/L08.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L09",
+      "unit": 3,
+      "title": "Exp 8: Vane Coefficient for Flat & Hemispherical Vanes",
+      "goal": "Measure hydrodynamic impact force using a spring balance; verify theoretical momentum transfer equations.",
+      "software": [
+        "Jet Apparatus"
+      ],
+      "sessions": [
+        "S17",
+        "S19",
+        "S21"
+      ],
+      "minutes": 50,
+      "file": "labs/L09.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L10",
+      "unit": 4,
+      "title": "Exp 11: Performance Test on Centrifugal Pump",
+      "goal": "Constant speed performance test: plot Head vs Q, Shaft Power vs Q, and Efficiency vs Q; locate BEP.",
+      "software": [
+        "Centrifugal Pump"
+      ],
+      "sessions": [
+        "S34",
+        "S35",
+        "S36"
+      ],
+      "minutes": 60,
+      "file": "labs/L10.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L11",
+      "unit": 4,
+      "title": "Exp 12: Working Demonstration of Pelton, Francis & Kaplan",
+      "goal": "Study runner construction, spear needle nozzle governing, wicket gates, and draft tube pressure recovery.",
+      "software": [
+        "Turbine Rigs"
+      ],
+      "sessions": [
+        "S28",
+        "S30",
+        "S31"
+      ],
+      "minutes": 60,
+      "file": "labs/L11.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L12",
+      "unit": 5,
+      "title": "Exp 9: Channel Model Setup in HEC-RAS 2D",
+      "goal": "Import channel geometry, define 2D computational mesh, assign Manning's n, and configure boundary conditions.",
+      "software": [
+        "HEC-RAS"
+      ],
+      "sessions": [
+        "S42",
+        "S43"
+      ],
+      "minutes": 60,
+      "file": "labs/L12.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L13",
+      "unit": 5,
+      "title": "Exp 10: 2D Simulation & Flume Validation",
+      "goal": "Run unsteady 2D hydrodynamic simulation; extract water surface profiles and compare with laboratory readings.",
+      "software": [
+        "HEC-RAS",
+        "SimFlow"
+      ],
+      "sessions": [
+        "S43",
+        "S44"
+      ],
+      "minutes": 60,
+      "file": "labs/L13.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L14",
+      "unit": 2,
+      "title": "Mid-Semester Practical Examination",
+      "goal": "Hands-on execution of flow measurement and machine performance test under exam conditions.",
+      "software": [
+        "Laboratory"
+      ],
+      "sessions": [
+        "S15",
+        "S35"
+      ],
+      "minutes": 90,
+      "file": "labs/L14.md",
+      "enabled": true,
+      "release": ""
+    },
+    {
+      "id": "L15",
+      "unit": 5,
+      "title": "Final Viva-Voce & Mini-Project Presentation",
+      "goal": "Submission of finalized laboratory record, team presentation, and oral defense of Mini-Project Stage III.",
+      "software": [
+        "Presentation"
+      ],
+      "sessions": [
+        "S45"
+      ],
+      "minutes": 90,
+      "file": "labs/L15.md",
+      "enabled": true,
+      "release": ""
+    }
+  ],
   "sessions": [
     {
+      "id": "S01",
       "day": 1,
       "unit": 1,
-      "topic": "Course Orientation & Concept of Boundary Layer",
+      "title": "Boundary Layer Concept & Growth",
       "hook": "Prandtl's boundary layer hypothesis; laminar vs turbulent boundary layer growth over spillway chutes and ship hulls.",
-      "folder": "Unit1_BoundaryLayer",
-      "notebook": "CE432P_U1_Day1.ipynb",
-      "pedagogy": "Slide Deck",
-      "ref": "T1, T2",
-      "enabled": true
+      "co": "CO1",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L01",
+      "keywords": "boundary layer laminar turbulent prandtl thickness chute hull",
+      "file": "sessions/S01.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L01"
+      ],
+      "release": ""
     },
     {
+      "id": "S02",
       "day": 2,
       "unit": 1,
-      "topic": "Boundary Layer Thicknesses",
+      "title": "Boundary Layer Thicknesses",
       "hook": "Displacement (delta*), momentum (theta), and energy thickness (delta**); mass deficit in wind tunnels and flumes.",
-      "folder": "Unit1_BoundaryLayer",
-      "notebook": "CE432P_U1_Day2.ipynb",
-      "pedagogy": "Slide Deck & Chalk-Board",
-      "ref": "T1, T2",
-      "enabled": true
+      "co": "CO1",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L01",
+      "keywords": "displacement momentum energy thickness deficit shape factor",
+      "file": "sessions/S02.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L01"
+      ],
+      "release": ""
     },
     {
+      "id": "S03",
       "day": 3,
       "unit": 1,
-      "topic": "Laminar Boundary Layer on a Flat Plate",
-      "hook": "Blasius exact solution vs von Karman momentum integral equation; boundary layer growth delta ~ x^(1/2).",
-      "folder": "Unit1_BoundaryLayer",
-      "notebook": "CE432P_U1_Day3.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T1, T2",
-      "enabled": true
+      "title": "Laminar Boundary Layer on Flat Plate",
+      "hook": "Blasius exact solution vs von Karman momentum integral equation; boundary layer growth delta proportional to x^(1/2).",
+      "co": "CO1",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L08",
+      "keywords": "blasius laminar flat plate von karman momentum integral shear",
+      "file": "sessions/S03.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L08"
+      ],
+      "release": ""
     },
     {
+      "id": "S04",
       "day": 4,
       "unit": 1,
-      "topic": "Turbulent Boundary Layer & Laminar Sub-layer",
-      "hook": "1/7th power velocity profile; buffer layer; Nikuradse equivalent sand grain roughness (ks); smooth vs rough regimes.",
-      "folder": "Unit1_BoundaryLayer",
-      "notebook": "CE432P_U1_Day4.ipynb",
-      "pedagogy": "Slide Deck & Visualization",
-      "ref": "T1, T2",
-      "enabled": true
+      "title": "Turbulent Boundary Layer & Sub-layer",
+      "hook": "1/7th power velocity profile; laminar sub-layer; Nikuradse equivalent sand grain roughness (ks); hydraulically smooth vs rough regimes.",
+      "co": "CO1",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L08",
+      "keywords": "turbulent power law sublayer nikuradse roughness smooth rough",
+      "file": "sessions/S04.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L08"
+      ],
+      "release": ""
     },
     {
+      "id": "S05",
       "day": 5,
       "unit": 1,
-      "topic": "Local and Average Friction Coefficients",
+      "title": "Local and Average Friction Coefficients",
       "hook": "Skin friction drag computation over flat plates, bridge piers, and sluice gate faces; skin friction vs form drag.",
-      "folder": "Unit1_BoundaryLayer",
-      "notebook": "CE432P_U1_Day5.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T1, T2",
-      "enabled": true
+      "co": "CO1",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L08",
+      "keywords": "skin friction drag coefficient local average pier sluice gate",
+      "file": "sessions/S05.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L08"
+      ],
+      "release": ""
     },
     {
+      "id": "S06",
       "day": 6,
       "unit": 1,
-      "topic": "Boundary Layer Separation & Control",
+      "title": "Separation & Control of Boundary Layer",
       "hook": "Adverse pressure gradient (dp/dx > 0); flow detachment; vortex shedding; boundary layer control (suction, blowing, streamlining).",
-      "folder": "Unit1_BoundaryLayer",
-      "notebook": "CE432P_U1_Day6.ipynb",
-      "pedagogy": "Slide Deck & Visualization",
-      "ref": "T1, T2",
-      "enabled": true
+      "co": "CO1",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L08",
+      "keywords": "separation adverse pressure gradient vortex shedding suction blowing streamlining",
+      "file": "sessions/S06.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L08"
+      ],
+      "release": ""
     },
     {
+      "id": "S07",
       "day": 7,
       "unit": 2,
-      "topic": "Open Channel Flow vs Pipe Flow & Classification",
-      "hook": "Hydraulic gradient line vs free surface; prismatic, rigid vs alluvial channels; steady/unsteady and uniform/non-uniform flow regimes.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day7.ipynb",
-      "pedagogy": "Slide Deck",
-      "ref": "T2, T3",
-      "enabled": true
+      "title": "Open Channel Flow vs Pipe Flow",
+      "hook": "Hydraulic gradient line vs free surface; prismatic vs non-prismatic channels; steady/unsteady and uniform/non-uniform regimes.",
+      "co": "CO2",
+      "refs": "T2, T3",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L01",
+      "keywords": "open channel pipe flow hydraulic gradient line free surface prismatic steady",
+      "file": "sessions/S07.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L01"
+      ],
+      "release": ""
     },
     {
+      "id": "S08",
       "day": 8,
       "unit": 2,
-      "topic": "Velocity Distribution & Governing Conservation Laws",
+      "title": "Velocity Distribution & Conservation Laws",
       "hook": "Isovels in rectangular and trapezoidal sections; dip phenomenon; energy correction factor (alpha) and momentum factor (beta).",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day8.ipynb",
-      "pedagogy": "Chalk-Board",
-      "ref": "T2, T3",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, T3",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L01",
+      "keywords": "velocity distribution isovels dip coriolis boussinesq energy momentum",
+      "file": "sessions/S08.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L01"
+      ],
+      "release": ""
     },
     {
+      "id": "S09",
       "day": 9,
       "unit": 2,
-      "topic": "Uniform Flow: Chezy's & Manning's Equations",
+      "title": "Uniform Flow: Chezy's & Manning's Equations",
       "hook": "Equilibrium between gravity driving force and boundary shear stress; factors influencing Manning's n; Cowan's composite roughness.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day9.ipynb",
-      "pedagogy": "Chalk-Board",
-      "ref": "T2, T3, R2",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, T3, R2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L01",
+      "keywords": "uniform flow chezy manning roughness cowan composite resistance",
+      "file": "sessions/S09.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L01"
+      ],
+      "release": ""
     },
     {
+      "id": "S10",
       "day": 10,
       "unit": 2,
-      "topic": "Most Economical Channel Sections",
+      "title": "Most Economical Channel Sections",
       "hook": "Condition for minimum wetted perimeter for given discharge: rectangular (b=2y), trapezoidal (semi-hexagon, m=1/sqrt(3)), circular.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day10.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T2, T3, R2",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, T3, R2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L01",
+      "keywords": "economical section optimal trapezoidal rectangular perimeter discharge",
+      "file": "sessions/S10.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L01"
+      ],
+      "release": ""
     },
     {
+      "id": "S11",
       "day": 11,
       "unit": 2,
-      "topic": "Computation of Normal Depth & Spreadsheet / Python Solvers",
-      "hook": "Iterative solution of implicit Manning's equation for trapezoidal canal design; automated Python bisection/Newton-Raphson solver.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day11.ipynb",
-      "pedagogy": "Hands-on (Python/Spreadsheet)",
-      "ref": "T3, R2",
-      "enabled": false
+      "title": "Computation of Normal Depth & Solvers",
+      "hook": "Iterative solution of implicit Manning's equation for trapezoidal canal design; automated Newton-Raphson solver.",
+      "co": "CO2",
+      "refs": "T3, R2",
+      "software": [
+        "Spreadsheet",
+        "HEC-RAS"
+      ],
+      "lab": "Linked with L12",
+      "keywords": "normal depth newton raphson bisection implicit manning solver canal",
+      "file": "sessions/S11.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L12"
+      ],
+      "release": ""
     },
     {
+      "id": "S12",
       "day": 12,
       "unit": 2,
-      "topic": "Specific Energy & Critical Flow Dynamics",
+      "title": "Specific Energy & Critical Flow",
       "hook": "Specific energy curve E = y + V^2/(2g); critical depth yc = (q^2/g)^(1/3); Froude number criteria (Fr=1); minimum specific energy Emin = 1.5 yc.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day12.ipynb",
-      "pedagogy": "Slide Deck & Chalk-Board",
-      "ref": "T2, T3",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, T3",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L04, L05",
+      "keywords": "specific energy critical flow depth froude number alternate depths",
+      "file": "sessions/S12.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L04",
+        "L05"
+      ],
+      "release": ""
     },
     {
+      "id": "S13",
       "day": 13,
       "unit": 2,
-      "topic": "Specific Force & Channel Transitions",
+      "title": "Specific Force & Channel Transitions",
       "hook": "Flow over upward bed humps (delta z) and channel contractions (b2 < b1); choking conditions and upstream water level backing.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day13.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T2, T3",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, T3",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L04, L05",
+      "keywords": "specific force channel transition hump width contraction choking backing",
+      "file": "sessions/S13.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L04",
+        "L05"
+      ],
+      "release": ""
     },
     {
+      "id": "S14",
       "day": 14,
       "unit": 2,
-      "topic": "Hydraulic Jump: Theory, Elements & Energy Dissipation",
+      "title": "Hydraulic Jump Theory & Dissipation",
       "hook": "Belanger momentum balance; conjugate depths y2/y1 = 0.5*(sqrt(1+8Fr1^2)-1); jump classification; stilling basin design and energy loss.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day14.ipynb",
-      "pedagogy": "Slide Deck & Visualization",
-      "ref": "T2, T3",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, T3",
+      "software": [
+        "Spreadsheet",
+        "HEC-RAS"
+      ],
+      "lab": "Linked with L13",
+      "keywords": "hydraulic jump belanger sequent depths energy dissipation stilling basin",
+      "file": "sessions/S14.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L13"
+      ],
+      "release": ""
     },
     {
+      "id": "S15",
       "day": 15,
       "unit": 2,
-      "topic": "Measurement of Flow: Flumes & Weirs",
+      "title": "Discharge Measurement in Channels",
       "hook": "Critical flow meters: Venturi flumes, Standing wave flumes, Parshall flumes, and broad-crested weirs; head-discharge calibration.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day15.ipynb",
-      "pedagogy": "Slide Deck & Video",
-      "ref": "T2, R1",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T2, R1",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L02, L03, L04, L05",
+      "keywords": "flow measurement venturi flume standing wave parshall weir calibration",
+      "file": "sessions/S15.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L02",
+        "L03",
+        "L04",
+        "L05"
+      ],
+      "release": ""
     },
     {
+      "id": "S16",
       "day": 16,
       "unit": 2,
-      "topic": "Gradually Varied Flow (GVF) & Profile Computation",
+      "title": "Gradually Varied Flow & Surface Profiles",
       "hook": "Dynamic equation dy/dx = (S0 - Sf)/(1 - Fr^2); 12 surface profiles (M1, M2, M3, S1, S2, S3, C, H, A); Direct Step method calculation.",
-      "folder": "Unit2_OpenChannelFlow",
-      "notebook": "CE432P_U2_Day16.ipynb",
-      "pedagogy": "Chalk-Board & Hands-on",
-      "ref": "T3, R2",
-      "enabled": false
+      "co": "CO2",
+      "refs": "T3, R2",
+      "software": [
+        "Spreadsheet",
+        "HEC-RAS"
+      ],
+      "lab": "Linked with L12, L13",
+      "keywords": "gradually varied flow gvf dynamic equation direct step profile backwater drawdown",
+      "file": "sessions/S16.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L12",
+        "L13"
+      ],
+      "release": ""
     },
     {
+      "id": "S17",
       "day": 17,
       "unit": 3,
-      "topic": "Impulse-Momentum Principle & Stationary Vertical Plate",
+      "title": "Impulse-Momentum & Stationary Vertical Plate",
       "hook": "Newton's second law for continuous fluid flow; normal hydrodynamic force Fn = rho*a*V^2; pressure head vs velocity head conversion.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day17.ipynb",
-      "pedagogy": "Slide Deck & Chalk-Board",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L09",
+      "keywords": "impulse momentum stationary plate normal force hydrodynamic jet nozzle",
+      "file": "sessions/S17.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L09"
+      ],
+      "release": ""
     },
     {
+      "id": "S18",
       "day": 18,
       "unit": 3,
-      "topic": "Jet Impact on Stationary Inclined Flat Plate",
+      "title": "Jet Impact on Inclined Flat Plate",
       "hook": "Normal force Fn = rho*a*V^2*sin(theta); split ratio of flow discharge along forward and backward directions; resolving force components.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day18.ipynb",
-      "pedagogy": "Chalk-Board",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L09",
+      "keywords": "inclined plate normal force discharge split ratio forward backward",
+      "file": "sessions/S18.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L09"
+      ],
+      "release": ""
     },
     {
+      "id": "S19",
       "day": 19,
       "unit": 3,
-      "topic": "Jet Impact on Stationary Curved Plates & Hemispherical Cups",
+      "title": "Jet Impact on Stationary Curved Vanes",
       "hook": "Symmetrical vs unsymmetrical vanes; turning angles (theta); force doubling in hemispherical cup (Fn = 2*rho*a*V^2); Pelton bucket principle.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day19.ipynb",
-      "pedagogy": "Chalk-Board",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L09",
+      "keywords": "curved vane hemispherical cup deflection angle pelton bucket force",
+      "file": "sessions/S19.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L09"
+      ],
+      "release": ""
     },
     {
+      "id": "S20",
       "day": 20,
       "unit": 3,
-      "topic": "Jet Impinging on Moving Flat Plates",
+      "title": "Jet Impinging on Moving Flat Plates",
       "hook": "Relative velocity Vr = (V - u); mass flow intercepted by moving plate m = rho*a*(V - u); power transmission and theoretical efficiency cap (29.6%).",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day20.ipynb",
-      "pedagogy": "Chalk-Board",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L09",
+      "keywords": "moving flat plate relative velocity mass intercepted work done efficiency",
+      "file": "sessions/S20.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L09"
+      ],
+      "release": ""
     },
     {
+      "id": "S21",
       "day": 21,
       "unit": 3,
-      "topic": "Jet on Moving Curved Vanes & Velocity Triangles",
+      "title": "Moving Curved Vanes & Velocity Triangles",
       "hook": "Inlet and outlet velocity triangles; whirl velocity components (Vw1, Vw2); work done per second W = rho*a*Vr1*(Vw1 +- Vw2)*u; hydraulic efficiency.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day21.ipynb",
-      "pedagogy": "Chalk-Board & Visualization",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L09, L11",
+      "keywords": "moving curved vane velocity triangles whirl velocity work done efficiency",
+      "file": "sessions/S21.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L09",
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S22",
       "day": 22,
       "unit": 3,
-      "topic": "Numerical Analysis on Stationary & Moving Plates",
+      "title": "Numerical Analysis on Plates & Vanes",
       "hook": "Comparative analysis of force, work done, and kinetic energy extraction across flat, inclined, and curved geometries.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day22.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L09",
+      "keywords": "numerical force work power energy comparison plate vane",
+      "file": "sessions/S22.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L09"
+      ],
+      "release": ""
     },
     {
+      "id": "S23",
       "day": 23,
       "unit": 3,
-      "topic": "Jet Impact on a Series of Flat Radial Vanes",
+      "title": "Series of Flat Radial Vanes",
       "hook": "Continuous mass flow intercepted m = rho*a*V; maximum efficiency condition u = V/2 yielding eta_max = 50%; wheel torque calculation.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day23.ipynb",
-      "pedagogy": "Slide Deck & Chalk-Board",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "series flat vanes wheel torque power maximum efficiency",
+      "file": "sessions/S23.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S24",
       "day": 24,
       "unit": 3,
-      "topic": "Jet Impact on a Series of Curved Radial Vanes",
+      "title": "Series of Curved Radial Vanes",
       "hook": "Full mass rate m = rho*a*V; exit velocity vector; maximum theoretical efficiency eta_max = (1 + cos(phi))/2 approaching 100% in ideal buckets.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day24.ipynb",
-      "pedagogy": "Chalk-Board & Diagram",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "series curved vanes wheel runner maximum efficiency exit vector",
+      "file": "sessions/S24.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S25",
       "day": 25,
       "unit": 3,
-      "topic": "Numerical Workshop on Velocity Triangles & Efficiency",
+      "title": "Numerical Workshop: Velocity Triangles",
       "hook": "Step-by-step vector construction and calculation of power delivered to the runner for specified nozzle diameters and heads.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day25.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "numerical workshop velocity triangles runner power torque",
+      "file": "sessions/S25.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S26",
       "day": 26,
       "unit": 3,
-      "topic": "Applications to Turbine Runners & Problem Solving",
+      "title": "Applications to Turbine Runners",
       "hook": "Bridging jet mechanics to impulse and reaction turbine runner design; Euler's turbine equation derivation.",
-      "folder": "Unit3_ImpactOfJets",
-      "notebook": "CE432P_U3_Day26.ipynb",
-      "pedagogy": "Peer Discussion & Problem Solving",
-      "ref": "T1, T2",
-      "enabled": false
+      "co": "CO3",
+      "refs": "T1, T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "turbine runner euler equation impulse reaction angular momentum",
+      "file": "sessions/S26.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S27",
       "day": 27,
       "unit": 4,
-      "topic": "Introduction to Turbines & Classification",
+      "title": "Introduction to Turbines & Classification",
       "hook": "Gross head vs net head; hydraulic, mechanical, volumetric, and overall efficiency; selection charts: Pelton vs Francis vs Kaplan.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day27.ipynb",
-      "pedagogy": "Slide Deck",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "turbines classification impulse reaction pelton francis kaplan gross net head",
+      "file": "sessions/S27.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S28",
       "day": 28,
       "unit": 4,
-      "topic": "Pelton Wheel: Components, Working & Bucket Design",
+      "title": "Pelton Wheel Components & Working",
       "hook": "Spear needle nozzle governing; splitter edge angle (165 deg); bucket dimensions; pitch diameter and jet ratio (m = D/d).",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day28.ipynb",
-      "pedagogy": "Slide Deck & Video",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "pelton wheel spear needle nozzle splitter bucket jet ratio",
+      "file": "sessions/S28.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S29",
       "day": 29,
       "unit": 4,
-      "topic": "Pelton Wheel Design Features & Sizing Problems",
+      "title": "Pelton Wheel Sizing & Sizing Problems",
       "hook": "Number of buckets (Taygun formula z = 15 + 0.5m); wheel speed N = 60*u/(pi*D); power generated and efficiency optimization.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day29.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "pelton design sizing taygun buckets runner speed power",
+      "file": "sessions/S29.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S30",
       "day": 30,
       "unit": 4,
-      "topic": "Francis Turbine: Inward Flow Reaction & Velocity Triangles",
+      "title": "Francis Turbine: Inward Flow Reaction",
       "hook": "Spiral casing, guide vanes (wicket gates), runner blades, and radial/mixed discharge; radial discharge condition at outlet (alpha2 = 90 deg).",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day30.ipynb",
-      "pedagogy": "Slide Deck & Video",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "francis turbine reaction spiral casing guide vanes wicket gates runner",
+      "file": "sessions/S30.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S31",
       "day": 31,
       "unit": 4,
-      "topic": "Kaplan & Propeller Turbines & Draft Tubes",
-      "hook": "Axial flow reaction turbine; adjustable runner blades; draft tube theory and pressure recovery efficiency eta_d = (V1^2 - V2^2 - 2ghf)/(V1^2).",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day31.ipynb",
-      "pedagogy": "Slide Deck & Video",
-      "ref": "T2",
-      "enabled": false
+      "title": "Kaplan & Propeller Turbines & Draft Tubes",
+      "hook": "Axial flow reaction turbine; adjustable runner blades; draft tube theory and pressure recovery efficiency.",
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "kaplan propeller axial flow draft tube pressure recovery cavitation",
+      "file": "sessions/S31.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S32",
       "day": 32,
       "unit": 4,
-      "topic": "Specific Speed, Unit Quantities & Model Testing",
+      "title": "Specific Speed & Unit Quantities",
       "hook": "Dimensionless parameters; specific speed Ns = N*sqrt(P)/H^(5/4); unit speed Nu, unit discharge Qu, unit power Pu for scale modeling.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day32.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "specific speed unit quantities model testing affinity laws scale",
+      "file": "sessions/S32.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S33",
       "day": 33,
       "unit": 4,
-      "topic": "Turbine Characteristic Curves & Cavitation",
+      "title": "Turbine Characteristic Curves & Cavitation",
       "hook": "Main, operating, and Muschel curves (constant efficiency contours); Thoma's cavitation factor (sigma); runaway speed protection.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day33.ipynb",
-      "pedagogy": "Slide Deck & Visualization",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L11",
+      "keywords": "characteristic curves muschel curves thoma cavitation runaway speed",
+      "file": "sessions/S33.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L11"
+      ],
+      "release": ""
     },
     {
+      "id": "S34",
       "day": 34,
       "unit": 4,
-      "topic": "Centrifugal Pumps: Classification & Working",
+      "title": "Centrifugal Pumps: Classification & Working",
       "hook": "Impeller types (backward curved, radial, forward curved); volute casing and vortex chamber; priming necessity; manometric head Hm.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day34.ipynb",
-      "pedagogy": "Slide Deck & Video",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L10",
+      "keywords": "centrifugal pump impeller volute vortex priming manometric head",
+      "file": "sessions/S34.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L10"
+      ],
+      "release": ""
     },
     {
+      "id": "S35",
       "day": 35,
       "unit": 4,
-      "topic": "Heads, Work Done & Efficiencies of Centrifugal Pumps",
+      "title": "Heads, Work Done & Pump Efficiencies",
       "hook": "Manometric efficiency, mechanical efficiency, overall efficiency; Euler head He = (Vw2*u2)/g; minimum starting speed calculation.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day35.ipynb",
-      "pedagogy": "Chalk-Board & Numerical",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L10",
+      "keywords": "pump heads work done manometric efficiency euler head starting speed",
+      "file": "sessions/S35.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L10"
+      ],
+      "release": ""
     },
     {
+      "id": "S36",
       "day": 36,
       "unit": 4,
-      "topic": "Pumps in Series / Parallel, Characteristic Curves & NPSH",
+      "title": "Pumps in Series/Parallel, Curves & NPSH",
       "hook": "System-head curve matching: H_sys = H_static + K*Q^2; multi-stage pumps (head addition) vs parallel sets (discharge addition); NPSH_avail > NPSH_req.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day36.ipynb",
-      "pedagogy": "Slide Deck & Chalk-Board",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L10",
+      "keywords": "pumps series parallel system curve duty point npsh cavitation",
+      "file": "sessions/S36.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L10"
+      ],
+      "release": ""
     },
     {
+      "id": "S37",
       "day": 37,
       "unit": 4,
-      "topic": "Reciprocating Pumps: Principles, Slip & Indicator Diagrams",
+      "title": "Reciprocating Pumps: Principles & Slip",
       "hook": "Positive displacement mechanics; theoretical vs actual discharge; slip and negative slip; air vessels for smoothing discharge fluctuation.",
-      "folder": "Unit4_HydraulicMachines",
-      "notebook": "CE432P_U4_Day37.ipynb",
-      "pedagogy": "Slide Deck & Chalk-Board",
-      "ref": "T2",
-      "enabled": false
+      "co": "CO4",
+      "refs": "T2",
+      "software": [
+        "Spreadsheet"
+      ],
+      "lab": "Linked with L10",
+      "keywords": "reciprocating pump positive displacement slip air vessel indicator diagram",
+      "file": "sessions/S37.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L10"
+      ],
+      "release": ""
     },
     {
+      "id": "S38",
       "day": 38,
       "unit": 5,
-      "topic": "Introduction to CFD & Governing Equations",
+      "title": "Introduction to CFD & Governing Equations",
       "hook": "Continuity (mass conservation), Navier-Stokes (momentum conservation), and energy equations; Reynolds-averaged Navier-Stokes (RANS).",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day38.ipynb",
-      "pedagogy": "Slide Deck",
-      "ref": "T1, R3",
-      "enabled": false
+      "co": "CO5",
+      "refs": "T1, R3",
+      "software": [
+        "HEC-RAS",
+        "SimFlow"
+      ],
+      "lab": "Linked with L12",
+      "keywords": "cfd governing equations continuity navier stokes rans turbulence",
+      "file": "sessions/S38.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L12"
+      ],
+      "release": ""
     },
     {
+      "id": "S39",
       "day": 39,
       "unit": 5,
-      "topic": "Discretisation Methods & Grid Generation",
+      "title": "Discretisation Methods & Grid Generation",
       "hook": "Finite Difference (FDM), Finite Volume (FVM); structured vs unstructured meshing; cell skewness, aspect ratio, and boundary layer prism inflation.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day39.ipynb",
-      "pedagogy": "Slide Deck & Demonstration",
-      "ref": "R3",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3",
+      "software": [
+        "HEC-RAS",
+        "SimFlow"
+      ],
+      "lab": "Linked with L12",
+      "keywords": "discretisation fdm fvm grid generation mesh skewness aspect ratio",
+      "file": "sessions/S39.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L12"
+      ],
+      "release": ""
     },
     {
+      "id": "S40",
       "day": 40,
       "unit": 5,
-      "topic": "Initial & Boundary Conditions & Turbulence Modelling",
+      "title": "Initial & Boundary Conditions & Turbulence",
       "hook": "Inlet velocity, pressure outlet, no-slip walls, symmetry planes; standard k-epsilon, k-omega SST turbulence models; y+ wall resolution.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day40.ipynb",
-      "pedagogy": "Slide Deck",
-      "ref": "R3",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3",
+      "software": [
+        "HEC-RAS",
+        "SimFlow"
+      ],
+      "lab": "Linked with L12",
+      "keywords": "boundary conditions inlet outlet no slip k epsilon k omega y plus",
+      "file": "sessions/S40.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L12"
+      ],
+      "release": ""
     },
     {
+      "id": "S41",
       "day": 41,
       "unit": 5,
-      "topic": "OpenFOAM & SimFlow Interface: Meshing & interFoam VOF",
+      "title": "OpenFOAM & SimFlow: Meshing & interFoam VOF",
       "hook": "Volume of Fluid (VOF) multiphase modelling for open channels; snappyHexMesh; tracking water-air free surface interfaces.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day41.ipynb",
-      "pedagogy": "Demonstration",
-      "ref": "R3, W6",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3, W6",
+      "software": [
+        "SimFlow"
+      ],
+      "lab": "Linked with L13",
+      "keywords": "openfoam simflow interfoam vof multiphase snappyhexmesh free surface",
+      "file": "sessions/S41.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L13"
+      ],
+      "release": ""
     },
     {
+      "id": "S42",
       "day": 42,
       "unit": 5,
-      "topic": "ANSYS-Fluent Workflow & Introduction to HEC-RAS 2D",
+      "title": "ANSYS-Fluent Workflow & HEC-RAS 2D Intro",
       "hook": "HEC-RAS 2D subgrid bathymetry approach; Diffusion Wave equation vs Full 2D Shallow Water Equations (SWE); comparison with 3D CFD.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day42.ipynb",
-      "pedagogy": "Demonstration & Hands-on",
-      "ref": "R3, W5",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3, W5",
+      "software": [
+        "HEC-RAS"
+      ],
+      "lab": "Linked with L12",
+      "keywords": "fluent hecras 2d shallow water diffusion wave subgrid bathymetry",
+      "file": "sessions/S42.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L12"
+      ],
+      "release": ""
     },
     {
+      "id": "S43",
       "day": 43,
       "unit": 5,
-      "topic": "Modelling of Uniform Open Channel Flow in HEC-RAS 2D",
+      "title": "Uniform Open Channel Flow in HEC-RAS 2D",
       "hook": "Terrain import, 2D flow area polygon, boundary hydrographs; simulated normal depth and bed shear stress validation against Manning's equation.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day43.ipynb",
-      "pedagogy": "Hands-on",
-      "ref": "R3, W5",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3, W5",
+      "software": [
+        "HEC-RAS"
+      ],
+      "lab": "Linked with L13",
+      "keywords": "hecras 2d uniform flow normal depth bed shear stress validation",
+      "file": "sessions/S43.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L13"
+      ],
+      "release": ""
     },
     {
+      "id": "S44",
       "day": 44,
       "unit": 5,
-      "topic": "Modelling of Non-Uniform Flow & Hydraulic Jump",
+      "title": "Non-Uniform Flow & Hydraulic Jump Simulation",
       "hook": "Simulating flow over an ogee weir and subsequent hydraulic jump in HEC-RAS 2D / SimFlow; water surface profile tracking.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day44.ipynb",
-      "pedagogy": "Hands-on",
-      "ref": "R3, W5",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3, W5",
+      "software": [
+        "HEC-RAS",
+        "SimFlow"
+      ],
+      "lab": "Linked with L13",
+      "keywords": "hecras 2d ogee weir hydraulic jump water surface non uniform",
+      "file": "sessions/S44.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L13"
+      ],
+      "release": ""
     },
     {
+      "id": "S45",
       "day": 45,
       "unit": 5,
-      "topic": "Validation: CFD vs Laboratory Flume & Capstone Guidance",
+      "title": "Validation: CFD vs Flume & Capstone Defense",
       "hook": "Computing Root Mean Square Error (RMSE) and percentage error between experimental readings, 1D analytical theory, and 2D/3D numerical models.",
-      "folder": "Unit5_CFD",
-      "notebook": "CE432P_U5_Day45.ipynb",
-      "pedagogy": "Discussion & Review",
-      "ref": "R3",
-      "enabled": false
+      "co": "CO5",
+      "refs": "R3",
+      "software": [
+        "HEC-RAS",
+        "SimFlow"
+      ],
+      "lab": "Linked with L15",
+      "keywords": "validation rmse error analysis flume comparison capstone defense",
+      "file": "sessions/S45.md",
+      "enabled": true,
+      "ready": true,
+      "labs": [
+        "L15"
+      ],
+      "release": ""
     }
   ]
 }

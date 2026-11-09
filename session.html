@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>CE633</title>
+<script>
+// Old links (session.html?id=S01 / ?page=setup) now live in the single-page hub.
+var q = new URLSearchParams(location.search), id = q.get("id"), pg = q.get("page");
+location.replace("index.html#/" + (id ? "s/" + id : pg ? "page/" + pg : ""));
+</script></head><body></body></html>
