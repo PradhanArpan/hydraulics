@@ -548,7 +548,7 @@ function AdminModal({ data, open, onClose, onDataUpdate }) {
       });
 
       if (!getRes.ok) {
-        throw new Error(`Failed to access repository: ${getRes.status} ${getRes.statusText}. Please verify your GitHub token has repository write permission for PradhanArpan/hydrology.`);
+        throw new Error(`Failed to access repository: ${getRes.status} ${getRes.statusText}. Please verify your GitHub token has repository write permission for PradhanArpan/hydraulics.`);
       }
 
       const fileData = await getRes.json();
@@ -641,7 +641,7 @@ function AdminModal({ data, open, onClose, onDataUpdate }) {
             {showTokenSettings && (
               <>
                 <p style={{ margin: "2px 0 6px", fontSize: "12px", color: "var(--g600)", lineHeight: 1.4 }}>
-                  To push releases directly to GitHub Pages, provide a GitHub Personal Access Token (PAT) with <code>repo</code> or <code>Contents: Read and write</code> scope for <code>PradhanArpan/hydrology</code>. The token is stored solely in your local browser storage.
+                  To push releases directly to GitHub Pages, provide a GitHub Personal Access Token (PAT) with <code>repo</code> or <code>Contents: Read and write</code> scope for <code>PradhanArpan/hydraulics</code>. The token is stored solely in your local browser storage.
                 </p>
                 <div className="admin-token-input-row">
                   <input
@@ -655,7 +655,7 @@ function AdminModal({ data, open, onClose, onDataUpdate }) {
                   {token && <button className="admin-btn secondary" onClick={handleClearToken}>Clear</button>}
                 </div>
                 <div style={{ fontSize: "11.5px", color: "var(--g600)" }}>
-                  Need a token? <a href="https://github.com/settings/tokens/new?scopes=repo&description=CE633+Course+Portal+Admin" target="_blank" rel="noopener" style={{ color: "var(--accent)" }}>Generate a Classic PAT on GitHub ↗</a>
+                  Need a token? <a href="https://github.com/settings/tokens/new?scopes=repo&description=CE432P+Course+Portal+Admin" target="_blank" rel="noopener" style={{ color: "var(--accent)" }}>Generate a Classic PAT on GitHub ↗</a>
                 </div>
               </>
             )}
@@ -867,7 +867,7 @@ function MenuDrawer({ data, route, open, close, onAdmin, preview, visited }) {
       <div className="fb-scrim" onClick={close} />
       <nav className="fb-drawer" aria-label="Course menu">
         <div className="fb-drawer__head">
-          <span className="fb-drawer__title">{c.code} Hydrology</span>
+          <span className="fb-drawer__title">{c.code} {c.short || 'Hydraulics'}</span>
           <button ref={closeRef} className="fb-iconbtn" onClick={close} aria-label="Close menu"><Icon as={X} size={20} /></button>
         </div>
         <div className="fb-drawer__body" onClick={e => { if (e.target.closest("a")) close(); }}>
