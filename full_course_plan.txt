@@ -1,0 +1,1072 @@
+SCHOOL OF ENGINEERING AND TECHNOLOGY
+DEPARTMENT OF CIVIL ENGINEERING
+COURSE PLAN
+ODD SEMESTER/ 2026-2027
+COURSE INFORMATION SHEET
+PROGRAMME: BTech (UG)
+COURSE NAME: Hydraulic Engineering
+COURSE CODE: CE432P
+COURSE TYPE (CORE/ELECTIVE): CORE
+CONTACT HOURS: 45 + 30
+CORRESPONDING LAB COURSE (IF ANY):
+Lab-integrated course (30 hours)
+CREDIT
+L
+T
+P
+Total
+3
+0
+1
+4
+COURSE INSTRUCTOR(S) NAME:
+Dr Shibu K. Mani
+Mob: 
+shibuk.mani@christuniversity.in
+CLASSROOM POLICY:
+Mobile phones and laptops are not permitted unless and until the teacher permits for subject-related activities and exercises (Students are to bring laptops to the class for hands-on CFD and spreadsheet exercises).
+Laboratory sessions require closed footwear, the observation book and adherence to the safety instructions for pumps, turbines and flumes. Readings must be signed by the faculty before leaving the laboratory.
+Each AI-assisted submission must include an AI Use Log: prompt used, output obtained, student verification, corrected calculation and reflection. Unverified AI output will not be accepted as engineering reasoning.
+The course will use Google Classroom / Moodle for content, quizzes, simulation files, lab records and mini-project submissions.
+Active participation in the class and Google Classroom exercises/ discussions is mandatory.
+1.  SYLLABUS:
+Course Name: - Hydraulic Engineering
+Course Code: CE432P
+L
+T
+P
+Category
+PCC
+Contact Hrs./Week
+3
+0
+2
+CIA Marks
+70
+Contact Hrs./Sem.
+45
+0
+30
+ESE Marks
+30
+Credits.
+3
+0
+1
+Exam Hours
+3
+Course Objectives: To introduce the students to various hydraulic engineering problems such as open channel flows and hydraulic machines. At the completion of the course, the student should be able to relate the theory and practice of problems in hydraulic engineering.
+Prerequisites: Engineering Physics, Engineering Mathematics, Introduction to Fluid Mechanics
+Units
+Teaching Hours
+Unit-1: Boundary Layer Theory
+Boundary Layer Analysis - Assumption and concept of boundary layer theory. Boundary-layer thickness, displacement, momentum and energy thickness, laminar and turbulent boundary layers on a flat plate; Laminar sub-layer, smooth and rough boundaries. Local and average friction coefficients. Separation and Control.
+Practicals-
+1. Calibration of V-notch
+2. Calibration of Rectangular Notch.
+3. Calibration of Ogee weir
+4. Calibration of Broad crested weir.
+5. Calibration of Venturi meter and Orifice meter.
+6. Determination of hydraulic coefficient of a vertical orifice
+06
+Unit-2: Open Channel Flow
+Introduction: Comparison between open channel flow and pipe flow, geometrical parameters of a channel, classification of open channels, classification of open channel flow, Velocity Distribution of channel section.
+Uniform Flow: Continuity Equation, Energy Equation and Momentum Equation, Characteristics of uniform flow, Chezy's formula, Manning's formula. Factors affecting Manning's Roughness Coefficient, Most economical section of channel, Computation of Uniform flow, Normal depth. Computation of economical section and bed roughness analytically as well as by using software.
+Non-Uniform Flow: Specific energy, Specific energy curve, critical flow, discharge curve, Specific force, Specific depth, and Critical depth. Channel Transitions. Hydraulic Jump - Theory of hydraulic jump, Elements and characteristics of hydraulic jump in a rectangular Channel, length and height of jump, location of jump, Types, applications and location of hydraulic jump.
+Measurement of Discharge and Velocity - Venturi Flume, Standing Wave Flume, Parshall Flume, Broad Crested Weir. Gradually Varied Flow - Dynamic Equation of Gradually Varied Flow, Classification of channel bottom slopes, Classification of surface profile, Characteristics of surface profile. Computation of water surface profile.
+10
+Unit-3: Impact of Jets
+The force exerted by the jet on Stationary and Moving Plates and Vanes: Flat, Inclined and Curved.
+Force exerted on a series of radial vanes - Flat and Curved.
+Experiments - 
+Determination of Darcy's friction factor for a straight pipe
+10
+Unit-4: Hydraulic Machines
+Turbines: Introduction to hydraulic machines, Classification of turbines, impulse and reaction turbines. Design features, The efficiency of turbines, operating and main characteristic curves.
+Hydraulic Pumps: Introduction, Classification of pumps: centrifugal and reciprocating pumps, pumps in series and parallel, The efficiency of the pumps, characteristic curves.
+Experiments - 
+Demonstration of the working of turbines (Pelton, Francis, Kaplan)
+11
+Unit-5: Computational Fluid Dynamics
+Basic Equations of fluid dynamics, Grid generation. Basics of modelling using OpenFOAM and ANSYS-Fluent. 3D Modelling of Open Channel Flow (Uniform/ Non-Uniform) on OpenFOAM and ANSYS-Fluent. Comparison of Experimental data with different CFD Models.
+Basic Equations of fluid dynamics, Grid generation. Basics of modelling using HEC-RAS. 3D Modelling of Open Channel Flow (Uniform/ Non-Uniform) on HEC-RAS. Comparison of Experimental data with different CFD Models.
+Experiments - 
+1. Create models with initial and boundary conditions for open channel flows
+2. 3D Modelling and Validation of Velocity and Discharge using different CFD Models
+08
+2.  LIST OF EXPERIMENTS (IF ANY): Lab-integrated Course (30 hours)
+Week
+Experiment / Activity
+CO
+1
+Laboratory orientation, safety briefing, observation-book format and uncertainty in measurements
+-
+2
+Exp 1: Calibration of V-notch
+CO2
+3
+Exp 2: Calibration of Rectangular or Trapezoidal Notch
+CO2
+4
+Exp 3: Calibration of Ogee weir
+CO2
+5
+Exp 4: Calibration of Broad crested weir
+CO2
+6
+Exp 5: Calibration of Venturi-meter and Orifice-meter
+CO2
+7
+Exp 6: Hydraulic Coefficients of a Vertical Orifice
+CO2
+8
+Exp 7: Darcy's Friction Factor for a Straight Pipe
+CO2
+9
+Exp 8: Vane Coefficient for Flat and Hemispherical Vanes
+CO3
+10
+Exp 11: Performance test on a Centrifugal Pump (Constant Speed)
+CO4
+11
+Exp 12: Demonstration of Pelton wheel, Francis and Kaplan Turbines
+CO4
+12
+Exp 9: Creation of Models with Initial and Boundary Conditions for Open Channel Flow (HEC-RAS 2D)
+CO5
+13
+Exp 10: Modelling and Validation of Velocity and Discharge (HEC-RAS 2D; OpenFOAM via SimFlow demonstration)
+CO5
+14
+Mid-Semester Laboratory Examination
+CO2-CO5
+15
+Viva-voce, record submission and Mini-Project Stage III presentation
+CO1-CO5
+3.  TEXT/REFERENCE BOOKS
+T1
+P.N. Modi and S.M. Seth, Fluid Mechanics and Hydraulics, New Delhi, Standard Book House. 21st edition, 2017. (Unit 1, 3, 5)
+T2
+R. K. Bansal, Fluid Mechanics and Hydraulic Machines, New Delhi, Lakshmi Publications, Revised Ninth Edition, 2018. (Unit 1, 2, 3, 4)
+T3
+V.T. Chow, Open Channel Hydraulics, McGraw-Hill Publishing Company, New Delhi, 1993. (Unit 2)
+4.  REFERENCE BOOKS
+R1.
+H. Chanson, The Hydraulics of Open Channel Flow, Elsevier.
+R2.
+K. Subramanya, Flow in Open Channels, Tata McGraw Hill.
+R3.
+K. A. Hoffmann, Computational Fluid Dynamics, Engineering Education System, 2000.
+R4.
+S. S. Rattan, “Fluid Mechanics and Hydraulic Machines”, 2014, Khanna Publishing House.
+R5.
+C. S. P. Ojha, R. Berndtsson and P. N. Chandramouli, “Fluid Mechanics and Machinery”, 2016, Oxford University Press.
+R6.
+Raghunath H.M., “Fluid Mechanics and Machinery”, 2014, CBS Publishers.
+R7.
+Arora K.R., “Hydraulics and Fluid Mechanics”, 2000, Standard Book House, New Delhi.
+R8.
+Gupta S.C., “Fluid Mechanics and Hydraulic Machines”, 2016, Pearson Education, India.
+R9.
+Jain A.K., “Fluid Mechanics”, 2012, Khanna Publishers, New Delhi.
+R10.
+John F. Douglas et al., “Fluid Mechanics”, 3rd edition, 2008, Pearson Education, India.
+R11.
+Rao B. C. S., “Fluid Mechanics and Machinery”, 2010, Tata McGraw-Hill Education Pvt. Ltd.
+R12.
+Subramanya K., “1000 Solved Problems in Fluid Mechanics: Includes Hydraulic Machines”, 2014, Tata McGraw-Hill Education Pvt. Ltd.
+5.  SELF STUDY
+Fluid properties, continuity equation, Bernoulli's equation and the impulse-momentum principle; Reynolds and Froude numbers; plotting and curve-fitting in Excel / Google Sheets.
+6.  ONLINE RESOURCES
+W1. NPTEL: https://nptel.ac.in/courses/105103096/
+W2. NPTEL: https://nptel.ac.in/courses/105/106/105106114/
+W3. NPTEL: https://nptel.ac.in/courses/105103021/
+W4. Virtual Labs (Fluid Mechanics and Hydraulics): https://www.vlab.co.in/
+W5. HEC-RAS (free, US Army Corps of Engineers) and its 2D modelling user manual: https://www.hec.usace.army.mil/software/hec-ras/
+W6. SimFlow (graphical interface for OpenFOAM, free edition): https://sim-flow.com/
+W7. Google Classroom / Moodle for lab records, simulation files and AI-use logs
+7.  COURSE PREREQUISITES
+Course Code
+Course Name
+Description
+Semester
+PH132P
+Engineering Physics
+Full syllabus
+I and II
+MA131
+Engineering Mathematics
+Full syllabus
+I and II
+CE332
+Introduction to Fluid Mechanics
+Full syllabus
+III
+8.  COURSE OBJECTIVES
+To introduce the students to various hydraulic engineering problems such as open channel flows and hydraulic machines. At the completion of the course, the student should be able to relate the theory and practice of problems in hydraulic engineering.
+9.  COURSE OUTCOMES
+Sl No
+Description
+Revised Bloom’s Taxonomy (RBT) Level
+CO1
+Understand the concept of boundary layer theory
+L2, L3; {PO1, PO2}; {PSO3}
+CO2
+Determine the most economical channel section and calibrate flow measuring devices
+L3, L4; {PO1, PO2}; {PSO3}
+CO3
+Analyse the force exerted by jets on Stationary and Moving Plates
+L4; {PO1, PO2}; {PSO3}
+CO4
+Analyse the Characteristics of hydraulic machines for efficiency
+L4; {PO1, PO2}; {PSO3}
+CO5
+Explain the importance of computational fluid dynamics in the modelling of water resources
+L2; {PO1, PO2}; {PSO3}
+10.  BEYOND SYLLABUS – (Industry/ Professional Orientation)
+Sl No
+Description
+Proposed Actions/ Learning Evidence
+1.
+Open-channel computation with software
+Normal depth, economical section and water-surface profile (direct step method) computed in a spreadsheet and checked in HEC-RAS (1D) using real canal or drain data.
+2.
+Easy-to-use hydraulic modelling with validation
+Guided HEC-RAS 2D sessions (and an OpenFOAM demonstration through the SimFlow interface) in which every simulation is validated against a laboratory measurement (weir, flume or jump) and the percentage error is reported.
+3.
+Pump and turbine selection practice
+Individual design assignment: select and size a turbine for a small-hydro site and a pump set for a lift-irrigation or water-supply duty, using manufacturer curves, the best efficiency point and an NPSH check.
+4.
+Responsible use of AI for engineering learning
+Structured use of AI for concept clarification and error checking. Every AI-assisted submission must include prompt used, output obtained, student verification, correction and learning reflection.
+5.
+Unit II + Unit V mini-project
+Groups take one open-channel problem through analytical solution (Stage I), laboratory/ field data (Stage II) and a validated HEC-RAS 2D or 3D model (Stage III).
+Proposed Actions: Topics Beyond Syllabus/ Industry Visit/ Guest Lectures/ Technical Talks/ Workshops/ NPTEL, etc.
+11.  DETAILS OF TOPICS RESULTING IN EMPLOYABILITY, SKILL DEVELOPMENT AND ENTREPRENEURSHIP
+Employability
+Skill Development
+Entrepreneurship
+Unit 2: Design and computation of open channels for irrigation and urban drainage
+Unit 4: Selection and operation of pumps and turbines for water supply, irrigation and hydropower
+Unit 1: Understanding flow near boundaries and drag
+Unit 2: Calibration of flow measuring devices
+Unit 3: Momentum analysis of jets and vanes
+Unit 4: Performance testing of hydraulic machines
+Unit 5: 2D/3D hydraulic model set-up and validation
+Unit 4: Small hydro and pump-based ventures
+Unit 5: Hydraulic modelling consultancy
+12.  DETAILS OF TOPICS RELATED TO LOCAL, NATIONAL, REGIONAL AND GLOBAL DEVELOPMENTAL (LRNG) NEEDS.
+Local
+National
+Regional
+Global Development
+Unit 2: Stormwater drains and tank-feeder canals of Bengaluru
+Unit 4: Hydropower and lift irrigation schemes
+Unit 2: Irrigation canals of the Cauvery and Krishna basins
+SDG 6: Clean Water and Sanitation
+SDG 7: Affordable and Clean Energy
+SDG 9: Industry, Innovation and Infrastructure
+13.  DETAILS OF TOPICS RELATED TO GENDER, ENVIRONMENT, SUSTAINABILITY, HUMAN VALUES AND PROFESSIONAL ETHICS.
+Gender Issues
+Human Values
+Professional Ethics
+Environment
+Sustainability
+-
+-
+Unit 1-5: Honest reporting of laboratory readings, transparent use of AI, plagiarism-free submissions and accountability for engineering decisions.
+Unit 2: Urban drainage and flood conveyance
+Unit 4: Cavitation and energy losses in machines
+Unit 4: Energy-efficient pumping; small hydro
+Unit 5: Virtual prototyping reduces material and physical trials
+14.  DELIVERY/INSTRUCTIONAL METHODOLOGIES
+(Tick ✓ the Relevant Methodologies)
+✓  Blackboard & Chalk
+✓  PowerPoint
+Student seminars
+✓  Web Resources
+MOOC
+✓  Laboratory Demonstration
+✓  Self-Learning
+✓  HEC-RAS 2D / SimFlow simulation
+Any other (Specify)
+15.  ASSESSMENT METHODOLOGIES – DIRECT
+(Tick ✓ the Relevant Methodologies)
+✓  Assignments
+✓  Closed Book Tests
+Open-book tests
+Student Seminars
+✓  Student Viva
+✓  Mini projects
+MOOC
+✓  Quiz
+✓  Laboratory Examination
+16.  ASSESSMENT METHODOLOGIES – INDIRECT
+(Tick ✓ the Relevant Methodologies)
+✓  Student Feedback on the Course
+Feedback from Senior Students / Alumni
+Any Other (Specify)
+17.  COURSE PLAN
+Day
+Unit
+Unit Detail
+Pedagogy
+Reference
+1
+I
+Course orientation; concept of boundary layer and its assumptions
+Slide Deck
+T1, T2
+2
+I
+Boundary-layer thickness: displacement, momentum and energy thickness
+Slide Deck
+Chalk-Blackboard
+T1, T2
+3
+I
+Laminar boundary layer on a flat plate; Numerical
+Chalk-Blackboard
+T1, T2
+4
+I
+Turbulent boundary layer; laminar sub-layer; smooth and rough boundaries
+Slide Deck
+Visualization
+T1, T2
+5
+I
+Local and average friction coefficients; Numerical
+Chalk-Blackboard
+T1, T2
+6
+I
+Boundary layer separation and its control
+Slide Deck
+Visualization
+T1, T2
+7
+II
+Open channel flow vs pipe flow; geometrical parameters; classification of channels and flows; Mini-Project topics allotted (Stage I)
+Slide Deck
+T2, T3
+8
+II
+Velocity distribution; continuity, energy and momentum equations
+Slide Deck
+Chalk-Blackboard
+T2, T3
+9
+II
+Uniform flow: Chezy's and Manning's formulae; factors affecting Manning's n
+Chalk-Blackboard
+T2, T3, R2
+10
+II
+Most economical rectangular, trapezoidal and circular sections; Numerical
+Chalk-Blackboard
+T2, T3, R2
+11
+II
+Computation of uniform flow and normal depth: analytical and spreadsheet/ software
+Hands-on (Spreadsheet)
+T3, R2
+12
+II
+Specific energy, specific energy curve, critical flow, critical depth and discharge curve
+Slide Deck
+Chalk-Blackboard
+T2, T3
+13
+II
+Specific force; channel transitions (hump and contraction); Numerical
+Chalk-Blackboard
+T2, T3
+14
+II
+Hydraulic jump: theory, elements, length and height, types, location and applications
+Slide Deck
+Visualization
+T2, T3
+15
+II
+Measurement of discharge: venturi flume, standing wave flume, Parshall flume, broad crested weir
+Slide Deck
+Video
+T2, R1
+16
+II
+Gradually varied flow: dynamic equation, bottom slopes, surface profiles, profile computation
+Chalk-Blackboard
+Hands-on
+T3, R2
+17
+III
+Impulse-momentum principle; force of a jet on a stationary vertical flat plate
+Slide Deck
+Chalk-Blackboard
+T1, T2
+18
+III
+Force of a jet on a stationary inclined flat plate
+Chalk-Blackboard
+T1, T2
+19
+III
+Force of a jet on stationary curved plates (symmetrical and unsymmetrical)
+Chalk-Blackboard
+T1, T2
+20
+III
+Force of a jet on moving flat plates (vertical and inclined)
+Chalk-Blackboard
+T1, T2
+21
+III
+Force on a moving curved vane; work done and efficiency
+Chalk-Blackboard
+Visualization
+T1, T2
+22
+III
+Numerical on stationary and moving plates
+Chalk-Blackboard
+T1, T2
+23
+III
+Force exerted on a series of flat radial vanes
+Slide Deck
+Chalk-Blackboard
+T1, T2
+24
+III
+Force exerted on a series of curved radial vanes; velocity triangles
+Chalk-Blackboard
+T1, T2
+25
+III
+Numerical on velocity triangles and efficiency
+Chalk-Blackboard
+T1, T2
+26
+III
+Applications to turbine runners; problem-solving session
+Peer Discussion
+T1, T2
+27
+IV
+Introduction to hydraulic machines; classification of turbines; heads and efficiencies
+Slide Deck
+T2
+28
+IV
+Pelton wheel: components, working and velocity triangles
+Slide Deck
+Video
+T2
+29
+IV
+Design features of the Pelton wheel; Numerical
+Chalk-Blackboard
+T2
+30
+IV
+Francis turbine: working, velocity triangles and design features
+Slide Deck
+Video
+T2
+31
+IV
+Kaplan and propeller turbines; draft tube
+Slide Deck
+Video
+T2
+32
+IV
+Specific speed and unit quantities; Numerical
+Chalk-Blackboard
+T2
+33
+IV
+Main, operating and constant-efficiency characteristic curves; cavitation
+Slide Deck
+Visualization
+T2
+34
+IV
+Centrifugal pumps: classification, components and working
+Slide Deck
+Video
+T2
+35
+IV
+Heads, work done and efficiencies of centrifugal pumps; Numerical
+Chalk-Blackboard
+T2
+36
+IV
+Pumps in series and parallel; characteristic curves; NPSH
+Slide Deck
+Chalk-Blackboard
+T2
+37
+IV
+Reciprocating pumps: working, discharge, slip and efficiency
+Slide Deck
+Chalk-Blackboard
+T2
+38
+V
+Introduction to CFD; governing equations of fluid dynamics
+Slide Deck
+T1, R3
+39
+V
+Discretisation and grid generation; mesh quality
+Slide Deck
+Demonstration
+R3
+40
+V
+Initial and boundary conditions; basics of turbulence modelling
+Slide Deck
+R3
+41
+V
+Basics of modelling using OpenFOAM through the SimFlow interface: meshing, interFoam (VOF)
+Demonstration
+R3, W6
+42
+V
+Basics of modelling using ANSYS-Fluent (workflow demonstration); introduction to HEC-RAS 2D
+Demonstration
+Hands-on
+R3, W5
+43
+V
+Modelling of uniform open channel flow: HEC-RAS 2D (3D comparison from the SimFlow demonstration)
+Hands-on
+R3, W5
+44
+V
+Modelling of non-uniform open channel flow (weir / hydraulic jump) in HEC-RAS 2D
+Hands-on
+R3, W5
+45
+V
+Comparison of experimental data with 2D and 3D (CFD) models; Mini-Project Stage III guidance
+Discussion
+R3
+18.  TUTORIAL DETAILS: Not Applicable
+19.  ASSESSMENT DETAILS
+Sl. No.
+Component
+Unit
+CO
+RBT Level
+1
+CIA I:
+Assignment and Quiz – 40% (Google Classroom)
+Participation in class activities – 10%
+Mini-Project Stage I – 50%
+I, II
+CO1, CO2
+L2, L4
+2
+Mid Sem Exam (CIA II)
+I, II, III
+CO1 – CO3
+L2, L4
+3
+CIA III:
+Mini-Project Stage II – 50%
+Hydraulic Machines Assignment (pumps and turbines) – 50%
+II – V
+CO2 – CO5
+L3, L4
+4
+OVERALL CIA:
+Laboratory Conduct and Exam – 50%
+Mini-Project Stage III – 50%
+I – V
+CO1 – CO5
+L2 – L5
+5
+End Semester Exam
+I – V
+CO1 – CO5
+L2, L4
+Sl. No.
+Component
+Exam
+Marks
+CIA I (includes Mini-Project Stage I)
+20
+Mid Sem Exam (CIA II)
+50
+CIA III (Mini-Project Stage II + Hydraulic Machines Assignment)
+20
+1
+Total CIA I – III
+90
+30
+2
+Overall CIA (Laboratory + Mini-Project Stage III)
+100
+35
+3
+Attendance (class and laboratory)
+5
+4
+End Semester Exam
+100
+30
+Total
+100
+Minimum pass requirement: 40% in aggregate, as per the university regulations.
+Mini-Project Assessment – Stages I, II and III (CIA I, CIA III and Overall CIA)
+Sl. No.
+Stage / Part
+Assessed in
+Exam Marks
+Marks
+Evidence
+1
+Mini-Project Stage I
+CIA I
+10
+10
+Problem statement, governing equations, design data and analytical / spreadsheet solution.
+Assessment: Concept Note and Preliminary Calculation
+2
+Mini-Project Stage II
+CIA III
+20
+10
+Laboratory flume, field or HEC-RAS (1D) data for the same problem; analysis and comparison with Stage I (conducted for 20, scaled to 10).
+Assessment: Data Workbook and Progress Report
+3
+Mini-Project Stage III
+Overall CIA
+50
+50
+HEC-RAS 2D model (or 3D OpenFOAM model through SimFlow), validation against Stages I and II, final report, presentation and viva.
+Assessment: Project Report, Presentation and Viva
+Total
+80
+70
+Hydraulic Machines Assignment (CIA III) – 10 Marks
+Individual assignment on Units III and IV, issued in Week 11 and submitted in Week 12. Each student receives a unique data set (site head, discharge, pipe length, static lift, pump curve), so answers cannot be shared. Hand calculations are compulsory; a spreadsheet may be used for curves. Laboratory readings from Exp 11 (centrifugal pump) may be used as the pump curve in Part B.
+Part
+Task
+What is required
+Marks
+CO
+A
+Turbine selection for a small-hydro or canal-drop site
+For the given head and discharge: power available, specific speed, choice of turbine (Pelton / Francis / Kaplan) with justification, main dimensions (jet and wheel diameter, or runner diameter and speed), inlet and outlet velocity triangles, hydraulic efficiency, and a sketch of the expected main characteristic curves.
+5
+CO3, CO4
+B
+Pump selection for a lift-irrigation or apartment water-supply duty
+Static lift and friction losses; system-head curve; operating point on the given pump curve; power and efficiency; effect of two pumps in series or parallel; NPSH check against cavitation; recommendation.
+5
+CO4
+Assignment Rubric – 10 Marks
+Criteria
+Marks
+Excellent
+Good
+Needs Improvement
+Turbine selection and sizing
+3
+Specific speed, choice of turbine and main dimensions are correct and justified.
+Selection correct; sizing has minor errors.
+Wrong turbine type or major errors.
+Velocity triangles and efficiency
+2
+Triangles drawn to scale with correct work done and efficiency.
+Triangles drawn; minor errors.
+Missing or incorrect.
+System curve and operating point
+3
+System curve, operating point, power and efficiency correct and plotted.
+Method correct; minor errors.
+Operating point missing or wrong.
+Series / parallel operation and NPSH
+1
+Both checks done and interpreted.
+One check done.
+Not attempted.
+Presentation and AI-use log
+1
+Neat, referenced work; AI use disclosed and verified.
+Presentation adequate; log partial.
+Untidy or AI use undisclosed.
+Total
+10
+20.  LAB ASSESSMENT DETAILS (OVERALL CIA – conducted for 100, scaled to 35):
+Sl. No.
+Component
+Marks
+Experiments
+CO
+RBT Level
+1
+Observation & Record
+15
+1 to 12
+CO2 – CO5
+L3
+2
+Mid-Semester Lab Exam
+30
+1 to 12
+CO2 – CO5
+L4, L5
+3
+Viva-voce
+5
+1 to 12
+CO1 – CO5
+L1, L2
+4
+Mini-Project Stage III
+50
+9, 10 (modelling)
+CO2, CO5
+L5
+Total
+100
+21.  MINI-PROJECT TOPICS
+Each group (3–4 students) takes one open-channel problem through three stages. Stage I (CIA I) solves it analytically; Stage II (CIA III) obtains laboratory, field or HEC-RAS data for the same problem; Stage III (Overall CIA) models it in HEC-RAS 2D (groups wanting a 3D model may use OpenFOAM through the SimFlow interface) and validates the model against Stages I and II, linking Units II and V with laboratory experiments 3, 4, 9 and 10.
+Sl. No.
+Project Topic
+Focus
+Stage I (CIA I)
+Stage II (CIA III)
+Stage III (Overall CIA)
+1
+Uniform flow in a rectangular laboratory flume
+Manning's equation; normal depth
+Compute normal depth and Manning's n for a design discharge and bed slope.
+Measure depth at three discharges in the flume; back-calculate n.
+HEC-RAS 2D model of the flume; validate depth and mean velocity; report % error.
+2
+Most economical trapezoidal section for an irrigation canal
+Economical section; uniform flow
+Derive the economical section for a given discharge and slope; compare with a rectangular section.
+Build a HEC-RAS model of the canal reach for both sections.
+2D velocity distribution for both sections (3D in SimFlow optional); compare with Stages I and II.
+3
+Hydraulic jump in a rectangular channel
+Sequent depth; energy loss
+Compute sequent depth, jump length and energy loss for three Froude numbers.
+Create a jump in the flume below a sluice gate; measure y1, y2 and jump length.
+HEC-RAS 2D (full momentum) model of the jump; compare location and sequent depth with Stages I and II.
+4
+Flow over a broad-crested weir
+Critical depth; discharge measurement
+Derive the theoretical head-discharge relation.
+Use Exp 4 readings to obtain Cd and the rating curve.
+HEC-RAS 2D model with a weir structure; compare water surface and Cd with laboratory values.
+5
+Flow over an ogee spillway crest
+Head-discharge; non-uniform flow
+Set up the crest geometry and theoretical head-discharge relation.
+Use Exp 3 readings to obtain Cd against head.
+HEC-RAS 2D head-discharge for the spillway; 3D crest pressures in SimFlow (optional).
+6
+Venturi / Parshall flume as a critical-depth meter
+Channel transition; critical flow
+Compute discharge from upstream head; check free-flow conditions.
+Measure heads and discharge in the flume or venturi set-up.
+HEC-RAS 2D model of the flume; compare computed, measured and simulated discharge.
+7
+Backwater (M1) profile behind a weir
+Gradually varied flow
+Compute the M1 profile by the direct step method.
+Measure the water-surface profile upstream of a weir in the flume.
+HEC-RAS 1D and 2D models of the reach; compare backwater length and depths.
+8
+Drawdown (M2) profile at a free overfall
+Gradually varied flow; critical depth
+Compute the M2 profile and brink depth.
+Measure brink depth and the upstream profile in the flume.
+HEC-RAS 2D model of the overfall; compare brink depth and profile.
+9
+Flow over a hump and through a width contraction
+Specific energy; choking
+Compute water-surface change and the choking condition.
+Test a hump or contraction in the flume for two discharges.
+HEC-RAS 2D model of sub-critical and choked cases; compare with Stages I and II.
+10
+Estimation of Manning's n for different bed roughness
+Roughness coefficient
+Review n values and expected depths for smooth and rough beds.
+Flume tests with two bed roughnesses; back-calculate n.
+Calibrate Manning's n in HEC-RAS 2D; compare simulated and measured depths.
+11
+Flow in a compound channel (main channel + floodplain)
+Divided channel method
+Compute discharge capacity for three flow depths.
+Build a HEC-RAS cross-section model of the compound channel.
+HEC-RAS 2D model of the compound section; examine the velocity field at the interface.
+12
+Hydraulic capacity of a road culvert
+Inlet / outlet control
+Compute capacity under inlet and outlet control.
+HEC-RAS culvert model; headwater-discharge curve.
+HEC-RAS 2D model with the culvert; compare headwater depth with Stages I and II.
+13
+Capacity of an urban stormwater drain in Bengaluru
+Manning's equation; GVF
+Compute bankfull capacity from an assumed or surveyed section.
+Field survey of section, slope and float velocity.
+HEC-RAS 2D model of the design flow; identify overtopping reaches.
+14
+Flow around a bridge pier
+Afflux; boundary layer separation
+Estimate afflux for two discharges.
+Flume test with a pier model; measure afflux.
+HEC-RAS 2D flow field around the pier (3D in SimFlow optional); compare afflux.
+15
+Flow under a sluice gate
+Specific energy; vena contracta
+Compute discharge and contracted depth.
+Measure upstream head, gate opening and contracted depth in the flume.
+HEC-RAS 2D model with the gate; compare Cc and Cd with Stages I and II.
+Mini-Project Stage I Rubric (CIA I) – 10 Marks
+Criteria
+Marks
+Excellent
+Good
+Needs Improvement
+Problem statement and objectives
+2
+Problem clearly defined and linked to Unit II; objectives specific.
+Relevant but objectives need sharpening.
+Vague or weakly linked to Unit II.
+Theory and governing equations
+2
+Correct equations (Manning, specific energy, momentum, GVF) with stated assumptions.
+Basic theory correct but incomplete.
+Theory copied, unclear or wrong.
+Data, variables and assumptions
+2
+Geometry, discharge, slope and roughness listed with units and sources.
+Mostly complete; minor gaps.
+Incomplete or unjustified.
+Analytical / spreadsheet computation
+2
+Calculations correct, checked and presented as tables or plots.
+Minor errors.
+Missing, copied or incorrect.
+Work plan and AI-use log
+2
+Clear plan for Stages II and III; AI prompt, output, verification and correction documented.
+Plan broadly feasible; AI verification partial.
+Plan unclear, or AI use undisclosed.
+Total
+10
+Mini-Project Stage II Rubric (CIA III) – 20 Marks, scaled to 10
+Criteria
+Marks
+Excellent
+Good
+Needs Improvement
+Measurement or model set-up
+5
+Flume, field or HEC-RAS set-up clearly described with sketch and procedure.
+Set-up described but incomplete.
+Set-up unclear or missing.
+Data quality and uncertainty
+4
+Readings repeated, units consistent, sources of error identified.
+Data adequate; error discussion limited.
+Data unreliable or incomplete.
+Analysis of data
+5
+Correct processing (Cd, n, profiles, rating) with tables and graphs.
+Analysis mostly correct; minor errors.
+Analysis incorrect or missing.
+Comparison with Stage I
+4
+Quantitative comparison with % deviation and reasons.
+Comparison only qualitative.
+No comparison.
+Progress report and AI-use log
+2
+Concise progress report; AI use disclosed and verified.
+Report or AI log partial.
+Missing.
+Total
+20
+Mini-Project Stage III Rubric (Overall CIA) – 50 Marks
+Criteria
+Marks
+Excellent
+Good
+Needs Improvement
+Final report structure and completeness
+8
+Title, abstract, objectives, theory, methods, results, validation, discussion, conclusion and references.
+Mostly complete; some sections weak.
+Incomplete or poorly structured.
+Model set-up (geometry, mesh, boundary conditions)
+10
+Domain, 2D/3D mesh, Manning's n and boundary/initial conditions appropriate and justified; mesh sensitivity checked.
+Set-up workable; some choices not justified.
+Set-up incorrect or unexplained.
+Results and visualisation
+8
+Free surface, velocity and pressure fields clearly plotted, labelled and interpreted.
+Results present; interpretation limited.
+Results missing or unclear.
+Validation against Stages I and II
+10
+Three-way comparison (analytical, measured, model) with % error and reasons for deviation.
+Comparison shown but partly qualitative.
+No meaningful validation.
+Engineering interpretation and limitations
+6
+Practical relevance and limits of the model explained.
+Interpretation general.
+No interpretation.
+Presentation and viva
+6
+All members explain the model, assumptions and results.
+Some members unclear.
+Weak presentation or poor understanding.
+AI-use log and correction record
+2
+AI use disclosed, verified and corrected; reasoning is the student's own.
+Disclosed but verification weak.
+Undisclosed or uncorrected.
+Total
+50
+22.  CO-PO MAPPING
+CO
+PO
+PSO
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+1
+2
+3
+CO1
+3
+3
+2
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3
+CO2
+3
+3
+2
+2
+-
+-
+-
+-
+2
+2
+-
+-
+-
+-
+3
+CO3
+3
+3
+-
+2
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3
+CO4
+3
+3
+-
+2
+-
+-
+-
+-
+2
+2
+-
+-
+-
+-
+3
+CO5
+3
+3
+2
+-
+-
+-
+-
+-
+2
+2
+-
+-
+-
+-
+3
+3 – High;  2 – Medium;  1 – Low;  – Not mapped
+23.  COURSE OUTCOME ATTAINMENT TARGET
+CO
+Proficiency Level
+Attainment Level
+Remarks
+CO1
+60%
+65%
+CO2
+60%
+65%
+CO3
+60%
+65%
+CO4
+60%
+65%
+CO5
+60%
+65%
+Dr Shibu K. Mani
+Prepared by (Faculty in-charge)
+Dr. Sujatha Unnikrishnan
+Approved by (HOD)

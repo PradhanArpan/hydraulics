@@ -1,0 +1,1149 @@
+
+
+=====================================================
+PDF: Centrifugal Pump.pdf
+=====================================================
+Total Pages: 23
+
+--- Page 1 ---
+
+
+--- Page 2 ---
+
+
+--- Page 3 ---
+
+
+--- Page 4 ---
+
+
+--- Page 5 ---
+
+
+--- Page 6 ---
+
+
+--- Page 7 ---
+
+
+--- Page 8 ---
+
+
+--- Page 9 ---
+
+
+--- Page 10 ---
+
+
+--- Page 11 ---
+
+
+--- Page 12 ---
+
+
+--- Page 13 ---
+
+
+--- Page 14 ---
+
+
+--- Page 15 ---
+
+
+--- Page 16 ---
+
+
+--- Page 17 ---
+
+
+--- Page 18 ---
+
+
+--- Page 19 ---
+
+
+--- Page 20 ---
+
+
+--- Page 21 ---
+
+
+--- Page 22 ---
+
+
+--- Page 23 ---
+
+
+
+
+=====================================================
+PDF: Turbines.pdf
+=====================================================
+Total Pages: 17
+
+--- Page 1 ---
+
+
+--- Page 2 ---
+
+
+--- Page 3 ---
+
+
+--- Page 4 ---
+
+
+--- Page 5 ---
+
+
+--- Page 6 ---
+
+
+--- Page 7 ---
+
+
+--- Page 8 ---
+
+
+--- Page 9 ---
+
+
+--- Page 10 ---
+
+
+--- Page 11 ---
+
+
+--- Page 12 ---
+
+
+--- Page 13 ---
+
+
+--- Page 14 ---
+
+
+--- Page 15 ---
+
+
+--- Page 16 ---
+
+
+--- Page 17 ---
+
+
+
+
+=====================================================
+PDF: V-1 - Derivatives and Acceleration.pdf
+=====================================================
+Total Pages: 4
+
+--- Page 1 ---
+Date 
+Clevermate 
+Substandl nd lahal Derrvativ 
+Camdex a aln:fertmall omallJlud elorn Unt mory 
+alk Ike flow acugh cuferian pact 
+Theun t vectoalny he 1,y.3 ae fk *tf 
+The Pt velo cty vecfor eld cn he casesta pe. 
+,y73, 
+Cmderrg uasteady ou, 
+Scalas denntyeldJ 
+P-Plrj5,) 
+A Tnet 
+aplz,Jryor'- 
+AP 2atex Tuine 3 
+Expandiug ku Jncteen_cn laylos Sesuesabaut past 1 
+prp).)A ))6) 
+t Hihes Oxder 
+Pirdeng (-L) nd gncxiy Hher Crelez 
+Denat i a pkupsically e avenage tme te dchange 
+ke uid element as tmevEA bom
+
+--- Page 2 ---
+Date M 
+Page 
+Clevermate 
+D 
+in ke stantanesus ine aale cha, 
+D Jenoat 
+Th caled as Suhotantiay Dere vati ve. 
+Tme e ale Aarge flenetyJlud 
+a it mves lhiogh pacte 
+latia! Desvahve. 
+Tune ate jehangt e alensnb 
+aa tud 
+D u t Vef t adt 
+DE 
+Substaatia! Desivzhve_cn _leian co-ox lvafe,_
+D 
+V Vecher Cpesator= r titkd 
+Vectax arm
+
+--- Page 3 ---
+pa 
+Clevermate 
+Accelertcn Acceleratcon can be deJened a He ae horg 
+veloaty cnkeped lo ne 
+Veloety, 
+, V, Cmponenl efvele culy cn 1, ,3- itcI-ar 
+ta,k 
+a 
+ay 
+Lm d 
+Ats0 t 
+Semilaaly .py t v ¢y t + 
+VV) 
+D 
+Lecal Acceleratear 
+V.(v. Canve ch ve Aeceleralein.
+
+--- Page 4 ---
+Date 
+Page 
+Clevermata 
+Accelerata 
+Cnveetzyt 
+Aecela ton 
+u t ou t wds 
+elala 
+y t Loca Loca 
+Accelea 
+ConN.
+
+
+
+=====================================================
+PDF: V-2 - Conservation Laws.pdf
+=====================================================
+Total Pages: 13
+
+--- Page 1 ---
+
+
+--- Page 2 ---
+
+
+--- Page 3 ---
+
+
+--- Page 4 ---
+
+
+--- Page 5 ---
+
+
+--- Page 6 ---
+
+
+--- Page 7 ---
+
+
+--- Page 8 ---
+
+
+--- Page 9 ---
+
+
+--- Page 10 ---
+
+
+--- Page 11 ---
+
+
+--- Page 12 ---
+
+
+--- Page 13 ---
+
+
+
+
+=====================================================
+PDF: CFD Material.pdf
+=====================================================
+Total Pages: 24
+
+--- Page 1 ---
+HYDRAULIC ENGINEERING
+CE431P (2024-2025)
+Lecture Notes
+Dr. Arpan Pradhan
+
+--- Page 2 ---
+Copyright © 2025 Dr Arpan Pradhan
+DEPARTMENT OF CIVIL ENGINEERING ,
+SCHOOL OF ENGINEERING AND TECHNOLOGY
+CHRIST (D EEMED TO BE UNIVERSITY )
+HTTPS :// CHRISTUNIVERSITY .IN/
+First release, March 2025
+
+--- Page 3 ---
+Contents
+1 Computational Fluid Dynamics . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.1 Introduction to Computational Fluid Dynamics 5
+1.1.1 Definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.1.2 Scope of CFD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.1.3 Importance of CFD in Fluid Flow Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.1.4 Comparison with Experimental and Analytical Methods . . . . . . . . . . . . . . . 6
+1.1.5 Fundamental Concepts in CFD Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+1.2 Simplified forms of the Navier-Stokes equations 9
+1.2.1 Euler Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.2.2 Reynolds-Averaged Navier-Stokes (RANS) Equations . . . . . . . . . . . . . . . . . . 9
+1.2.3 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+1.3 Numerical Methods for CFD 11
+1.3.1 Finite Difference Method (FDM) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.3.2 Finite Volume Method (FVM) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.3.3 Finite Element Method (FEM) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.4 Turbulence Modeling in Fluid Dynamics 13
+1.4.1 Nature of Turbulence: Unsteady, Chaotic Motion . . . . . . . . . . . . . . . . . . . . 13
+1.4.2 Importance of Turbulence Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+1.4.3 Reynolds-Averaged Navier-Stokes (RANS) Models . . . . . . . . . . . . . . . . . . . . 14
+1.4.4 Large Eddy Simulation (LES) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.4.5 Detached Eddy Simulation (DES) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.4.6 Comparison of Different Turbulence Models . . . . . . . . . . . . . . . . . . . . . . . . 15
+1.4.7 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+--- Page 4 ---
+4
+1.5 Comparison of Grids in CFD Simulations 16
+1.5.1 Structured Grid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+1.5.2 Unstructured Grid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+1.5.3 Hybrid Grid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+1.5.4 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+1.6 Experimental Validation and Calibration in CFD 18
+1.6.1 Importance of Experimental Data in CFD . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+1.6.2 Need for Validation Using Experimental Results . . . . . . . . . . . . . . . . . . . . . . 18
+1.6.3 Sources of Experimental Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+1.7 Basics of Modeling Using HEC-RAS 20
+1.7.1 Introduction to HEC-RAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+1.7.2 Key Features of HEC-RAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+1.7.3 Steps in HEC-RAS Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+1.7.4 Model Calibration and Validation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+1.7.5 Applications of HEC-RAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+1.7.6 Future Trends in HEC-RAS Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+1.8 Uniform and Non-Uniform Flow in Open Channel Simulations 23
+1.8.1 Uniform Flow: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+1.8.2 Non-Uniform Flow: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+1.8.3 Using HEC-RAS for Uniform and Non-Uniform Flow Simulation . . . . . . . . . . 23
+1.8.4 Example: Simulating Uniform and Non-Uniform Flow in HEC-RAS . . . . . . . 23
+
+--- Page 5 ---
+1. Computational Fluid Dynamics
+“Nothing is softer or more flexible than water, yet nothing can resist it. ”
+- Lao Tzu
+1.1 Introduction to Computational Fluid Dynamics
+1.1.1 Definition
+Computational Fluid Dynamics (CFD) is a field of fluid mechanics that utilizes numerical
+methods and algorithms to analyze fluid flow problems. It involves solving the fundamental
+governing equations of fluid motion, including the Navier-Stokes equations, continuity
+equations, and energy equations, using computational techniques. CFD is widely used
+across various industries, including aerospace, automotive, civil engineering, and biomedical
+applications. Computational Fluid Dynamics (CFD) is a specialized discipline within
+fluid mechanics that employs numerical methods and algorithms to solve and analyze
+problems involving fluid flows. It enables engineers and scientists to simulate complex fluid
+dynamics phenomena within a computational framework, reducing reliance on costly and
+time consuming experimentation.
+CFD integrates fundamental physics, mathematics, and computational sciences to
+provide detailed insights into fluid behavior. The governing equations of CFD, primarily
+the Navier-Stokes equations, describe the conservation of mass, momentum, and energy in
+a fluid flow system. These equations are solved using advanced numerical techniques and
+computational power.
+1.1.2 Scope of CFD
+CFD has extensive applications across multiple engineering and scientific fields, including:
+
+--- Page 6 ---
+6 Chapter 1. Computational Fluid Dynamics
+➡ Aerospace Engineering:
+Aerodynamic analysis of aircraft, jet propulsion modeling, and turbulence studies.
+➡ Automotive Industry:
+Vehicle aerodynamics optimization, internal combustion engine simulations, and
+cooling system design.
+➡ Civil and Environmental Engineering:
+River hydraulics modeling, flood forecasting, and pollutant dispersion analysis.
+➡ Biomedical Engineering:
+Blood flow modeling in arteries, prosthetic device optimization, and respiratory
+airflow studies.
+➡ Marine Engineering:
+Ship hull design, offshore structure analysis, and underwater vehicle simulations.
+➡ Energy Sector:
+Wind turbine performance analysis, heat exchanger optimization, and nuclear reactor
+thermal management.
+1.1.3 Importance of CFD in Fluid Flow Analysis
+CFD provides detailed insight into fluid behavior without the need for expensive and
+time-consuming physical experiments. It helps engineers optimize designs, evaluate system
+performance, and predict operational challenges.
+➡ Optimization of Designs:
+Enhances the performance of engineering systems such as aircraft wings, turbines,
+and heat exchangers.
+➡ Performance Evaluation:
+Assesses the behavior of hydraulic structures, industrial cooling systems, and HV AC
+systems.
+➡ Safety Analysis:
+Helps predict fire and smoke movement in buildings, crucial for emergency planning.
+➡ Environmental Impact Studies:
+Models pollutant transport in air and water bodies to assess ecological impacts.
+➡ Medical Advancements:
+Assists in the design of medical implants, drug delivery systems, and fluid-based
+diagnostics.
+1.1.4 Comparison with Experimental and Analytical Methods
+CFD serves as a complementary tool to traditional experimental and analytical methods.
+Below is a comparative analysis:
+
+--- Page 7 ---
+1.1 Introduction to Computational Fluid Dynamics 7
+Table 1.1: Comparison of CFD, Experimental, and Analytical Methods
+Aspect CFD Experimental
+Methods
+Analytical Methods
+Cost Lower after setup High due to
+laboratory expenses
+Moderate
+Time Shorter simulation
+time
+Time-intensive setup
+and data collection
+Case-dependent
+Data Coverage Provides full-field
+data
+Limited to
+measurement
+locations
+Restricted by
+assumptions
+Flexibility High, adaptable to
+different conditions
+Difficult due to
+physical constraints
+Limited to solvable
+equations
+Accuracy Dependent on
+models and
+discretization
+High but subject
+to instrumentation
+errors
+Limited by
+theoretical
+assumptions
+1.1.5 Fundamental Concepts in CFD Modeling
+➡ Governing Equations of Fluid Flow
+➡ Numerical Methods for CFD
+➡ Turbulence Modeling in CFD
+➡ Mesh Generation in CFD
+Governing Equations of Fluid Flow
+CFD simulations rely on fundamental fluid mechanics equations:
+➡ Continuity Equation:
+Represents mass conservation.
+➡ Navier-Stokes Equations:
+Governs fluid motion considering inertia, pressure, viscosity, and external forces.
+➡ Energy Equation:
+Accounts for heat transfer and temperature changes within the fluid.
+Numerical Methods for CFD
+Numerical discretization is essential for solving CFD problems:
+➡ Finite Difference Method (FDM):
+Uses numerical differentiation to approximate derivatives.
+➡ Finite Volume Method (FVM):
+Solves integral forms of governing equations.
+➡ Finite Element Method (FEM):
+Employs variational principles for complex geometries.
+
+--- Page 8 ---
+8 Chapter 1. Computational Fluid Dynamics
+Turbulence Modeling in CFD
+Turbulence plays a critical role in fluid flow simulations, necessitating specialized models:
+➡ Direct Numerical Simulation (DNS):
+Resolves all turbulence scales (computationally intensive).
+➡ Large Eddy Simulation (LES):
+Captures large turbulent structures while modeling smaller ones.
+➡ Reynolds-Averaged Navier-Stokes (RANS):
+Uses statistical averaging for engineering applications.
+Mesh Generation in CFD
+Mesh quality significantly impacts simulation accuracy:
+➡ Structured Mesh:
+Regular grid with high precision but less flexibility.
+➡ Unstructured Mesh:
+Adaptable to complex geometries but computationally expensive.
+➡ Hybrid Mesh:
+Balances accuracy and efficiency for intricate domains.
+
+--- Page 9 ---
+1.2 Simplified forms of the Navier-Stokes equations 9
+1.2 Simplified forms of the Navier-Stokes equations
+The Navier-Stokes (NS) equations describe the motion of fluid flow, governing conservation
+of mass, momentum, and energy. However, their full form is highly complex and often
+requires simplifications for practical Computational Fluid Dynamics (CFD) simulations.
+Two common simplified forms are the Euler equations and the Reynolds-Averaged Navier-Stokes
+(RANS) equations.
+1.2.1 Euler Equations
+Assumptions
+➡ Inviscid flow: Neglects viscosity (µ = 0), meaning no shear stresses.
+➡ Irrotational flow: Assumes no vorticity (though not always required).
+➡ No turbulence modeling: Does not account for small-scale fluctuations.
+Derivation
+Starting from the Navier-Stokes equations, the momentum equation is:
+∂u
+∂t + (u · ∇)u = − 1
+ρ ∇p + ν∇2u + g (1.1)
+Setting viscosity ν = 0 (inviscid assumption) removes the viscous term (ν∇2u), leading
+to:
+∂u
+∂t + (u · ∇)u = − 1
+ρ ∇p + g (1.2)
+Additionally, the continuity equation remains:
+∂ ρ
+∂t + ∇ · (ρu) =0 (1.3)
+Application in CFD
+➡ Used for high-speed aerodynamics and compressible flows where viscous effects are
+negligible.
+➡ Often applied in external flows, such as supersonic/hypersonic aircraft design.
+➡ Less accurate for boundary layers and turbulent regions due to the neglect of viscosity.
+1.2.2 Reynolds-Averaged Navier-Stokes (RANS) Equations
+Assumptions
+➡ Turbulent flow decomposition: Velocity is decomposed into mean and fluctuating
+components:
+u = u + u′ (1.4)
+where u is the time-averaged velocity and u′ is the fluctuating part.
+
+--- Page 10 ---
+10 Chapter 1. Computational Fluid Dynamics
+➡ Reynolds averaging: Time-averaging removes small turbulent fluctuations.
+➡ Closure models required: Since turbulence introduces unknowns, additional models
+(like k-ε or k-ω) are needed.
+Derivation
+Reynolds averaging the Navier-Stokes momentum equation gives:
+∂u
+∂t + (u · ∇)u = − 1
+ρ ∇p + ν∇2u − ∇ · u′u′ (1.5)
+where the term −∇ · u′u′ represents the Reynolds stress tensor, which must be modeled
+using turbulence models.
+Application in CFD
+➡ Widely used in engineering applications like aircraft design, HV AC systems, and
+environmental flows.
+➡ Provides an efficient way to model turbulent flows without resolving every small
+fluctuation (as in Direct Numerical Simulation, DNS).
+➡ Used in steady-state and unsteady CFD simulations, but requires careful selection of
+turbulence models (e.g., k-ε, k-ω).
+1.2.3 Conclusion
+➡ Euler equations are useful for high-speed, inviscid flows but cannot capture turbulence
+or boundary layer effects.
+➡ RANS equations simplify turbulent flows using averaging, making them ideal for
+industrial and engineering applications.
+➡ The choice depends on the problem: Euler for inviscid high-speed flow, RANS for
+practical turbulent flow modeling.
+
+--- Page 11 ---
+1.3 Numerical Methods for CFD 11
+1.3 Numerical Methods for CFD
+Numerical discretization is fundamental in Computational Fluid Dynamics (CFD) as it
+enables the transformation of governing differential equations into algebraic equations that
+can be solved using computational methods. Several numerical techniques exist, each with
+distinct advantages and applications. The most commonly used methods in CFD include:
+1.3.1 Finite Difference Method (FDM)
+The Finite Difference Method (FDM) is based on approximating the derivatives of the
+governing partial differential equations (PDEs) using numerical differentiation. The domain
+is discretized into a structured grid, and derivatives are estimated using difference equations
+such as forward, backward, or central differences.
+Advantages:
+1. Simple to implement, especially for structured grids.
+2. Computationally efficient for problems with regular geometries.
+Disadvantages:
+1. Less flexible for complex geometries. Accuracy depends on the choice of grid spacing
+and numerical scheme (explicit vs. implicit).
+2. FDM is widely used in problems involving Cartesian grids and for solving problems
+such as boundary layer flows and turbulence modeling.
+1.3.2 Finite Volume Method (FVM)
+The Finite V olume Method (FVM) discretizes the governing equations in their integral form,
+ensuring conservation of mass, momentum, and energy over control volumes. The domain
+is divided into small control volumes (cells), and fluxes across the cell faces are evaluated
+using interpolation and numerical integration techniques.
+Advantages:
+1. Strict conservation properties, making it suitable for fluid flow problems.
+2. Flexibility in handling unstructured grids and complex geometries.
+Disadvantages:
+1. More computationally intensive compared to FDM.
+2. Requires careful selection of interpolation and flux reconstruction schemes.
+3. FVM is extensively used in commercial CFD solvers such as ANSYS Fluent and
+OpenFOAM due to its robustness in solving Navier-Stokes equations.
+1.3.3 Finite Element Method (FEM)
+The Finite Element Method (FEM) employs variational principles and weighted residual
+methods to approximate solutions. It is particularly useful for solving problems involving
+complex geometries and irregular boundaries. The computational domain is divided into
+
+--- Page 12 ---
+12 Chapter 1. Computational Fluid Dynamics
+elements, and shape functions (basis functions) are used to approximate the solution within
+each element.
+Advantages:
+1. Excellent for handling complex geometries.
+2. Can accommodate higher-order accuracy through polynomial basis functions.
+Disadvantages:
+1. Computationally expensive due to matrix assembly and inversion.
+2. More complex implementation compared to FDM and FVM.
+FEM is commonly used in structural mechanics and multiphysics simulations but is also
+applied in CFD, particularly for problems involving porous media and fluid-structure
+interactions.
+Each of these methods has its strengths and limitations, and the choice of method
+depends on the specific nature of the CFD problem, the desired accuracy, and computational
+efficiency.
+
+--- Page 13 ---
+1.4 Turbulence Modeling in Fluid Dynamics 13
+1.4 Turbulence Modeling in Fluid Dynamics
+Turbulence is a complex, chaotic state of fluid motion characterized by vortices, eddies,
+and fluctuating velocity fields. It occurs in most real-world flows, including air around an
+aircraft, water in rivers, and wind in urban environments.
+Solving the Navier-Stokes equations directly for turbulent flows requires resolving all
+scales of motion, which is computationally infeasible for most practical problems. This is
+why turbulence modeling is necessary—to approximate turbulent effects while keeping
+computations manageable.
+1.4.1 Nature of Turbulence: Unsteady, Chaotic Motion
+Turbulence is a complex phenomenon in fluid dynamics characterized by irregular, three-dimensional
+vortices and rapid variations in velocity and pressure. It occurs when the inertial forces in a
+fluid flow dominate over viscous forces, leading to an unpredictable and chaotic motion of
+fluid particles.
+Turbulence commonly occurs in high Reynolds number flows, where:
+➡ There is a significant difference in velocity between fluid layers.
+➡ Flow interactions create swirling eddies of different scales.
+➡ Energy cascades from large vortices to smaller ones until it dissipates as heat.
+Examples of turbulence in real-world applications include:
+➡ Airflow over an aircraft wing:
+The boundary layer transitions from laminar to turbulent, affecting lift and drag forces.
+➡ River flows:
+Rapid and turbulent currents occur around obstacles like boulders, bridge piers, and
+bends.
+➡ Combustion in engines:
+Turbulent mixing of fuel and air enhances combustion efficiency.
+➡ Atmospheric turbulence:
+Wind patterns create turbulence in weather systems, affecting cloud formation and
+dispersion of pollutants.
+➡ Turbulent mixing in oceans:
+Plays a crucial role in nutrient distribution and energy transfer.
+1.4.2 Importance of Turbulence Modeling
+Turbulence modeling is essential for accurate simulations in engineering and environmental
+studies due to the following reasons:
+➡ Predicting Flow Behavior:
+Understanding how turbulence affects velocity profiles, pressure distribution, and
+shear stresses is critical for design and performance evaluation.
+➡ Enhancing Simulation Accuracy:
+Direct Numerical Simulation (DNS) of turbulence is computationally expensive,
+making turbulence models necessary for practical applications.
+
+--- Page 14 ---
+14 Chapter 1. Computational Fluid Dynamics
+➡ Designing Efficient Systems:
+Engineering applications, such as aircraft aerodynamics, hydraulic structures, and
+HV AC systems, require turbulence modeling to optimize performance.
+➡ Safety and Reliability:
+Accurate turbulence prediction helps mitigate risks associated with extreme weather
+conditions, fluid-structure interactions, and industrial processes.
+Turbulence modeling remains a fundamental aspect of computational fluid dynamics (CFD),
+enabling engineers and scientists to analyze and optimize fluid flow behavior in complex
+environments.
+1.4.3 Reynolds-Averaged Navier-Stokes (RANS) Models
+k-ε Model
+➡ Solves two transport equations (turbulent kinetic energy k and dissipation rate ε).
+➡ Pros: Robust, widely used for industrial flows.
+➡ Cons: Struggles with flow separation and near-wall accuracy.
+➡ Application: HV AC, pipelines, hydrodynamics, civil structures.
+k-ω Model
+➡ Uses ω (specific dissipation rate) instead of ε.
+➡ Pros: Better for boundary layers and low-Re flows.
+➡ Cons: More sensitive to freestream turbulence conditions.
+➡ Application: Aerospace, marine hydrodynamics, wind tunnels.
+Shear Stress Transport (SST) Model
+➡ Hybrid of k-ε and k-ω uses k-ω near walls and k-ε in free-stream regions.
+➡ Pros: Improved accuracy for separation and adverse pressure gradients.
+➡ Cons: More computationally expensive than standard RANS.
+➡ Application: Airfoil aerodynamics, ship hulls, turbomachinery.
+1.4.4 Large Eddy Simulation (LES)
+➡ Resolves large turbulence structures while modeling small-scale effects using a
+sub-grid scale (SGS) model.
+➡ Pros: Captures unsteady turbulence more accurately than RANS.
+➡ Cons: Requires fine meshes and high computational power.
+➡ Application: Jet engines, combustion modeling, meteorology, aerospace.
+1.4.5 Detached Eddy Simulation (DES)
+➡ Combines LES for large turbulent structures and RANS near walls.
+➡ Pros: Reduces computational cost compared to full LES.
+➡ Cons: Less accurate than pure LES for some flows.
+➡ Application: Car aerodynamics, high-Re flows, bluff body flows.
+
+--- Page 15 ---
+1.4 Turbulence Modeling in Fluid Dynamics 15
+1.4.6 Comparison of Different Turbulence Models
+Table 1.2: Comparison of Turbulence Models
+Model Description Applicability Computational Cost
+Direct Numerical
+Simulation (DNS)
+Solves all turbulence scales
+directly.
+Only for fundamental
+research (Re<1000).
+Extremely high (prohibitive
+for practical use).
+Large Eddy
+Simulation (LES)
+Resolves large turbulence
+scales, models small ones.
+High-Re flows,
+external aerodynamics,
+combustion.
+High (but lower than DNS).
+Reynolds-Averaged
+Navier-Stokes
+(RANS)
+Models all turbulence effects
+using statistical averaging.
+Engineering
+applications (pipes,
+aircraft, HV AC).
+Low (widely used in
+industry).
+Detached Eddy
+Simulation (DES)
+Hybrid LES-RANS approach;
+LES in unsteady regions,
+RANS elsewhere.
+Aeroacoustics,
+external flows, car
+aerodynamics.
+Moderate (less expensive than
+LES).
+1.4.7 Conclusion
+➡ For industrial flows (pipes, buildings, cars)  Use RANS models (k-ε, SST).
+➡ For high-fidelity aerodynamics or turbulence studies  Use LES or DES.
+➡ For fundamental research in turbulence  Use DNS (only feasible for low Reynolds
+numbers).
+The choice of turbulence model depends on the trade-off between accuracy and computational
+efficiency.
+
+--- Page 16 ---
+16 Chapter 1. Computational Fluid Dynamics
+1.5 Comparison of Grids in CFD Simulations
+In Computational Fluid Dynamics (CFD), grid generation is crucial for accurate simulations.
+While OpenFOAM primarily uses structured, unstructured, and hybrid grids for CFD
+applications, HEC-RAS also employs different grid types for hydraulic modeling, particularly
+in its 2D and unsteady flow simulations.
+1.5.1 Structured Grid
+Description:
+Consists of regular, evenly spaced grids (typically quadrilateral or hexahedral cells).
+Advantages:
+➡ More accurate and computationally efficient due to alignment with flow direction.
+➡ Requires less memory and processing power.
+➡ Easier to apply numerical schemes with reduced numerical diffusion.
+Disadvantages:
+➡ Difficult to use for complex geometries like river meanders or floodplains.
+➡ Requires significant pre-processing to fit irregular boundaries.
+Use in HEC-RAS:
+➡ Typically not used for 1D simulations.
+➡ 2D flow areas in HEC-RAS can have structured grids, though it is less common.
+1.5.2 Unstructured Grid
+Description:
+Composed of irregularly shaped elements (triangular or tetrahedral in 2D/3D).
+Advantages:
+➡ Suitable for complex geometries, such as rivers with varying cross-sections and
+floodplain expansions.
+➡ Can adapt to changes in resolution, refining the grid where necessary.
+Disadvantages:
+➡ Higher computational cost due to irregular connectivity of nodes.
+➡ Can introduce numerical diffusion if not properly refined.
+Use in HEC-RAS:
+➡ Used extensively in 2D modeling, allowing flexible meshing of rivers, floodplains,
+and structures.
+➡ Adaptive refinement helps in areas with rapid changes in flow characteristics.
+
+--- Page 17 ---
+1.5 Comparison of Grids in CFD Simulations 17
+1.5.3 Hybrid Grid
+Description:
+A combination of structured and unstructured grids, using structured grids in simple regions
+and unstructured grids in complex areas.
+Advantages:
+➡ Balances accuracy and computational efficiency.
+➡ Allows structured grids in uniform regions and unstructured grids where high resolution
+is needed.
+Disadvantages:
+➡ More complex to generate and manage.
+➡ Requires specialized meshing tools to ensure smooth transitions.
+Use in HEC-RAS:
+➡ Often used when integrating 1D river models with 2D floodplain models.
+➡ Helps improve accuracy in floodplain regions while keeping computational costs
+manageable.
+1.5.4 Conclusion
+In HEC-RAS, unstructured grids are most commonly used for 2D modeling due to their
+flexibility in handling complex terrains. However, structured grids can be beneficial for
+efficiency in regular channel sections. Hybrid grids are valuable when combining river and
+floodplain models to optimize accuracy and performance.
+
+--- Page 18 ---
+18 Chapter 1. Computational Fluid Dynamics
+1.6 Experimental Validation and Calibration in CFD
+Computational Fluid Dynamics (CFD) simulations provide a numerical approach to solving
+fluid flow problems, but their reliability depends on proper validation and calibration.
+Experimental validation ensures that the numerical model accurately represents real-world
+physics, while calibration fine-tunes the model parameters for improved accuracy. Without
+experimental validation, CFD predictions may be uncertain and lack credibility in engineering
+applications.
+1.6.1 Importance of Experimental Data in CFD
+Experimental data plays a crucial role in CFD simulations by providing a benchmark against
+which numerical results can be compared. This validation process helps ensure that the
+numerical methods, boundary conditions, and turbulence models accurately capture the
+physics of fluid flow.
+1. Need for validation using experimental results.
+2. Sources of experimental data (lab-scale and field-scale measurements).
+1.6.2 Need for Validation Using Experimental Results
+Validation is essential for:
+➡ Assessing Accuracy:
+Comparing simulation results with experimental data helps quantify numerical errors
+and deviations.
+➡ Ensuring Model Reliability:
+Establishing confidence in the CFD model before it is used for design, optimization,
+or decision-making.
+➡ Identifying Limitations:
+Highlighting areas where improvements in grid resolution, turbulence modeling, or
+boundary conditions are required.
+➡ Regulatory Compliance:
+Many industries, such as aerospace, automotive, and environmental engineering,
+require CFD results to be validated against experimental findings before approval.
+In cases where significant discrepancies exist between CFD and experiments, model
+calibration is performed by adjusting parameters such as turbulence closure coefficients,
+wall roughness, or boundary conditions.
+1.6.3 Sources of Experimental Data
+Experimental data for CFD validation can be obtained from controlled laboratory-scale
+experiments or large-scale field measurements. Each source has its advantages and challenges.
+➡ A. Lab-Scale Measurements
+Laboratory experiments are conducted under controlled conditions, allowing for
+high-precision data collection. Common setups include:
+
+--- Page 19 ---
+1.6 Experimental Validation and Calibration in CFD 19
+1. Wind Tunnels:
+Used in aerospace and automotive applications to measure aerodynamics and
+turbulence characteristics.
+2. Water Flumes & Hydraulic Channels:
+Used for analyzing flow behavior over structures, sediment transport, and
+hydrodynamics.
+3. Particle Image Velocimetry (PIV):
+A non-intrusive technique that provides detailed velocity field measurements in
+a flow.
+4. Laser Doppler Anemometry (LDA):
+Used for pointwise velocity measurements with high accuracy.
+Advantages:
+1. High accuracy and repeatability.
+2. Controlled boundary conditions enable systematic studies.
+Challenges:
+1. Scaling effects may cause differences between lab conditions and real-world
+scenarios.
+2. Limited capability for replicating large-scale or highly complex systems.
+➡ B. Field-Scale Measurements
+Field experiments provide real-world data under natural conditions, making them
+highly valuable for validation. Common sources include:
+1. Environmental Monitoring:
+Air and water quality measurements, pollutant dispersion studies, and meteorological
+observations.
+2. Full-Scale Wind Tunnel or Open-Field Tests:
+Used in the assessment of building aerodynamics, wind energy studies, and
+urban air quality modeling.
+3. Flow Measurements in Rivers and Coastal Areas:
+Acoustic Doppler Current Profilers (ADCP) and remote sensing techniques help
+capture large-scale flow patterns.
+Advantages:
+1. Realistic representation of operational conditions.
+2. Suitable for complex and large-scale applications where lab replication is not
+feasible.
+Challenges:
+1. Difficult to control environmental variables (temperature, pressure, humidity,
+etc.).
+2. Expensive and time-consuming compared to lab-scale experiments.
+Both lab-scale and field-scale measurements contribute significantly to improving CFD
+simulations.
+
+--- Page 20 ---
+20 Chapter 1. Computational Fluid Dynamics
+1.7 Basics of Modeling Using HEC-RAS
+1.7.1 Introduction to HEC-RAS
+HEC-RAS (Hydrologic Engineering Center’s River Analysis System) is a powerful hydraulic
+modeling software developed by the U.S. Army Corps of Engineers. It is widely used
+for simulating open channel flow, floodplain mapping, and hydraulic structure analysis.
+HEC-RAS enables engineers and hydrologists to analyze steady and unsteady flow conditions,
+perform sediment transport simulations, and evaluate water quality impacts.
+1.7.2 Key Features of HEC-RAS
+HEC-RAS includes a range of features that make it suitable for hydraulic modeling:
+➡ Steady and Unsteady Flow Analysis:
+Supports one-dimensional (1D) and two-dimensional (2D) flow modeling to simulate
+various hydraulic conditions.
+➡ Sediment Transport Modeling:
+Predicts sediment erosion, transport, and deposition over time, which is essential for
+river and reservoir management.
+➡ Water Quality Analysis:
+Assesses pollutant dispersion and water quality parameters such as temperature,
+dissolved oxygen, and nutrient concentrations.
+➡ Bridge and Culvert Analysis:
+Evaluates hydraulic impacts of bridges, culverts, and other structures on river flow,
+aiding in flood risk assessment.
+➡ Floodplain Mapping:
+Generates flood inundation maps that help in flood risk management and urban
+planning.
+➡ Dam Breach Analysis:
+Simulates dam failure scenarios to assess potential downstream impacts and mitigation
+strategies.
+➡ Geospatial Integration:
+Works with GIS software for improved spatial analysis and visualization of hydraulic
+simulations.
+1.7.3 Steps in HEC-RAS Modeling
+HEC-RAS modeling involves several key steps to ensure accurate and reliable simulations:
+Define Geometry
+1. Input river cross-sections, channel dimensions, and hydraulic structures.
+2. Define bank stations and overbank areas.
+3. Incorporate bridges, culverts, weirs, and levees where applicable.
+
+--- Page 21 ---
+1.7 Basics of Modeling Using HEC-RAS 21
+Set Boundary Conditions
+1. Specify inflow and outflow conditions based on observed or estimated hydrological
+data.
+2. Define lateral inflows, tributary interactions, and hydraulic controls.
+3. Assign roughness coefficients (e.g., Manning’s n-values) to represent channel and
+floodplain conditions.
+Assign Flow and Hydraulic Parameters
+1. Specify steady or unsteady flow conditions depending on the analysis objectives.
+2. Set computational timestep and numerical solvers for simulation accuracy.
+3. Include precipitation, evaporation, and infiltration factors if required.
+Run Simulations
+1. Execute steady or unsteady flow analysis.
+2. Perform sensitivity analysis to assess the influence of model parameters on results.
+3. Adjust model settings to improve numerical stability and convergence.
+Analyze Results
+1. Interpret water surface profiles, velocity distributions, and depth variations.
+2. Evaluate flood inundation maps for different return periods.
+3. Assess hydraulic performance of structures under different scenarios.
+4. Validate model results by comparing simulated outputs with observed data.
+1.7.4 Model Calibration and Validation
+Calibration and validation are essential steps to enhance model reliability:
+➡ Calibration:
+Adjust parameters (e.g., roughness coefficients, boundary conditions) to match
+observed data.
+➡ Validation:
+Compare simulation results with independent datasets to verify model accuracy.
+➡ Statistical Evaluation:
+Use Nash-Sutcliffe efficiency, root mean square error (RMSE), and other metrics to
+assess model performance.
+1.7.5 Applications of HEC-RAS
+HEC-RAS is extensively used in various civil and environmental engineering applications,
+including:
+➡ Flood Risk Assessment:
+Identifying flood-prone areas and designing mitigation measures.
+➡ River Restoration:
+Evaluating the impacts of channel modifications and habitat restoration projects.
+➡ Infrastructure Design:
+Analyzing the hydraulic performance of bridges, culverts, and embankments.
+
+--- Page 22 ---
+22 Chapter 1. Computational Fluid Dynamics
+➡ Emergency Management:
+Assessing dam breach scenarios and developing evacuation plans.
+➡ Urban Drainage Modeling:
+Simulating stormwater flow and urban flood events.
+1.7.6 Future Trends in HEC-RAS Modeling
+With advancements in computing and data science, HEC-RAS is evolving to incorporate:
+➡ Artificial Intelligence and Machine Learning:
+Enhancing predictive accuracy and model automation.
+➡ Cloud-Based Computing:
+Enabling large-scale simulations and real-time data integration.
+➡ Remote Sensing and GIS Integration:
+Improving spatial analysis with high-resolution terrain and hydrological data.
+➡ 3D Hydraulic Modeling:
+Advancing towards three-dimensional (3D) simulations for more detailed flow analysis.
+HEC-RAS continues to be a vital tool for hydraulic engineers and researchers, supporting
+informed decision-making in water resources management and flood risk assessment.
+
+--- Page 23 ---
+1.8 Uniform and Non-Uniform Flow in Open Channel Simulations 23
+1.8 Uniform and Non-Uniform Flow in Open Channel Simulations
+1.8.1 Uniform Flow:
+➡ In uniform flow, the depth and velocity of water remain constant along the length of
+the channel.
+➡ It typically occurs in long, prismatic channels where the slope, roughness, and
+cross-section remain unchanged.
+➡ The driving force (gravity) and resisting force (friction) balance each other, resulting
+in steady flow conditions.
+➡ A key example is normal flow in a straight river reach, which can be estimated using
+Manning’s equation.
+1.8.2 Non-Uniform Flow:
+➡ Non-uniform flow occurs when water depth and velocity change along the channel.
+➡ It can be classified into gradually varied flow (GVF) and rapidly varied flow (RVF).
+➡ GVF occurs when there are gradual changes in flow depth due to backwater effects,
+obstructions, or mild channel slopes.
+➡ RVF happens in cases of sudden changes, such as at hydraulic jumps, weirs, or
+spillways.
+1.8.3 Using HEC-RAS for Uniform and Non-Uniform Flow Simulation
+HEC-RAS is widely used for open-channel flow simulations, including both uniform and
+non-uniform flow scenarios.
+Uniform Flow in HEC-RAS:
+➡ Can be approximated by ensuring a long, prismatic channel with a steady flow regime.
+➡ Manning’s equation is used for normal depth calculations.
+➡ The steady-flow analysis module in HEC-RAS can compute flow profiles under
+uniform conditions.
+Non-Uniform Flow in HEC-RAS:
+➡ The software’s steady and unsteady flow analysis tools help model gradually and
+rapidly varied flows.
+➡ Backwater curves, hydraulic jumps, and flow transitions can be simulated using
+energy and momentum equations.
+➡ The unsteady flow module allows dynamic analysis of flood waves, dam breaks, and
+tidal effects.
+1.8.4 Example: Simulating Uniform and Non-Uniform Flow in HEC-RAS
+Scenario: A river reach with a mild slope and a downstream dam.
+Uniform Flow Simulation:
+➡ Define a long, straight river reach with a constant bed slope and cross-section.
+
+--- Page 24 ---
+24 Chapter 1. Computational Fluid Dynamics
+➡ Set steady flow boundary conditions with constant discharge at the upstream end.
+➡ HEC-RAS will compute a uniform flow profile using Manning’s equation.
+Non-Uniform Flow Simulation:
+➡ Introduce a downstream dam, causing backwater effects.
+➡ Specify varied flow conditions, such as increasing discharge or changing bed slopes.
+➡ Run steady-flow analysis to compute gradually varied profiles or unsteady analysis
+for flood wave propagation.
+
+
+
+=====================================================
+PDF: Lab Schedule.pdf
+=====================================================
+Total Pages: 1
+
+--- Page 1 ---
+Week 1
+Experiment 1Experiment 2Experiment 3Experiment 4Experiment 5Experiment 6Experiment 7Experiment 8Experiment 9
+1 2360101AADITH D
+2 2360105AKSHAY GIRISH
+3 2360106AMANDEEP
+4 2360107DEEP TOPPO
+5 2360108DON T GEORGE
+6 2360109HRIDAY AGRAWAL
+7 2360110KARTHIK V SAJI
+8 2360111KAYI PERTIN
+9 2360112KOTTAIYAN M
+10 2360113MALAVIKA MANOJ
+11 2360116PRIYASHA WADEKAR
+12 2360117RIBI  S
+13 2360118RISHABH ARAVIND DESAI
+14 2360119SANIA VALERIE FERNANDES
+15 2360121MUHAMMAD MUBIN ABDULLA
+16 2360122DOVEI MICHAEL
+17 2360123SUDHANSHU LAMA
+18 2360126ANNA ROSE SHAJU
+19 2360127YAMMALA DINESH VARMA
+20 2360128LAKSHMI K DEEPAK
+21 2360129NELIL JOHN
+22 2360130BULLE KURUBA REDDY JAYAVARDHAN
+23 2360131DURAI ADITYA R
+24 2362371SUGAM SUBEDI
+Day 1 Day 7 Day 8
+Darcy's Friction 
+factor
+Vertical Orifice
+Venturimeter
+Venturimeter
+CHRIST (DEEMED TO BE UNIVERSITY)
+Department of Civil Engineering
+CE432P - Hydraulic Engineering Laboratory Schedule
+Sl No Register No Student Name
+Day 2 Day 3 Day 4 Day 5 Day 6
+Week 6 Week 7 Week 8
+Vane Coefficient for Flat and 
+Hemispherical Vanes
+Experiment 10 Experiment 11 Experiment 12
+Darcy's Friction 
+factor
+Vertical Orifice
+Darcy's Friction 
+factor
+Vertical Orifice
+Rectangular 
+Notch
+Rectangular 
+Notch
+Rectangular 
+Notch
+Rectangular 
+Notch
+Darcy's Friction 
+factor
+Vertical Orifice
+ Orifice-meter
+ Orifice-meter
+Week 2 Week 3 Week 4 Week 5
+Rectangular 
+Notch
+Rectangular 
+Notch
+Broad Crested 
+Weir
+Broad Crested 
+Weir
+Vertical Orifice
+Darcy's Friction 
+factor
+Vertical Orifice
+Darcy's Friction 
+factor
+Vertical Orifice
+Darcy's Friction 
+factor
+Ogee Weir
+Ogee Weir
+Venturimeter
+Venturimeter
+Vertical Orifice
+Darcy's Friction 
+factor
+Venturimeter
+Venturimeter
+ Orifice-meter
+ Orifice-meter
+V-Notch
+V-Notch
+Ogee Weir
+Ogee Weir
+Venturimeter
+Venturimeter
+Ogee Weir
+Ogee Weir
+Ogee Weir
+Ogee Weir
+V-Notch
+V-Notch
+V-Notch
+V-Notch
+V-Notch
+V-Notch
+ Demonstration on Francis/ Kaplan 
+Turbine
+ Demonstration on Pelton Wheel 
+Turbine
+Rectangular 
+Notch
+Rectangular 
+Notch
+ Orifice-meter
+ Orifice-meterBroad Crested 
+Weir
+Broad Crested 
+Weir
+Single Stage 
+Centrifugal 
+Pump
+ Orifice-meter
+ Orifice-meter
+Broad Crested 
+Weir
+Broad Crested 
+Weir
+Broad Crested 
+Weir
+Broad Crested 
+Weir
+

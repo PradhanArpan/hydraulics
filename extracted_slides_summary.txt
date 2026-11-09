@@ -1,0 +1,3160 @@
+=====================================================
+CE432P HYDRAULIC ENGINEERING SESSIONS
+=====================================================
+
+
+
+### FILE: I_1 - Introduction.pptx (38 slides)
+
+--- Slide 1 ---
+Contents 
+ Introduction to Syllabus 
+ Practical 
+ Introduction to Fluid Kinematics
+
+--- Slide 2 ---
+Syllabus 
+ Unit 1: Laminar and Turbulent Flow 
+ Unit 2: Boundary Layer Theory 
+ Unit 3: Open Channel Flow 
+ Unit 4: Hydraulic Machines 
+ Unit 5: Computational Fluid Dynamics
+
+--- Slide 3 ---
+Syllabus 
+ Unit 1: Laminar and Turbulent Flow
+
+--- Slide 4 ---
+Syllabus 
+ Unit 2: Boundary Layer Theory
+
+--- Slide 5 ---
+Syllabus 
+ Unit 3: Open Channel Flow
+
+--- Slide 6 ---
+Syllabus 
+ Unit 4: Hydraulic Machines
+
+--- Slide 7 ---
+Syllabus 
+ Unit 5: Computational Fluid Dynamics
+
+--- Slide 8 ---
+Practical
+
+--- Slide 9 ---
+Fluid kinematics 
+ Branch of fluid mechanics which deals with response of fluids in motion without considering forces and energies in them. 
+ The study of Kinematics is often referred to as the geometry of motion. 
+ Velocity at any point in a fluid field at any time is studied.
+
+--- Slide 10 ---
+Fluid motion - perspective 
+ Eulerian: 
+ Velocity, Acceleration, Pressure, Density, etc. are described at a Point in a flow field. 
+ Lagrangian: 
+ A Single Particle is followed during its motion and its Velocity, Acceleration, Density, etc. are described. 
+ Eulerian 
+ Lagrangian
+
+--- Slide 11 ---
+Fluid motion - perspective 
+ Eulerian: 
+ Sit and observe a fixed area from a fixed point.
+
+--- Slide 12 ---
+Fluid motion - perspective 
+ Lagrangian: 
+ Travel with the flow and observe what happens around you.
+
+--- Slide 13 ---
+Types of flow 
+ Steady and Unsteady Flows 
+ Uniform and Non-Uniform Flows 
+ Laminar and Turbulent Flows 
+ Compressible and Incompressible Flows 
+ Rotational and Irrotational Flows 
+ One, Two and Three Dimensional Flows
+
+--- Slide 14 ---
+Steady and Unsteady Flows 
+ Steady: 
+ Flow in which Conditions of Flow remains Constant w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 15 ---
+Steady and Unsteady Flows 
+ Unsteady: 
+ Flow in which Conditions of Flow Changes w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 16 ---
+Steady and Unsteady Flows
+
+--- Slide 17 ---
+uniform and non-uniform Flows 
+ Uniform: 
+ Flow in which Conditions of Flow remains Constant from section to section at any given Time 
+ Example: Constant Discharge though a Constant Diameter of Pipe
+
+--- Slide 18 ---
+uniform and non-uniform Flows 
+ Non-Uniform: 
+ Flow in which Conditions of Flow Changes from section to section at any given Time 
+ Example: Constant Discharge though a Variable Diameter of Pipe
+
+--- Slide 19 ---
+uniform and non-uniform Flows
+
+--- Slide 20 ---
+Flow combinations 
+ Steady Uniform 
+ Steady Non-Uniform 
+ Unsteady Non-Uniform
+
+--- Slide 21 ---
+Steady Uniform 
+ Conditions do not change with position in the stream or with time
+
+--- Slide 22 ---
+Steady Non-Uniform 
+ Conditions change from point to point in the stream but do not change with time
+
+--- Slide 23 ---
+Unsteady Uniform 
+ At a given instant in time the conditions at every point are the same, but will change with time
+
+--- Slide 24 ---
+Unsteady Non-Uniform 
+ Every condition of the flow may change from point to point and with time at every point
+
+--- Slide 25 ---
+Laminar and Turbulent Flows
+
+--- Slide 26 ---
+Laminar and Turbulent Flows – Reynolds Number 
+ Reynolds Number (Re): 
+ Reynolds number is used to differentiate between laminar and turbulent flows
+
+--- Slide 27 ---
+Laminar and Turbulent Flows 
+ Laminar: 
+ The fluid flow in laminations (layers) is termed as laminar flow
+
+--- Slide 28 ---
+Laminar and Turbulent Flows 
+ Turbulent: 
+ The fluid flow layers intermix with each other is termed as turbulent flow 
+ Highly disordered fluid motion that typically occurs at higher velocities and is characterized by velocity fluctuations
+
+--- Slide 29 ---
+Laminar and Turbulent Flows
+
+--- Slide 30 ---
+Laminar and Turbulent Flows – Reynolds Number 
+ Pipe Flow 
+ Laminar 
+ Turbulent 
+ Streamflow 
+ Laminar 
+ Turbulent
+
+--- Slide 31 ---
+Compressible and Incompressible Flows 
+ Compressible: 
+ Flow in which Density of the Fluid changes from point to point 
+ Density is not Constant 
+ Example: Gases
+
+--- Slide 32 ---
+Compressible and Incompressible Flows 
+ Incompressible: 
+ Flow in which Density of the Fluid remains nearly constant throughout 
+ Density is Constant 
+ Example: Generally all Liquids
+
+--- Slide 33 ---
+Rotational and Irrotational Flows 
+ Rotational: 
+ Flow in which the fluid particles while flowing along the Stream-lines, also rotate about their own axis 
+ Irrotational: 
+ Flow in which the fluid particles while flowing along the Stream-lines, do not  rotate about their own axis
+
+--- Slide 34 ---
+Rotational and Irrotational Flows
+
+--- Slide 35 ---
+One, Two and Three Dimensional Flows 
+ The terms one, two or three dimensional flow refers to the number of space coordinate required to describe a flow. 
+ It appears that any physical flow is generally three-dimensional. 
+ But these are difficult to calculate and thus simplification is necessary. This is achieved by ignoring changes to flow in any of the directions, thus reducing the complexity. 
+ It may be possible to reduce a three-dimensional problem into a two-dimensional  or even an one-dimensional problem.
+
+--- Slide 36 ---
+One, Two and Three Dimensional Flows 
+ One Dimensional Flow: 
+ If the flow parameters (such as velocity, pressure, depth etc.) at a given instant in time only vary in the one direction; 
+ In the direction of flow and not across the cross-section 
+ Across the cross-section and not along the flow
+
+--- Slide 37 ---
+One, Two and Three Dimensional Flows 
+ Two Dimensional Flow: 
+ If it can be assumed that the flow parameters vary in the direction of flow and in one other direction at right angles to the flow.
+
+--- Slide 38 ---
+One, Two and Three Dimensional Flows 
+ Three Dimensional Flow: 
+ If the flow parameters vary in all three directions of flow
+
+
+### FILE: Turbines.pptx (34 slides)
+
+--- Slide 1 ---
+Contents 
+ Hydraulic Machines 
+ Turbines 
+ Classification of Turbines
+
+--- Slide 2 ---
+Hydraulic machines 
+ Hydraulic machines, are defined as those machines which convert either; 
+ Hydraulic Energy (energy possessed by water) into Mechanical Energy – further converted into Electrical Energy 
+ - TURBINES 
+ Mechanical Energy into Hydraulic Energy 
+ - PUMPS
+
+--- Slide 3 ---
+Hydraulic energy 
+ Hydraulic Energy is what is produced by the water which is stored in Reservoirs and Lakes at a High Altitude (so that it has Gravitational Potential Energy)
+
+--- Slide 4 ---
+turbines 
+ Hydroelectric Power Plant
+
+--- Slide 5 ---
+turbines 
+ Hydroelectric Power Plant
+
+--- Slide 6 ---
+turbines 
+ A Turbine is a Rotary Mechanical Device that extracts Energy from a Fluid Flow and Converts it into useful work. 
+ Has at least one set of Moving Blades attached to a Shaft called the Rotor assembly.
+
+--- Slide 7 ---
+Turbine - classification
+
+--- Slide 8 ---
+Impulse turbine 
+ Impulse Turbine is a turbine which is driven by the Impulse of Water. 
+ In case of an impulse turbine water from the dam flows through a pipeline. 
+ After passing a guide mechanism it comes out through a nozzle. 
+ All the Energy of water is converted into Kinetic Energy. 
+ Water in the form of a jet from nozzle impinges on the buckets fixed to the outer periphery of a running wheel. 
+ After coming out of buckets water flows with a low velocity. 
+ The Pressure of water both at Entering and Leaving the buckets is Atmospheric.
+
+--- Slide 9 ---
+reaction turbine 
+ A Reaction Turbine is a turbine into which water enters with High Pressure and flows over Curved Blades. 
+ A part of Pressure Head is converted into Kinetic Energy and the remaining part remains as Pressure Head. 
+ The Reaction Pressure is responsible for the motion of the Runner. 
+ The Difference of Pressure between Inlet and Outlet point is known as Reaction Pressure. 
+ The entire Water Passage remains totally Enclosed.
+
+--- Slide 10 ---
+Impulse and reaction turbine
+
+--- Slide 11 ---
+Impulse and reaction turbine 
+ 1. Conversion of Fluid Energy 
+ Impulse turbine: Fluid energy is converted into KE by a Nozzle 
+ Reaction Turbine: Fluid energy is partly transformed into KE, before it enters the runner of the turbine. 
+ 2. Changes in Pressure and Velocity 
+ Impulse Turbine: Pressure remains same 
+ Reaction Turbine: Pressure and Velocity changes while passing through runner 
+ 3. Admittance of Water over the Wheel 
+ Impulse Turbine: Enters a part or whole of the wheel circumference 
+ Reaction Turbine: Water enters over the wheel circumference
+
+--- Slide 12 ---
+Impulse and reaction turbine 
+ 4. Installation 
+ Impulse Turbine: Above the Tail Race, No Draft Tubes 
+ Reaction Turbine: Above or below Tail Race, Draft tubes required. 
+ 5. Flow Regulation 
+ Impulse Turbine: By a Needle valve 
+ Reaction Turbine: Guide vane assembly
+
+--- Slide 13 ---
+Turbine - classification
+
+--- Slide 14 ---
+Turbine – impulse – Pelton wheel
+
+--- Slide 15 ---
+Turbine – reaction – francis turbine
+
+--- Slide 16 ---
+Turbine – reaction – kaplan turbine
+
+--- Slide 17 ---
+Turbine – impulse – Pelton wheel 
+ Nozzles direct Forceful, High-Speed streams of water against a Rotary Series of spoon-shaped buckets mounted on the rim of a wheel. 
+ The water jet’s Momentum is transferred to the wheel and then to a turbine. Thus, impulse energy does work on the turbine. 
+ Used for High Head, Low Flow-Rate.
+
+--- Slide 18 ---
+Pelton wheel 
+ Nozzle and Flow Regulating Arrangement 
+ Runner with Buckets 
+ Casing 
+ Breaking Jet
+
+--- Slide 19 ---
+Turbine – reaction – francis turbine 
+ Francis Turbine is an Inward Flow Reaction Turbine where the water under the pressure enters the runner from the guide vanes towards the Centre in Radial Direction and Discharges out of the runner Axially. 
+ Used for Medium Head and Medium Flow Rates.
+
+--- Slide 20 ---
+Turbine – reaction – kaplan turbine 
+ Kaplan turbine is an evolution of the Francis turbine. It is a Propeller-Type Water Turbine which has adjustable blades. 
+ Since the Radial distance from the Axis at the Inlet and Outlet is same, the Peripheral Velocity is Constant. 
+ Used for Low Heads and High Flow-Rates.
+
+--- Slide 21 ---
+Turbine - classification
+
+--- Slide 22 ---
+Turbine - classification 
+ According to the Energy used 
+ Impulse turbine 
+ Reaction turbine 
+ Direction of water flow 
+ Axial flow - Radial in axial out 
+ Inward flow - Outward flow 
+ According to the Head available to the inlet of turbine 
+ High Head Turbine (250-1800m), Pelton Wheel 
+ Medium Head Turbine (50-250m), Francis Turbine 
+ Low Head Turbine ( <50m), Kaplan Turbine
+
+--- Slide 23 ---
+Turbine - classification 
+ According to the Specific Speed 
+ Low specific speed ( <50) Pelton wheel 
+ Medium specific speed (50 < Ns < 250) Francis 
+ High Specific speed ( >250) Kaplan 
+ According to the Fluid used 
+ Water Turbine (Pelton Wheel, Francis Turbine, Kaplan Turbine) 
+ Gas Turbine 
+ Steam Turbine
+
+--- Slide 24 ---
+head 
+ GROSS HEAD, Hg 
+ The difference between the Head Race Level and Tail Race Level, when no water is flowing. 
+ NET HEAD, hf 
+ Net Head is also called Effective Head and is defined as the Head available at the Inlet of the Turbine. 
+ When Water flows from Head Race to the Turbine, a Loss of Head due to Friction between Water and Penstock occurs, hf
+
+--- Slide 25 ---
+Efficiencies of a Turbine 
+ Hydraulic Efficiency, ηh 
+ It is defined as the Ratio of Power given by water to the Runner of the Turbine; to the Power supplied by the water at the Inlet of the Turbine. 
+ Power at the Inlet of the Turbine is more and this Power goes on Decreasing as the Water flows over the Vanes of the Turbine due to Hydraulic Losses as the Vanes are not smooth. 
+ kW 
+ kW 
+ W = Weight of Water Striking the Vanes of the Turbine per second
+
+--- Slide 26 ---
+Efficiencies of a Turbine 
+ Mechanical Efficiency, ηm 
+ It is defined as the Ratio of Power available at the Shaft of the Turbine; to the Power delivered to the Runner of the Turbine.
+
+--- Slide 27 ---
+Efficiencies of a Turbine 
+ Volumetric Efficiency, ηV 
+ It is defined as the Ratio of Volume of water striking the Runner of the Turbine; to the Volume of water supplied to the Turbine.
+
+--- Slide 28 ---
+Efficiencies of a Turbine 
+ Overall Efficiency, ηo 
+ It is defined as the Ratio of Power available at the Shaft of the Turbine; to the Power supplied by the water at the Inlet of the Turbine. 
+ kW
+
+--- Slide 29 ---
+Pelton wheel 
+ Nozzles direct Forceful, High-Speed streams of water against a Rotary Series of spoon-shaped buckets mounted on the rim of a wheel. 
+ The water jet’s Momentum is transferred to the wheel and then to a turbine. Thus, impulse energy does work on the turbine. 
+ Used for High Head, Low Flow-Rate.
+
+--- Slide 30 ---
+Pelton wheel 
+ Nozzle and Flow Regulating Arrangement 
+ Runner with Buckets 
+ Casing 
+ Breaking Jet
+
+--- Slide 31 ---
+Pelton wheel – velocity triangles and work done
+
+--- Slide 32 ---
+velocity triangles and work done 
+ V   Absolute Velocity of Jet 
+ u   Absolute Velocity of Bucket 
+ Vr  Relative Velocity of Jet 
+ Vw  Velocity of Whirl 
+ Vf   Velocity of Flow
+
+--- Slide 33 ---
+velocity triangles and work done - Pelton wheel 
+ V1     Absolute Velocity of Jet before striking the bucket 
+ V2     Absolute Velocity of Jet leaving the bucket 
+ u1      Absolute Velocity of Bucket at Inlet 
+ u2      Absolute Velocity of Bucket at Outlet 
+ Vr1     Relative Velocity of Incoming Jet 
+ Vr2     Relative Velocity of Jet Leaving the Bucket 
+ Vw 1,2  Velocity of Whirl at Inlet and Outlet 
+ Vf 1,2   Velocity of Flow at Inlet and Outlet
+
+--- Slide 34 ---
+velocity triangles and work done - Pelton wheel
+
+
+### FILE: V_1 - Intro and Methodology.pptx (33 slides)
+
+--- Slide 1 ---
+Contents 
+ What is Computational Fluid Dynamics? 
+ Why use CFD? 
+ Where is CFD used?
+
+--- Slide 2 ---
+Experimental fluid dynamics 
+ Experimental studies are performed with laboratory-scale models. 
+ The amount of information is limited and the costs are very high. 
+ There are measurement errors and disturbances caused by probes.
+
+--- Slide 3 ---
+Computational Fluid Dynamics 
+ The Euler and Navier-Stokes equations have been known since 1755 (resp. since 1827). No closed-form solutions are available to date…… 
+ Numerical methods can be used to calculate approximate solutions 
+ Computational Fluid Dynamics makes it possible to perform detailed numerical simulations of fluid flows in a “virtual flow laboratory” 
+ von Karman vortex street                                   CFD simulation
+
+--- Slide 4 ---
+What is computational fluid dynamics? 
+ Computational fluid dynamics (CFD) is the science of predicting fluid flow, heat transfer, mass transfer, chemical reactions, and related phenomena by solving the mathematical equations which govern these processes using a numerical process. 
+ The result of CFD Analyses is relevant engineering data used in 
+ Detailed Product Development. 
+ Conceptual Studies of New Designs. 
+ Troubleshooting. 
+ Redesign. 
+ CFD analysis Compliments Testing and Experimentation. 
+ Reduces the total effort required in the laboratory.
+
+--- Slide 5 ---
+Why USE computational fluid dynamics? 
+ Numerical simulations of fluid flow (will) enable 
+ architects to design comfortable and safe living environments 
+ designers of vehicles to improve the aerodynamic characteristics 
+ chemical engineers to maximize the yield from their equipment 
+ petroleum engineers to devise optimal oil recovery strategies 
+ surgeons to cure arterial diseases (computational hemodynamics) 
+ meteorologists to forecast the weather and warn of natural disasters 
+ safety experts to reduce health risks from radiation and other hazards 
+ military organizations to develop weapons and estimate the damage
+
+--- Slide 6 ---
+Experiments v/s Simulations 
+ CFD gives an insight into flow patterns that are difficult, expensive or impossible to study using traditional (experimental) techniques 
+ Experiments 
+ Simulations 
+ Quantitative description of flow phenomena using measurements 
+ Quantitative prediction of flow phenomena using CFD software 
+ for one quantity at a time 
+ at a limited number of points and time instants 
+ for a laboratory-scale model 
+ for a limited range of flow problems and operating conditions 
+ for all desired quantities 
+ with high resolution in space and time 
+ for the actual flow domain 
+ for virtually any problem and realistic operating conditions 
+ Error sources: measurement errors, flow disturbances by the probes 
+ Error sources: modeling, discretization, iteration, implementation
+
+--- Slide 7 ---
+Experiments v/s Simulations 
+ CFD does not replace the measurements completely but the amount of experimentation and the overall cost can be significantly reduced 
+ Experiments 
+ Simulations 
+ expensive 
+ slow 
+ sequential 
+ Single purpose 
+ cheap(er) 
+ fast(er) 
+ parallel 
+ Multiple-purpose 
+ Equipment and personnel are difficult to transport 
+ CFD software is portable, easy to use and modify
+
+--- Slide 8 ---
+Experiments v/s Simulations 
+ The results of a CFD simulation are never 100% reliable 
+ the input data may involve too much guessing or imprecision 
+ mathematical model of the problem at hand may be inadequate 
+ the quality of numerical solutions depends on the accuracy of approximation techniques and available computing power
+
+--- Slide 9 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 10 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 11 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis 
+ Surface-heat-flux plots of the No-Frost  refrigerator and freezer compartments helped  BOSCH-SIEMENS engineers to optimize the  location of air inlets.
+
+--- Slide 12 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis 
+ External Aerodynamics         Undercarriage  Aerodynamics 
+ Interior Ventilation                                       Engine Cooling
+
+--- Slide 13 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis 
+ Medtronic Blood Pump 
+ Temperature and natural  convection currents in the eye  following laser heating. 
+ Spinal Catheter
+
+--- Slide 14 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 15 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 16 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 17 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 18 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 19 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 20 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 21 ---
+Where IS cfd used 
+ Aerospace 
+ Appliances 
+ Automotive 
+ Biomedical 
+ Chemical Processing 
+ HVAC&R 
+ Marine 
+ Defense Industry 
+ Oil & Gas 
+ Power Generation 
+ Sports 
+ Hazard Analysis
+
+--- Slide 22 ---
+Computational Modeling - Procedure 
+ Model the Geometry and Flow Domain to Formulate the Flow problem 
+ Establish the Boundary and Initial Condition 
+ Generate the Grid 
+ Development of Simulation Solver 
+ Perform Simulation 
+ Monitor the Simulation Convergence 
+ Post process the Simulation and pull out Plots 
+ Make Comparison and Analyze 
+ Repeat process to Examine the Sensitivities
+
+--- Slide 23 ---
+Computational Modeling – Boundary and Initial condition 
+ Boundary conditions need to finalized with respect to the problem 
+ They are various boundary conditions like Pressure inlet, velocity inlet, Wall, symmetry, axis, pressure outlet etc., 
+ Usually the calculations starts with the help of initial conditions to reach final  solution. 
+ Setting up proper boundary and initial condition will be helpful to avoid divergence in solver.
+
+--- Slide 24 ---
+Computational Modeling – GRID 
+ Grid/Mesh is a set of point distributed over the problem domain for a numerical solution of a set of partial differential equations. 
+ There are several methods to discretize a geometry 
+ Un-structured grid 
+ Structured grid 
+ Rectangular grids 
+ Multi block grids 
+ Overlapping grids.
+
+--- Slide 25 ---
+Computational Modeling – GRID
+
+--- Slide 26 ---
+Computational Modeling – GRID 
+ Cell = control volume into which domain is broken up 
+ computational domain is defined by mesh that represents the fluid and solid regions of interest. 
+ Face = boundary of a cell 
+ Edge = boundary of a face 
+ Node = grid point 
+ Zone = group of nodes, faces, and/or cells 
+ Boundary data assigned to face zones. 
+ Material data and source terms assigned to cell zones.
+
+--- Slide 27 ---
+Computational Modeling – GRID - Structured Grids
+
+--- Slide 28 ---
+Computational Modeling – GRID - Unstructured Grids 
+ Unlike structured grids, sides of a cell/element have no relation to the co-ordinate directions in unstructured grids. 
+ The un-structured grid consists of triangles or quadrilateral in 2D and tetrahedra, wedge, hexahedra or polyhedral in 3D.
+
+--- Slide 29 ---
+Computational Modeling – GRID - Unstructured Grids 
+ Unstructured Quad Mesh
+
+--- Slide 30 ---
+Computational Modeling – GRID - Unstructured Grids 
+ Polyhedral Mesh
+
+--- Slide 31 ---
+Computational Modeling – GRID – Generation Process 
+ The process of grid-generation for complex geometries normally involves following steps: 
+ Decompose the problem domain into a set of sub-domains (blocks) 
+ In each block, generate the requisite grid. Typical sequence of operations would be, 
+ Generate edge-grid 
+ (i.e. divide the edges of a surface in desired number of one dimensional elements). 
+ Using the edge grids, generate the grid on the block-surfaces. 
+ Use surface grids as input to generate volume mesh. 
+ Check mesh quality, and modify the mesh as required.
+
+--- Slide 32 ---
+Computational Modeling – simulation solver
+
+--- Slide 33 ---
+Computational Modeling – fluid characteristic 
+ The reliability of CFD simulations is greater 
+ for laminar/slow flows than for turbulent/fast ones 
+ for single-phase flows than for multi-phase flows 
+ for chemically inert systems than for reactive flows
+
+
+### FILE: V_2 - Discretization and Conservation Equation (1).pptx (7 slides)
+
+--- Slide 1 ---
+Contents 
+ CFD Discretization 
+ Substantial and Partial Derivative 
+ Acceleration
+
+--- Slide 2 ---
+Computational Modeling – simulation solver
+
+--- Slide 3 ---
+Computational Modeling
+
+--- Slide 4 ---
+Computational Modeling
+
+--- Slide 5 ---
+Substantial and partial derivatives
+
+--- Slide 6 ---
+Substantial and partial derivatives
+
+--- Slide 7 ---
+Substantial and partial derivatives
+
+
+### FILE: V_2 - Discretization and Conservation Equation.pptx (7 slides)
+
+--- Slide 1 ---
+Contents 
+ CFD Discretization 
+ Substantial and Partial Derivative 
+ Acceleration
+
+--- Slide 2 ---
+Computational Modeling – simulation solver
+
+--- Slide 3 ---
+Computational Modeling
+
+--- Slide 4 ---
+Computational Modeling
+
+--- Slide 5 ---
+Substantial and partial derivatives
+
+--- Slide 6 ---
+Substantial and partial derivatives
+
+--- Slide 7 ---
+Substantial and partial derivatives
+
+
+### FILE: Unit II\III_1 - Introduction.pptx (43 slides)
+
+--- Slide 1 ---
+Contents 
+ Pipe Flow and Open Channel Flow 
+ Classification
+
+--- Slide 2 ---
+Open channel flow – introduction 
+ The flow in an open channel or in a closed conduit having a free surface is referred to as free-surface flow or open-channel flow.
+
+--- Slide 3 ---
+Open channel flow – introduction 
+ Open Channel Hydraulics is of great importance to Civil Engineers as it deals with 
+ Channels constructed for Water Supply, Irrigation, Drainage 
+ Sewers, Culverts 
+ Tunnels flowing Partially Full 
+ Natural Streams and Rivers.
+
+--- Slide 4 ---
+PIPE FLOW & Open channel flow – Comparison 
+ The flow in a closed conduit is not necessarily a pipe flow 
+ PIPE FLOW 
+ OPEN CHANNEL FLOW 
+ The liquid completely fills the pipe and flow under pressure. 
+ The flow must be classified as open channel flow if the liquid has a free surface 
+ The flow in a pipe takes place due to difference of pressure (pressure gradient), 
+ Flow takes place due to the slope of the channel bed (due to gravity)
+
+--- Slide 5 ---
+PIPE FLOW & Open channel flow – Comparison
+
+--- Slide 6 ---
+PIPE FLOW & Open channel flow – Comparison 
+ PIPE FLOW 
+ The Hydraulic Gradient Line (HGL) is the sum of the Elevation and the Pressure Head (connecting the water surfaces in piezometers). 
+ The Energy Gradient Line (EGL) is the sum of the HGL and Velocity Head. 
+ The amount of Energy Loss when the liquid flows from section 1 to section 2 is indicated by hL. 
+ OPEN CHANNEL FLOW 
+ The Hydraulic Gradient Line (HGL) corresponds to the Water Surface Line (WSL);  where it subjected to only Atmospheric Pressure which is commonly referred  to as the Zero Pressure Reference. 
+ The Energy Gradient Line (EGL) is the sum of the HGL and Velocity Head. 
+ The amount of Energy Loss when the liquid flows from section 1 to section 2 is indicated by hL. 
+ For uniform flow, the drop in the EGL is equal to the drop in the channel bed.
+
+--- Slide 7 ---
+PIPE FLOW & Open channel flow – Comparison
+
+--- Slide 8 ---
+Open channels – Classification 
+ Based on Existence 
+ Natural Channels 
+ Streams, Rivers, Valleys, etc. 
+ These are generally irregular in shape, alignment and roughness of the surface. 
+ Artificial Channels 
+ built for some specific purpose, such as irrigation, water supply, wastewater, water power development, and rain collection channels. 
+ These are regular in shape and alignment with uniform roughness of the boundary surface. 
+ Irrigation channels are often built with trapezoidal cross-section. Sewage channels are mostly made with circular cross-section.
+
+--- Slide 9 ---
+Open channels – Classification 
+ Based on Shape 
+ Prismatic Channels 
+ Cross-Section is Uniform 
+ Bed Slope is Constant. 
+ Non-Prismatic Channels 
+ Either the Cross-Section or the Slope (or Both) Change 
+ It is obvious that only Artificial Channel can be Prismatic
+
+--- Slide 10 ---
+Types of flow 
+ Steady and Unsteady Flows 
+ Uniform and Non-Uniform Flows 
+ Laminar and Turbulent Flows 
+ Compressible and Incompressible Flows 
+ Rotational and Irrotational Flows 
+ One, Two and Three Dimensional Flows
+
+--- Slide 11 ---
+Open channel Flows – Classification 
+ Based on Time Criterion 
+ Steady Flow (Time Independent) 
+ Discharge and Water Depth do not change with Time 
+ Unsteady Flow (Time Dependent) 
+ Discharge and Water Depth at any section change with Time
+
+--- Slide 12 ---
+Steady and Unsteady Flows 
+ Steady: 
+ Flow in which Conditions of Flow remains Constant w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 13 ---
+Steady and Unsteady Flows 
+ Unsteady: 
+ Flow in which Conditions of Flow Changes w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 14 ---
+Steady and Unsteady Flows
+
+--- Slide 15 ---
+Open channel Flows – Classification 
+ Based on Space Criterion 
+ Uniform Flow 
+ Discharge and Water Depth remains the same at every section in the channel 
+ Non-Uniform Flow 
+ Discharge and Water Depth change at any section in the channel
+
+--- Slide 16 ---
+uniform and non-uniform Flows 
+ Uniform: 
+ Flow in which Conditions of Flow remains Constant from section to section at any given Time 
+ Example: Constant Discharge though a Constant Diameter of Pipe
+
+--- Slide 17 ---
+uniform and non-uniform Flows 
+ Non-Uniform: 
+ Flow in which Conditions of Flow Changes from section to section at any given Time 
+ Example: Constant Discharge though a Variable Diameter of Pipe
+
+--- Slide 18 ---
+uniform and non-uniform Flows
+
+--- Slide 19 ---
+Flow combinations 
+ Steady Uniform 
+ Steady Non-Uniform 
+ Unsteady Non-Uniform
+
+--- Slide 20 ---
+Open channel Flows – Classification
+
+--- Slide 21 ---
+Open channels – Classification 
+ Based on Existence 
+ Natural Channels 
+ Artificial Channels 
+ Based on Shape 
+ Prismatic Channels 
+ Non-Prismatic Channels
+
+--- Slide 22 ---
+Open channel Flows – Classification 
+ Based on Time Criterion 
+ Steady Flow 
+ Unsteady Flow 
+ Based on Space Criterion 
+ Uniform Flow 
+ Non-Uniform Flow
+
+--- Slide 23 ---
+Flow combinations 
+ Steady Uniform 
+ Uniform flows are mostly steady 
+ Steady Non-Uniform 
+ Over a Spillway Crest
+
+--- Slide 24 ---
+Flow combinations 
+ Unsteady Uniform 
+ Unsteady uniform flows are very rare in nature 
+ Unsteady Non-Uniform 
+ Flood Wave 
+ Tidal Surge
+
+--- Slide 25 ---
+Non-Uniform flow 
+ Non-Uniform Flow is also called Varied Flow 
+ Flow in which the Water Depth and/or Discharge change along the length of the channel 
+ It can be further classified as 
+ Gradually Varied Flow (GVF) where the depth of the flow changes gradually along the length of the channel 
+ Rapidly Varied Flow (RVF) where the depth of flow changes suddenly over a small length of the channel
+
+--- Slide 26 ---
+Non-uniform or varied flow
+
+--- Slide 27 ---
+Flow combinations
+
+--- Slide 28 ---
+FORCES and dimensionless numbers 
+ Inertia Force, Fi 
+ Viscous Force, Fν 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Surface Tension Force, Fs 
+ Elastic Force, Fe 
+ Reynold’s Number, Re 
+ Froude’s Number, Fr 
+ Euler’s Number, Eu 
+ Weber’s Number, We 
+ Mach’s Number, M
+
+--- Slide 29 ---
+Laminar and Turbulent Flows – Reynolds Number 
+ Reynolds Number (Re): 
+ Reynolds number is used to differentiate between laminar and turbulent flows
+
+--- Slide 30 ---
+Laminar and Turbulent Flows 
+ Laminar: 
+ The fluid flow in laminations (layers) is termed as laminar flow
+
+--- Slide 31 ---
+Laminar and Turbulent Flows 
+ Turbulent: 
+ The fluid flow layers intermix with each other is termed as turbulent flow 
+ Highly disordered fluid motion that typically occurs at higher velocities and is characterized by velocity fluctuations
+
+--- Slide 32 ---
+Reynold’s Number, Re 
+ It is defined as the ratio of inertia force of a flowing fluid and the viscous force of the fluid.
+
+--- Slide 33 ---
+Froude’s Number, Fe 
+ It is defined as the square root of the ratio of inertia force of a flowing fluid to the gravity force.
+
+--- Slide 34 ---
+Critical; Sub-critical; super-critical Flows – FROUDE Number 
+ Froude Number (Fr): 
+ Froude number is used to differentiate between Critical; Sub-Critical and Super-Critical Flows
+
+--- Slide 35 ---
+Critical Flows 
+ A flow is called Critical if the flow velocity is equal to the velocity of a gravity wave having small amplitude
+
+--- Slide 36 ---
+Sub-Critical Flows 
+ A gravity wave may be produced by a change in the flow depth. 
+ The flow is called Sub-Critical flow, if the Flow Velocity is less than the Critical Velocity 
+ Sub-Critical flow is also called Tranquil or Streaming flow
+
+--- Slide 37 ---
+Super-Critical Flows 
+ The flow is called Super-Critical flow, if the Flow Velocity is greater than the Critical Velocity
+
+--- Slide 38 ---
+Geometric parameters of channel section
+
+--- Slide 39 ---
+Geometric parameters of channel section 
+ The geometrical properties of a channel section can be defined entirely by the geometry of the section or the depth of flow. 
+ Depth of Flow, y:  Vertical distance of the lowest point of a channel section from free surface. 
+ Top Width, T: It is the width of the channel section at the free surface. 
+ Wetted Area, A: It is the cross-sectional area of the flow, normal to the direction of flow. 
+ Wetted Perimeter, P: Length of the channel boundary in contact with the flowing water at any section. 
+ Hydraulic Radius, R: Ratio of the wetted area to its wetted perimeter. 
+ Hydraulic Depth, D: Ratio of the wetted area to the top width. 
+ Section Factor, Z:  For critical flow computation, Z is the product of the wetted area and the square root of the hydraulic depth.
+
+--- Slide 40 ---
+Geometric elements of channel section
+
+--- Slide 41 ---
+Velocity Distribution of channel section 
+ The flow velocity in a channel section varies from one point to another. This is due to shear stress at the bottom and at the sides of the channel and due to the presence of free surface.
+
+--- Slide 42 ---
+Velocity Distribution of channel section
+
+--- Slide 43 ---
+Velocity Distribution of channel section
+
+
+### FILE: Unit II\III_2 - Conservation Laws and C.pptx (54 slides)
+
+--- Slide 1 ---
+Contents 
+ Velocity Distribution 
+ Energy and Momentum Coefficient 
+ Continuity Equation 
+ Energy Equation 
+ Momentum Equation
+
+--- Slide 2 ---
+channel section
+
+--- Slide 3 ---
+Geometric parameters of channel section 
+ The geometrical properties of a channel section can be defined entirely by the geometry of the section or the depth of flow. 
+ Depth of Flow, y:  Vertical distance of the lowest point of a channel section from free surface. 
+ Top Width, T: It is the width of the channel section at the free surface. 
+ Wetted Area, A: It is the cross-sectional area of the flow, normal to the direction of flow. 
+ Wetted Perimeter, P: Length of the channel boundary in contact with the flowing water at any section. 
+ Hydraulic Radius, R: Ratio of the wetted area to its wetted perimeter. 
+ Hydraulic Depth, D: Ratio of the wetted area to the top width. 
+ Section Factor, Z:  For critical flow computation, Z is the product of the wetted area and the square root of the hydraulic depth.
+
+--- Slide 4 ---
+Geometric elements of channel section
+
+--- Slide 5 ---
+Velocity Distribution of channel section 
+ The flow velocity in a channel section varies from one point to another. This is due to shear stress at the bottom and at the sides of the channel and due to the presence of free surface.
+
+--- Slide 6 ---
+Velocity Distribution of channel section
+
+--- Slide 7 ---
+Energy and momentum coefficient 
+ Energy Coefficient: 
+ Flow Velocity in a channel section usually varies from one point to another. 
+ Hence, the Mean Velocity Head, in a channel section, is not the same as the Velocity Head, , computed by using the Mean Flow Velocity, Vm.
+
+--- Slide 8 ---
+Energy and momentum coefficient 
+ momentum Coefficient: 
+ Similar to the energy coefficient, a coefficient for the momentum transfer through a channel section may be introduced to account for nonuniform velocity distribution. 
+ This coefficient, also called Boussinesq coefficient, is denoted by β. An expression for this may be obtained as follows.
+
+--- Slide 9 ---
+Conservation laws 
+ Three Conservation Laws describe steady, free-surface flows 
+ Conservation of Mass 
+ Conservation of Momentum 
+ Conservation of Energy 
+ For simplicity, only one-dimensional flows are considered. 
+ In these flows, the flow velocity is only in the direction of flow and the components of flow velocity in the transverse and vertical directions are zero.
+
+--- Slide 10 ---
+Conservation laws 
+ Conservation of Mass 
+ This principle says that the mass neither be created nor destroyed. This forms the basis for continuity equation. 
+ Conservation of Energy 
+ This principle says that the energy neither be created nor destroyed, only can change the form. 
+ Conservation of Momentum 
+ The interaction of force and time acting on the object is equal to the change in momentum of the object.
+
+--- Slide 11 ---
+Conservation laws – Conservation of Mass
+
+--- Slide 12 ---
+Conservation laws – Conservation of Energy 
+ The Total Energy Head at a point in an open channel is the sum of the potential and kinetic energy of the flowing water. 
+ The energy per unit weight is the sum of pressure head or static head, velocity head or kinetic head and potential head. 
+ For steady irrotational flow these sum are constant.
+
+--- Slide 13 ---
+Conservation laws – Conservation of Energy
+
+--- Slide 14 ---
+Conservation laws – Conservation of Energy
+
+--- Slide 15 ---
+Conservation laws – Conservation of Energy 
+ Total Energy at Section 1 
+ Applying Energy Principle to Section 1 and 2 
+ If Bed Slope is small
+
+--- Slide 16 ---
+Conservation laws – Conservation of Momentum 
+ To derive an equation describing conservation of momentum, let us consider the steady flow of an incompressible liquid in a channel.
+
+--- Slide 17 ---
+Conservation laws – Conservation of Momentum 
+ Sum of Forces:
+
+--- Slide 18 ---
+Conservation laws – Conservation of Momentum 
+ The momentum of the flow passing the channel section per unit time is expressed as 
+ Momentum:
+
+--- Slide 19 ---
+Uniform flow
+
+--- Slide 20 ---
+Uniform flow 
+ Main features 
+ The depth of flow, wetted area, velocity of flow and discharge are constant at every section along the channel reach. 
+ The total energy line, water surface and the channel bottom are all parallel, that is, their slopes are all equal, or Sf = Sw = S0 = S
+
+--- Slide 21 ---
+Uniform flow
+
+--- Slide 22 ---
+Uniform flow - Fundamental Eq. 
+ The depth of a Uniform Flow is called as Normal Depth, denoted by yn 
+ The fundamental equation for uniform flow in channels may be derived by applying Newton’s second law of motion. 
+ In uniform flow since the velocity of flow does not change along the length of the channel, there is no acceleration. 
+ Hence the sum of the components of all the external forces in the direction of flow must be equal to zero.
+
+--- Slide 23 ---
+Uniform flow - Fundamental Eq.
+
+--- Slide 24 ---
+Uniform flow - Fundamental Eq.
+
+--- Slide 25 ---
+FRICTIONAL LOSS – Expression For Loss Of Head
+
+--- Slide 26 ---
+FRICTIONAL LOSS – Expression for Loss Of Head
+
+--- Slide 27 ---
+FRICTIONAL LOSS – Expression for Loss Of Head
+
+--- Slide 28 ---
+Coefficient of FRICTION – In terms of Shear Stress
+
+--- Slide 29 ---
+Uniform flow - Fundamental Eq.
+
+--- Slide 30 ---
+Uniform flow – chezy’s formula 
+ Chezy’s coefficient is not a dimensionless coefficient; has the dimensions [L1/2 T–1]
+
+--- Slide 31 ---
+Uniform flow – manning formula 
+ Mean Velocity, V of uniform flow in a channel is expressed in terms of a coefficient of 
+ roughness n, called Manning’s n, hydraulic radius R and channel bottom slope S0.
+
+--- Slide 32 ---
+Uniform flow – manning n
+
+--- Slide 33 ---
+Factors affecting manning n 
+ It is not uncommon for engineers to think of a channel as having a single value of n for all occasions. 
+ In reality, the value of n is highly variable and depends on a number of factors. In selecting a proper value of n for various design conditions. 
+ The factors that exert the greatest influence upon the coefficient of roughness in both artificial and natural channels are therefore important for study. 
+ It should be noted that these factors are to a certain extent interdependent; hence discussion about one factor may be repeated in connection 'with another'.
+
+--- Slide 34 ---
+Factors affecting manning n 
+ Vegetation 
+ Surface Roughness 
+ Channel Irregularity 
+ Channel Alignment 
+ Silting and Scouring 
+ Obstruction 
+ Size and Shape of the Channel 
+ Stage and Discharge 
+ Seasonal Change 
+ Suspended Material and Bed load.
+
+--- Slide 35 ---
+Factors affecting manning’s n 
+ Vegetation 
+ Vegetation may be regarded as a kind of surface roughness, but it also markedly reduces the capacity of the channel and retards the flow. This effect depends mainly on height, density, distribution and type of vegetation. 
+ The effect of vegetation on flood plains are also important to be considered 
+ It is very important in designing small drainage channels.
+
+--- Slide 36 ---
+Factors affecting manning’s n 
+ Vegetation
+
+--- Slide 37 ---
+Factors affecting manning’s n 
+ Surface Roughness 
+ The surface roughness is represented by the size and shape of the grains of the material forming the wetted perimeter and producing a retarding effect on the flow. This is often considered the only factor in selecting a roughness coefficient, but it is actually just one of several major factors. 
+ Generally speaking, Fine Grains result in a relatively low value of n and Coarse Grains, in a high value of n. 
+ In Alluvial Streams where the material is fine in grain, such as sand clay, loam, or silt, ,the retarding effect is much less than where the material is coarse such as gravel; or boulders.
+
+--- Slide 38 ---
+Factors affecting manning’s n 
+ Surface Roughness
+
+--- Slide 39 ---
+Factors affecting manning’s n 
+ Channel Irregularity 
+ Channel irregularity comprises irregularities in wetted perimeter and variations in cross section, size, and shape along the channel length. 
+ In natural channels, such irregularities are usually introduced by the presence of sand bars, sand waves, ridges and depressions, and holes and humps on the channel bed. 
+ These irregularities definitely introduce roughness in addition to that caused by surface roughness and other factors. 
+ A Gradual and Uniform change in cross section, size, and shape will not appreciably affect the value of n, but abrupt changed or alternation of small and large sections necessitates the use of a large value of n.
+
+--- Slide 40 ---
+Factors affecting manning’s n 
+ Channel Irregularity
+
+--- Slide 41 ---
+Factors affecting manning’s n 
+ Channel Alignment 
+ Smooth Curvature with large radius will give a relatively low value of n, whereas Sharp Curvature with severe meandering will increase n.
+
+--- Slide 42 ---
+Factors affecting manning’s n 
+ Silting and Scouring 
+ Silting may change a very irregular channel into a comparatively uniform one and decrease n. 
+ Scouring on the other hand may do the reverse and increase n. 
+ However, the dominant effect of silting will depend on the nature of the material deposited. Uneven deposits such as sand bars and sand waves will increase the 'roughness’. 
+ The amount of uniformity of scouring will depend on the material forming the wetted perimeter. Thus, a sandy or gravelly bed will be eroded more uniformly than a clay bed.
+
+--- Slide 43 ---
+Factors affecting manning’s n 
+ Silting and Scouring
+
+--- Slide 44 ---
+Factors affecting manning’s n 
+ Obstruction 
+ The presence of log jams, bridge piers, and the like things tends to increase n. The amount of increase depends on the nature of the obstructions, the size, shape, number, and distribution. 
+ Size and Shape of Channel 
+ There is no definite evidence about the size and shape of a channel as an important factor affecting the value of n. An increase in hydraulic radius may either increase or decrease n, depending on the condition of the channel ( as happens in a multi stage channels) .
+
+--- Slide 45 ---
+Factors affecting manning n 
+ Obstruction
+
+--- Slide 46 ---
+Factors affecting manning’s n 
+ Stage and Discharge 
+ The n value in most streams decreases with increase in stage and in discharge. 
+ When the water is shallow, the irregularities of the channel bottom are exposed and their effects become pronounced. 
+ If the bed and banks of a channel are equally smooth and regular and the bottom  slope is uniform, the value of n may remain almost the same at all so a constant is usually assumed in the flow computation. This happens mostly in artificial channels. 
+ On flood plains the value of n usually varies with the stage of submergence of the vegetation at low stages.
+
+--- Slide 47 ---
+Factors affecting manning’s n 
+ Seasonal Change 
+ Owing to the seasonal growth of aquatic plants, grass, weeds, willow, and trees in the channel or on the banks, the value of n may increase in the growing season and diminish in the dormant season. 
+ Suspended Material and Bed Load 
+ The suspended material and the bed load, whether moving or not moving, would consume energy and cause head loss or increase the apparent channel roughness.
+
+--- Slide 48 ---
+Factors affecting manning’s n 
+ All the above factors should be studied and needs to be evaluated to provide a basis for determining the proper value of n for a given problem. 
+ As a general guide to judgment it may be accepted that conditions tending to induce turbulence and cause retardance will increase n value and that those tending to reduce turbulence and retardance will decrease n value. 
+ Recognizing several primary factors affecting the roughness coefficient, Cowan developed a procedure for estimating the value of n.
+
+--- Slide 49 ---
+Factors affecting manning’s n 
+ where n0 is a basic n value for a straight, uniform, smooth channel in the natural material involved, 
+ n1 is a value added to correct for the effect of surface irregularities, 
+ n2 is a value for variations in shape and size of the channel cross section 
+ n3 is a value for obstructions, 
+ n4 is a value for vegetation and flow conditions 
+ m is a correction factor for meandering of channel 
+ Proper values of n, and m, may be selected from a standard Table (Chow) according to the given conditions.
+
+--- Slide 50 ---
+Factors affecting manning’s n
+
+--- Slide 51 ---
+Factors affecting manning’s n
+
+--- Slide 52 ---
+Factors affecting manning’s n
+
+--- Slide 53 ---
+numerical 
+ Q1. A smooth concrete-lined channel has trapezoidal cross-section with base width 6m and side-slopes 1V:2H. If the bed slope is 1 in 500 and the normal depth is 2m, calculate the quantity of flow.
+
+--- Slide 54 ---
+numerical 
+ Q2. For the above channel, if the quantity of flow is 40m3/s. What is the normal depth?
+
+
+### FILE: Unit II\III_3 - Economical Section.pptx (18 slides)
+
+--- Slide 1 ---
+Contents 
+ Most Economical Section
+
+--- Slide 2 ---
+Uniform flow 
+ Main features 
+ The depth of flow, wetted area, velocity of flow and discharge are constant at every section along the channel reach. 
+ The total energy line, water surface and the channel bottom are all parallel, that is, their slopes are all equal, or Sf = Sw = S0 = S
+
+--- Slide 3 ---
+Uniform flow - Fundamental Eq. 
+ The depth of a Uniform Flow is called as Normal Depth, denoted by yn
+
+--- Slide 4 ---
+Most economical section 
+ A section of channel is said to be Economical, when the cost of construction of the channel is minimum. 
+ Cost of Construction: Excavation and Lining 
+ Wetted Perimeter to be Minimum, for a given Discharge 
+ Best Section; Most Efficient Section 
+ Design of Channel 
+ A particular Discharge; for a given c/s area, A; slope of bed, S0; and resistant coefficient is maximum.
+
+--- Slide 5 ---
+Most economical section 
+ Q is Maximum when P is Minimum 
+ Constant
+
+--- Slide 6 ---
+Most economical section – Rectangular C/s 
+ Relationship b/w P and A 
+ Most Economical Section
+
+--- Slide 7 ---
+Most economical section – Trapezoidal C/s 
+ Relationship b/w P and A 
+ Most Economical Section
+
+--- Slide 8 ---
+Most economical section – Trapezoidal C/s 
+ Relationship b/w P and A 
+ Most Economical Section
+
+--- Slide 9 ---
+Most economical section – Trapezoidal C/s 
+ Relationship b/w P and A 
+ Most Economical Section
+
+--- Slide 10 ---
+numerical 
+ Q1. A rectangular channel of width, 4 m is having a bed slope of 1 in 1500. Find the maximum discharge through the channel. Take C=50.
+
+--- Slide 11 ---
+numerical 
+ Q2. A rectangular channel carries water at the rate of 400 lit/s when bed slope is 1 in 2000. Find the most economical dimensions of the channel if C=50.
+
+--- Slide 12 ---
+numerical 
+ Q3. A rectangular channel 4 m wide has depth of water 1.5 m. The slope of the bed of the channel is 1 in 1000 and value if Chezy’s constant, C=55. It is desired to increase the discharge to a maximum by changing the dimensions of the section for constant area of c/s, slope of bed and roughness of the channel. Find the dimensions of the channel and increase in discharge.
+
+--- Slide 13 ---
+numerical 
+ Q4. A trapezoidal channel has side slopes of 1H:2V and the slope of the bed is 1 in 1500. Area of section is 40 m2. Find the dimensions of the section if it is most economical. Determine the discharge of the most economical section; if C=50.
+
+--- Slide 14 ---
+numerical 
+ Q5. A trapezoidal channel with side slopes of 1 in 1 has to be designed to convey 10 m3/s at a velocity of 2 m/s so that the amount of concrete lining for the bed and sides is the minimum. Calculate the area of lining required for one metre length of canal.
+
+--- Slide 15 ---
+numerical 
+ Q6. A trapezoidal channel has side slopes of 1 in 1. It is required to discharge 13.75 m3/s of water with a bed gradient of 1 in 1000. If unlined, the value of Chezy’s C is 44 and 60 if lined with concrete. The cost per m3 of the excavation is four times the cost of m2 of lining. The channel is to be the most efficient one. Find whether the lined canal or the unlined canal will be cheaper. What will be the dimensions of that economical canal.
+
+--- Slide 16 ---
+Most economical section – Circular C/s 
+ Relationship b/w P and A
+
+--- Slide 17 ---
+numerical 
+ Q7. Find the discharge through a circular pipe of diameter 3 m, if the depth of water in the pipe is 1 m and the pipe is laid at a slope of 1 in 1000. Take the value of C as 70.
+
+--- Slide 18 ---
+numerical 
+ Q8. Calculate the quantity of water that will be discharged at a uniform depth of 0.9 m in a 1.2 m diameter pipe which is laid at a slope 1 in 1000. Assume C as 58.
+
+
+### FILE: Unit II\III_4 - Specific Energy and Hyd. Jump.pptx (13 slides)
+
+--- Slide 1 ---
+Uniform flow 
+ Main features 
+ The depth of flow, wetted area, velocity of flow and discharge are constant at every section along the channel reach. 
+ The total energy line, water surface and the channel bottom are all parallel, that is, their slopes are all equal, or Sf = Sw = S0 = S
+
+--- Slide 2 ---
+Non-Uniform flow 
+ Non-Uniform Flow is also called Varied Flow 
+ Flow in which the Water Depth and/or Discharge change along the length of the channel 
+ It can be further classified as 
+ Gradually Varied Flow (GVF) where the depth of the flow changes gradually along the length of the channel 
+ Rapidly Varied Flow (RVF) where the depth of flow changes suddenly over a small length of the channel
+
+--- Slide 3 ---
+Non-uniform flow
+
+--- Slide 4 ---
+Specific energy 
+ The Total Energy of a flowing liquid per unit weight 
+ Datum ~ Channel Bottom 
+ Specific Energy of a flowing liquid is defined as energy per unit weight of the liquid with respect to the bottom of the channel.
+
+--- Slide 5 ---
+Specific energy curve 
+ Curve which shows the variation of Specific Energy with Depth of Flow 
+ Consider Steady; Non-Uniform Flow
+
+--- Slide 6 ---
+Specific energy curve 
+ Curve which shows the variation of Specific Energy with Depth of Flow
+
+--- Slide 7 ---
+Critical depth, hc 
+ It is the depth of flow of water at which the specific energy is minimum.
+
+--- Slide 8 ---
+Critical depth, hc 
+ Mathematical expression is obtained by differentiating the specific energy equation w.r.t depth of flow and equating the same to zero.
+
+--- Slide 9 ---
+Critical velocity, Vc 
+ The velocity of flow at critical depth is known as Critical Velocity.
+
+--- Slide 10 ---
+Specific energy in terms of critical depth
+
+--- Slide 11 ---
+Hydraulic jump 
+ The rise of water level, which takes place due to the transformation of the Unstable Shooting (Super-Critical) Flow to the Stable Streaming (Sub-Critical) Flow.
+
+--- Slide 12 ---
+Hydraulic jump – Expression for Depth 
+ In the analysis of hydraulic jumps, the following assumptions are made 
+ The Flow is Uniform and Pressure Distribution is due to Hydrostatic; before and after the Jump. 
+ Losses due to Friction on the surface of the bed of the channel are Small and hence Neglected. 
+ The Slope of the bed of the channel is very Small, so that the Component of the Weight of the fluid in the direction of the flow is Neglected.
+
+--- Slide 13 ---
+Hydraulic jump – Expression for Depth 
+ Forces acting on the Mass of water b/w sections 1 and 2 
+ Pressure Force, p1 
+ Pressure Force, p2 
+ Frictional Force - on the floor of the channel
+
+
+### FILE: Unit II\III_5 - Hydraulic Jump.pptx (12 slides)
+
+--- Slide 1 ---
+Contents 
+ Hydraulic Jump
+
+--- Slide 2 ---
+Hydraulic jump 
+ The rise of water level, which takes place due to the transformation of the Unstable Shooting (Super-Critical) Flow to the Stable Streaming (Sub-Critical) Flow.
+
+--- Slide 3 ---
+Hydraulic jump – Expression for Depth 
+ In the analysis of hydraulic jumps, the following assumptions are made 
+ The Flow is Uniform and Pressure Distribution is due to Hydrostatic; before and after the Jump. 
+ Losses due to Friction on the surface of the bed of the channel are Small and hence Neglected. 
+ The Slope of the bed of the channel is very Small, so that the Component of the Weight of the fluid in the direction of the flow is Neglected.
+
+--- Slide 4 ---
+Hydraulic jump – Expression for Depth 
+ Forces acting on the Mass of water b/w sections 1 and 2 
+ Pressure Force, p1 
+ Pressure Force, p2 
+ Frictional Force - on the floor of the channel
+
+--- Slide 5 ---
+Hydraulic jump – Expression for Depth 
+ Discharge per unit width, 
+ Pressure Force, p1 
+ Pressure Force, p1
+
+--- Slide 6 ---
+Hydraulic jump – Expression for Depth 
+ Net Force acting on the Mass of water b/w sections 1 and 2, 
+ Momentum Principle, 
+ Rate of change of momentum = Mass of water per sec x change in Velocity
+
+--- Slide 7 ---
+Hydraulic jump – Expression for Depth 
+ The two roots of the quadratic equation, 
+ , 
+ Hence, 
+ Therefore, depth of Hydraulic Jump =
+
+--- Slide 8 ---
+Hydraulic jump – Expression for Loss of Energy
+
+--- Slide 9 ---
+Hydraulic jump – Expression for Depth in terms of Fr
+
+--- Slide 10 ---
+Hydraulic jump – Length 
+ For a rectangular channel, the Length of the Hydraulic Jump is 5 or 7 times the Height of the Hydraulic Jump
+
+--- Slide 11 ---
+numerical 
+ Q1. The depth of flow of water, at a certain section of a rectangular channel of 4m wide, is 0.5m. This discharge through the channel is 16m3/s. If a hydraulic jump takes place on the downstream side, find the depth of flow after the jump.
+
+--- Slide 12 ---
+numerical 
+ Q2. A sluice gate discharges water into a horizontal rectangular channel with a velocity of 10m/s and depth of flow of 1m. Determine the depth of flow after the jump and consequent loss in total head.
+
+
+=====================================================
+CE332 FLUID MECHANICS SLIDE DECK (FOUNDATIONS & BRIDGING)
+=====================================================
+
+
+
+### FILE: Unit I\I_1 - Intro, Density, SV.pptx (17 slides)
+
+--- Slide 1 ---
+Solids and Fluids
+
+--- Slide 2 ---
+Solids and Fluids 
+ The technical distinction between solid and fluid lies with the reaction of the two to an applied shear or tangential stress. 
+ A solid can resist a shear stress by a static deformation; a fluid cannot.
+
+--- Slide 3 ---
+Fluid Mechanics
+
+--- Slide 4 ---
+Fluid Mechanics 
+ FLUID MECHANICS - It deals with the behavior of fluids at rest (fluid statics) or in motion (fluid dynamics), and the interaction of fluids with solids or other fluids at the boundaries. 
+ When you think about it, almost everything on this planet either is a fluid or moves within or near a fluid.
+
+--- Slide 5 ---
+Fluid Mechanics everywhere 
+ Fluid Structure Interactions 
+ Automobiles (Standard and Sports Car) 
+ Space Crafts (Airplane/ Rockets) 
+ Movement of different Sporting Balls 
+ Nature/ Inanimate (Tornado, River, Raindrop) 
+ Nature/ Animate (Birds, Fish, etc.) 
+ Human body/ Medical science (Respiratory, Pulmonary, Cardiovascular Systems)
+
+--- Slide 6 ---
+Fluid Mechanics everywhere
+
+--- Slide 7 ---
+Types of Study in Fluid Mechanics 
+ Hydrodynamics: 
+ Motion of the fluids that can be approximated as incompressible [Constant Density] 
+ Hydraulics: 
+ Sub-category of Hydrodynamics dealing with flows in pipes and open channels 
+ Gas Dynamics: 
+ Deals with flow of fluids that undergo significant density changes 
+ Aerodynamics: 
+ Deals with flow of gases over bodies such as aircrafts and automobiles 
+ Meteorology: 
+ Deals with naturally occurring flows
+
+--- Slide 8 ---
+DENSITY 
+ Density or Mass Density of a fluid is defined as the ratio of the Mass of a fluid to its Volume. 
+ It is denoted by the symbol ρ (rho) 
+ In S.I. Unit: kg per cubic meter i.e. kg/m3 
+ Mass per Unit Volume of a Fluid is called Density
+
+--- Slide 9 ---
+DENSITY 
+ Density of Water: 1000 kg/m3 or gm/cm3 
+ What is Density of water in kg/lit ? 
+ The density of water at 4 deg C and 1 atm (101325 Pa, standard atmospheric pressure) is 1000kg/m3. 
+ 1kg/lit
+
+--- Slide 10 ---
+Specific Volume 
+ Specific Volume of a fluid is defined as the Volume of fluid occupied by a Unit Mass of the fluid. 
+ Thus specific volume is the reciprocal of density and is expressed as m3/kg in SI units
+
+--- Slide 11 ---
+Specific Gravity 
+ Specific Gravity of a fluid is defined as the ratio of the density of a fluid to the density of a standard fluid. 
+ Specific Gravity is also called as Relative Density 
+ Specific Gravity is denoted by the symbol S 
+ For Liquids: 
+ For Gases:
+
+--- Slide 12 ---
+Specific Gravity 
+ Density of a Liquid = S x Density of Water 
+ Density of a Liquid = S x 1000 kg/m3 
+ Example: 
+ Specific Gravity of Mercury (Hg) is 13.6 
+ Hence the Density of Mercury is 13.6 x 1000 kg/m3
+
+--- Slide 13 ---
+Specific Gravity
+
+--- Slide 14 ---
+Specific Weight/ Weight Density 
+ Specific Weight or Weight Density of a fluid is defined as the ratio between the Weight of a fluid to its Volume 
+ It is denoted by the symbol w 
+ The specific weight (w) for water is 9.81x1000 N/m3 in S.I. Unit
+
+--- Slide 15 ---
+Numerical 
+ Q1. Calculate density, specific weight and weight of one litre of petrol of specific gravity, 0.7.
+
+--- Slide 16 ---
+Numerical 
+ Q2. Calculate the density, specific volume, specific weight and specific gravity of one litre of a liquid which weighs 7N.
+
+--- Slide 17 ---
+Numerical 
+ Q3. 5.6m3 of oil weighs 46800N. Find its mass density and determine whether it is lighter or heavier than water.
+
+
+### FILE: Unit I\I_2 - Viscosity.pptx (23 slides)
+
+--- Slide 1 ---
+DENSITY 
+ Specific Volume 
+ Specific Gravity 
+ Specific Weight/ Weight Density
+
+--- Slide 2 ---
+viscosity 
+ Viscosity is defined as the property of a fluid which offers resistance to the movement of one layer of fluid over another adjacent layer of fluid. 
+ It is a measure of a fluid's resistance to flow. 
+ It describes the internal friction of a moving fluid. 
+ A fluid with high viscosity resists motion because its molecular makeup gives it a lot of internal friction. A fluid with low viscosity flows easily because it has little internal friction.
+
+--- Slide 3 ---
+SHEAR STRESS & viscosity 
+ Viscosity, along with Relative Velocity, causes Shear Stress acting between the fluid layers.
+
+--- Slide 4 ---
+Derivation of viscosity 
+ Shear stress is proportional to the rate of change of velocity with respect to y 
+ μ is the constant of proportionality. Also known as the coefficient of Dynamic Viscosity or Viscosity. 
+ is velocity gradient or rate of shear deformation
+
+--- Slide 5 ---
+Unit of viscosity 
+ In SI: N.s/m2 -> Pa.s 
+ In MKS: kgf-sec/m2 
+ In CGS: dyne-sec/m2 
+ 1kgf = 9.81N
+
+--- Slide 6 ---
+Kinematic viscosity 
+ Kinematic Viscosity is defined as the ratio between dynamic viscosity and density of fluid. 
+ It is denoted by, ν
+
+--- Slide 7 ---
+Unit of Kinematic viscosity 
+ In SI: m2/s 
+ In CGS: cm2 /s -> stoke
+
+--- Slide 8 ---
+Dynamic and Kinematic Viscosity 
+ Dynamic Viscosity - measurement of the fluid’s internal resistance to flow. 
+ Kinematic Viscosity refers to the ratio of dynamic viscosity to density. 
+ Based on the expressions above, two fluids with the same dynamic viscosities can have very different kinematic viscosities depending on density and vice versa. 
+ Dynamic Viscosity gives you information on the force needed to make the fluid flow at a certain rate, while Kinematic Viscosity tells how fast the fluid is moving when a certain force is applied.
+
+--- Slide 9 ---
+Newton's Law of Viscosity 
+ It states that the shear stress, τ, on a fluid element layer is directly proportional to the rate of shear strain.
+
+--- Slide 10 ---
+Types of Fluids 
+ Newtonian Fluids: Fluids which obey Newton's Law of Viscosity. 
+ Non-Newtonian Fluids: Fluids which do not obey Newton's Law of Viscosity. 
+ It states that the shear stress, τ, on a fluid element layer is directly proportional to the rate of shear strain.
+
+--- Slide 11 ---
+Types of Fluids 
+ Ideal Fluid: A fluid which is incompressible and is having no viscosity. 
+ Real Fluid: A fluid which possesses viscosity. All fluids are Real Fluids. 
+ Newtonian Fluid 
+ Non-Newtonian Fluid
+
+--- Slide 12 ---
+Newtonian Fluid
+
+--- Slide 13 ---
+NON-Newtonian Fluid
+
+--- Slide 14 ---
+NON-Newtonian Fluid 
+ Bingham Plastic 
+ The linear relationship do not pass through the origin; i.e. shear stress is more than the yield value. 
+ behaves as a rigid body at low stresses but flows as a viscous fluid at high stress 
+ Examples: Soap, Mud Flow, Toothpaste, Sewage Sludge, Paper Pulp
+
+--- Slide 15 ---
+NON-Newtonian Fluid 
+ Pseudo-Plastic 
+ Fluids show decrease in apparent viscosity with increase in shear stress. 
+ Examples: Quicksand, Blood, Milk, Polymer Solutions, Grease, Starch Suspension, Ketchup
+
+--- Slide 16 ---
+NON-Newtonian Fluid 
+ Dilatant 
+ Fluids show increase in apparent viscosity with increase in shear stress. 
+ hardens upon application of high enough 
+ Examples: Corn Flour Solution, Wet Beach Sand, Potassium Silicate in water
+
+--- Slide 17 ---
+Variation of Viscosity with Temperature 
+ Temperature affects Viscosity. 
+ The viscosity of liquids decreases with the increase of temperature while the viscosity of gases increases with the increase of temperature.
+
+--- Slide 18 ---
+Variation of Viscosity with Temperature 
+ For Liquids: 
+ For Gases: 
+ μ: Viscosity at t°C, in poise 
+ μ0: Viscosity at 0°C, in poise 
+ α,β: Constants 
+ For water: poise, α=0.03368 and β =0.000221 
+ For water:  poise, α=0.000000056 and β =0.1189 x 10-9
+
+--- Slide 19 ---
+Newton's Law of Viscosity 
+ It states that the shear stress, τ, on a fluid element layer is directly proportional to the rate of shear strain.
+
+--- Slide 20 ---
+Numerical 
+ Q1. If the velocity distribution over a plate is given by  in which u is the velocity in m/s at a distance y meter above the plate, determine the shear stress at y=0 and y=0.15m. Take dynamic viscosity of the fluid as 8.63poise.
+
+--- Slide 21 ---
+Numerical 
+ Q2. The space between two square flat parallel plates is filled with oil. Each side of the plate is 60cm. The thickness of the oil film is 12.5mm. The upper plate which moves at 2.5m/s requires a force of 98.1N to maintain the speed. Determine the dynamic viscosity and kinematic viscosity of oil if the specific gravity of oil is 0.95.
+
+--- Slide 22 ---
+Numerical 
+ Q3. Calculate the dynamic viscosity of an oil, which is used for lubrication between a square plate of size 0.8m x 0.8m and an inclined plane with angle of inclination 30°. The weight of the square plate is 300N and it slides down the inclined plane with a uniform velocity of 0.3m/s. The thickness of oil film is 1.5mm.
+
+--- Slide 23 ---
+Numerical 
+ Q4. A shaft of diameter 100mm is rotating inside sleeve or bearing of diameter 102mm at a pace of 360rpm. The space b/w the shaft and bearing is filled with a lubricating oil of viscosity 5 poise. The length of bearing is 200mm. Find the power absorbed in the lubricating oil.
+
+
+### FILE: Unit I\I_3 - Compres, BM, ST, VP.pptx (22 slides)
+
+--- Slide 1 ---
+Contents 
+ Fluid Properties 
+ Compressibility of Fluids – Bulk Modulus 
+ Surface Tension
+
+--- Slide 2 ---
+DENSITY 
+ Specific Volume 
+ Specific Gravity 
+ Specific Weight/ Weight Density 
+ Viscosity
+
+--- Slide 3 ---
+Compressibility of Fluids 
+ An important question to answer when considering the behavior of a particular fluid is how easily can the volume (and thus the density) of a given mass of the fluid be changed when there is a change in pressure? 
+ That is, how compressible is the fluid? 
+ A property that is commonly used to characterize compressibility is the bulk modulus
+
+--- Slide 4 ---
+Bulk Modulus 
+ Bulk Modulus is defined as the differential change in pressure needed to create a differential change in volume with respect to the initial volume, 
+ The -ve sign is included since an increase in pressure will cause a decrease in volume.
+
+--- Slide 5 ---
+Bulk Modulus 
+ Since a decrease in volume of a given mass, , will result in an increase in density, 
+ The bulk modulus is also referred to as the bulk modulus of elasticity. 
+ It is also denoted by K 
+ It has dimensions of Pressure. SI Unit: N/m2
+
+--- Slide 6 ---
+Compressibility 
+ Compressibility is defined as the reciprocal of the bulk modulus of elasticity, K,
+
+--- Slide 7 ---
+Numerical 
+ Q1. What is the compressibility of a liquid which is compressed in a cylinder from volume 0.0125m3 at 80N/cm2 pressure to a volume of 0.0124m3 at 150N/cm2 pressure?
+
+--- Slide 8 ---
+Surface Tension
+
+--- Slide 9 ---
+Surface Tension 
+ Surface Tension is defined as the tensile force acting on the surface of a liquid in contact with a gas/ an immiscible liquid, such that the surface behaves as membrane under tension. 
+ It is denoted by σ; SI Unit is N/m
+
+--- Slide 10 ---
+Surface Tension1. Surface Tension on a Liquid Droplet 
+ Excess pressure in the droplet,
+
+--- Slide 11 ---
+Surface Tension2. Surface Tension on a soap bubble 
+ Excess pressure in the bubble,
+
+--- Slide 12 ---
+Surface Tension3. Surface Tension on a Liquid Jet 
+ Excess pressure in the liquid jet,
+
+--- Slide 13 ---
+Capillarity 
+ Capillary action or Capillarity, is the ability of a liquid to flow in narrow spaces without the assistance of, and in opposition to, external forces like gravity.
+
+--- Slide 14 ---
+Capillarity 
+ Capillarity depends upon 
+ Specific Weight of the Liquid 
+ Diameter of the Tube 
+ Surface Tension of the Liquid 
+ Examples of Capillary Action 
+ Ink at Pen Nib 
+ Blotting paper 
+ Sponges 
+ Lamp Wick 
+ Movement of water molecules in Soil 
+ Absorption of water in roots
+
+--- Slide 15 ---
+Capillary RISE 
+ Capillary Rise,
+
+--- Slide 16 ---
+Capillary FALL 
+ Capillary Fall,
+
+--- Slide 17 ---
+Vapour Pressure 
+ The vapour pressure is the pressure exerted by the gas when the amount of particles leaving the liquid equals the amount of particles entering the liquid
+
+--- Slide 18 ---
+CAVITATION 
+ Reduction of pressure above liquid to less than or equal to its Vapour Pressure 
+ Boiling Temperature reduces/ Boiling starts at ordinary temperature 
+ Bubbles start to form 
+ These bubbles, when collapse, generate High Pressures 
+ The adjoining boundaries or surfaces get corroded due to this action 
+ This phenomenon is called CAVITATION
+
+--- Slide 19 ---
+CAVITATION
+
+--- Slide 20 ---
+Numerical 
+ Q1. The surface tension of water in contact with air at 20°C is 0.0725N/m. The pressure inside a droplet of water is to be 0.02N/cm2 greater than the outside pressure. Calculate the diameter of droplet of water.
+
+--- Slide 21 ---
+Numerical 
+ Q2. The pressure outside the droplet of water of diameter 0.04mm is 10.32N/cm2. Calculate the pressure within the droplet if surface tension is given as 0.0725N/m of water.
+
+--- Slide 22 ---
+Numerical 
+ Q3. Calculate the capillary rise in a glass tube of 2.5mm diameter when immersed vertically in (a) water and (b) mercury. Take surface tension, σwater=0.0725N/m σmercury =0.52N/m in contact with air. The specific gravity of mercury is 13.6 and the angle of contact is 130°.
+
+
+### FILE: Unit II\II_1 - Hydrostatics; Pascal's Law and Variation of Pressure.pptx (16 slides)
+
+--- Slide 1 ---
+Contents 
+ Hydrostatics 
+ Fluid Pressure – At a Point 
+ Pascal’s Law 
+ Pressure Variation in a Fluid at Rest
+
+--- Slide 2 ---
+Hydrostatics 
+ For any Fluid Problems: 
+ Pressure Field, P 
+ Velocity Field, V 
+ Density, ρ 
+ Temperature T 
+ Fluid at Rest 
+ At Rest, V = 0 
+ LIQUID - Incompressible, ρ = Constant 
+ If no significant variation, T = Constant 
+ No Velocity implies No Shear Stress 
+ Forces: 1. Forces due to Pressure; 2. Gravity Force 
+ Force due to Pressure Distribution is balanced with Gravity Force
+
+--- Slide 3 ---
+Fluid pressure: at a point 
+ If the fluid is stationary, the Force exerted is Perpendicular to the Surface
+
+--- Slide 4 ---
+Fluid pressure: at a point, P 
+ Pressure at a Point (Small Area dA), in a Fluid at Rest 
+ If Force, F is uniformly distributed over Area A
+
+--- Slide 5 ---
+Pascal’s law 
+ It states that the Pressure or Intensity of Pressure at a Point in a Static Fluid is Equal in all Directions
+
+--- Slide 6 ---
+Pascal’s law - Derivation
+
+--- Slide 7 ---
+Pascal’s law - Derivation 
+ Since the fluid element is completely arbitrary, it means that the pressure at any point is the same in all directions
+
+--- Slide 8 ---
+Pressure variation in a fluid at rest
+
+--- Slide 9 ---
+Pressure variation in a fluid at rest
+
+--- Slide 10 ---
+Pressure variation in a fluid at rest
+
+--- Slide 11 ---
+Pressure variation in a fluid at rest
+
+--- Slide 12 ---
+Pressure variation in a fluid at rest
+
+--- Slide 13 ---
+Numerical 
+ Q1. Calculate the pressure due to a column of 0.3 m of 
+ Water 
+ Oil of Specific Gravity, 0.8 
+ Mercury of Specific Gravity, 13.6 
+ Take ρwater = 1000 kg/m3
+
+--- Slide 14 ---
+Numerical 
+ Q2. An open tank contains water up-to a depth of 2 m and above it, an oil of specific gravity, 0.9 for a depth of 1 m. Find the pressure intensity 
+ at the interface of the two liquids 
+ at the bottom of the tank
+
+--- Slide 15 ---
+Hydraulic Press
+
+--- Slide 16 ---
+Numerical 
+ Q3. A hydraulic press has a ram of 30cm diameter and plunger of 4.5 cm diameter. Find the weight lifted by the hydraulic press when the force applied at the plunger is 500N.
+
+
+### FILE: Unit II\II_2 - Pressure - Abs,Atm,Gauge, Baro, Manometer.pptx (11 slides)
+
+--- Slide 1 ---
+Hydraulic Press
+
+--- Slide 2 ---
+Numerical 
+ Q3. A hydraulic press has a ram of 30cm diameter and plunger of 4.5 cm diameter. Find the weight lifted by the hydraulic press when the force applied at the plunger is 500N.
+
+--- Slide 3 ---
+Contents 
+ Measurement of Pressure 
+ Absolute, Gauge, Atmospheric – Pressure 
+ Barometer 
+ Manometer
+
+--- Slide 4 ---
+Measurement of Pressure 
+ Determination of Reference Point or Datum
+
+--- Slide 5 ---
+Absolute, Gauge, Atmospheric - Pressure 
+ Absolute Pressure - Pressure measured with reference to a perfect vacuum 
+ Gauge Pressure - Pressure measured with respect to local atmospheric pressure 
+ Vacuum Pressure - Pressure measured below atmospheric pressure
+
+--- Slide 6 ---
+Absolute, Gauge, Atmospheric - Pressure 
+ A gauge pressure of zero is at local atmospheric pressure 
+ Absolute pressure is always positive 
+ Gauge pressure can be either negative or positive 
+ Negative gauge pressure is known as a vacuum or suction 
+ Standard units of Pressure are psi, psia, kPa, kPa (absolute) 
+ Pressure could be measured in terms of the height of the fluid column 
+ Units in mm of Hg, inches of Hg, inches of H2O,etc
+
+--- Slide 7 ---
+Absolute, Gauge, Atmospheric - Pressure 
+ Absolute Pressure= Atmospheric Pressure ± Gauge Pressure 
+ Notes 
+ The Patm at Sea Level at 15°C is 101.3 kN/m2 or 10.13 N/cm2 in SI or 1.033 kgf/cm2 in MKS. 
+ The Patm  Head is 760 mm of Hg or 10.33 m of Water.
+
+--- Slide 8 ---
+Numerical 
+ Q1. What are the gauge pressure and absolute pressure at a point 3 m below the free surface of a liquid having a density of 1.53x103 kg/m3; if the atmospheric pressure is 100062 N/m2?
+
+--- Slide 9 ---
+barometer 
+ Used to measure Atmospheric Pressure 
+ Note: Often Pvapor is very small, 0.159 Pa at 20° C, and Patm is 101325 Pa, thus:
+
+--- Slide 10 ---
+Numerical 
+ Q1. What are the gauge pressure and absolute pressure at a point 3 m below the free surface of a liquid having a density of 1.53x103 kg/m3; if the atmospheric pressure is 100062 N/m2? 
+ Q1. What are the gauge pressure and absolute pressure at a point 3 m below the free surface of a liquid having a density of 1.53x103 kg/m3; if the atmospheric pressure is 750mm of Hg?
+
+--- Slide 11 ---
+manometer 
+ Manometry is a standard technique for measuring pressure using liquid columns in vertical or inclined tubes. The devices used in this manner are known as manometers. 
+ The types of Manometers are; 
+ Simple 
+ Piezometer 
+ U-Tube Manometer 
+ Single Column Manometer – (Vertical/ Inclined) 
+ Differential 
+ U-Tube Differential Manometer 
+ Inverted U-Tube Differential Manometer 
+ The fundamental equation for manometers since they involve columns of fluid at rest;
+
+
+### FILE: Unit II\II_3 - Piezometer, U-Tube Manometer.pptx (6 slides)
+
+--- Slide 1 ---
+Piezometer 
+ Disadvantages: 
+ The pressure in the container has to be greater than atmospheric pressure. 
+ Pressure must be relatively small to maintain a small column of fluid. 
+ The measurement of pressure must be of a liquid.
+
+--- Slide 2 ---
+U-Tube manometer 
+ Specific gravity of Measuring Liquid should be greater than the sp. gr. of the Liquid to be measured.
+
+--- Slide 3 ---
+Numerical 
+ Q1. The right limb of a simple U-tube manometer containing mercury is open to the atmosphere while the left limb is connected to a pipe in which a fluid of sp. gr. 0.9 is flowing. The center of the pipe is 12cm below the level of mercury in the right limb. Find the pressure of fluid in the pipe if the difference of mercury level in the two limbs is 20cm
+
+--- Slide 4 ---
+Numerical
+
+--- Slide 5 ---
+Numerical 
+ Q2. A simple U-tube manometer containing mercury is connected to a pipe in which a fluid of sp. gr. 0.8 and having vacuum pressure is flowing. The other end of the manometer is open to atmosphere. Find the vacuum pressure in pipe, if the difference of mercury level in the two limbs is 40 cm and the height of fluid from the center of pipe is 15 cm below. 
+ Ans: 
+ -54543.6 N/m2 
+ -5.454 N/cm2
+
+--- Slide 6 ---
+Numerical 
+ Q3. A conical vessel having its outlet at A, is attached to a U-tube manometer at that point, containing water. The manometer reading is provided for the empty conical vessel. Find the manometer reading when the vessel is completely filled with water.
+
+
+### FILE: Unit II\II_4 - Single Column Manometer.pptx (8 slides)
+
+--- Slide 1 ---
+Contents 
+ Manometer: Simple 
+ Single Column Manometer 
+ Inclined Single Column Manometer
+
+--- Slide 2 ---
+Single Column manometer 
+ Reservoir having c/s Area about 100 times more than that of the tube. 
+ For any change in variation in Pressure, the change in liquid level is very small.
+
+--- Slide 3 ---
+Single Column manometer
+
+--- Slide 4 ---
+Single Column manometer
+
+--- Slide 5 ---
+Inclined Single Column manometer 
+ Reservoir having c/s Area about 100 times more than that of the tube. 
+ For any change in variation in Pressure, the change in liquid level is very small.
+
+--- Slide 6 ---
+Inclined Single Column manometer
+
+--- Slide 7 ---
+Numerical 
+ Q1. A single column manometer is connected to a pipe containing a liquid of sp. gr. 0.9. Find the pressure in the pipe if the area of the reservoir is 100 times the area of manometer tube. The manometric fluid is taken as mercury.
+
+--- Slide 8 ---
+Numerical
+
+
+### FILE: Unit II\II_5 - Differential Manometer.pptx (7 slides)
+
+--- Slide 1 ---
+Contents 
+ Manometer: Simple 
+ U-Tube Differential Manometer
+
+--- Slide 2 ---
+U-Tube Differential Manometer 
+ Devices used for measuring the difference of pressures between Two Points in a Pipe or in Two Different Pipes
+
+--- Slide 3 ---
+U-Tube Differential Manometer
+
+--- Slide 4 ---
+U-Tube Differential Manometer
+
+--- Slide 5 ---
+Numerical 
+ Q1. A differential manometer is connected at the two points A and B of two pipes as shown. Pipe A contains a liquid of sp. gr. 1.5 while in B is 0.9. The pressure at A and B are 1kgf/cm2 and 1.8 kgf/cm2 respectively. Find the difference in mercury level in the differential manometer.
+
+--- Slide 6 ---
+Numerical
+
+--- Slide 7 ---
+INVERTED U-Tube Differential Manometer 
+ Determine an Expression for Pressure Difference: pA -pB
+
+
+### FILE: Unit III\III_1 - Introduction & Types of Flow.pptx (14 slides)
+
+--- Slide 1 ---
+Contents 
+ Fluid Kinematics 
+ Methods of Fluid Motion 
+ Types of Flow 
+ Steady Unsteady 
+ Uniform Non-Uniform 
+ Flow Combinations
+
+--- Slide 2 ---
+Fluid kinematics 
+ Branch of fluid mechanics which deals with response of fluids in motion without considering forces and energies in them. 
+ The study of Kinematics is often referred to as the geometry of motion. 
+ Velocity at any point in a fluid field at any time is studied.
+
+--- Slide 3 ---
+Types of flow 
+ Steady and Unsteady Flows 
+ Uniform and Non-Uniform Flows 
+ Laminar and Turbulent Flows 
+ Compressible and Incompressible Flows 
+ Rotational and Irrotational Flows 
+ One, Two and Three Dimensional Flows
+
+--- Slide 4 ---
+Steady and Unsteady Flows 
+ Steady: 
+ Flow in which Conditions of Flow remains Constant w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 5 ---
+Steady and Unsteady Flows 
+ Unsteady: 
+ Flow in which Conditions of Flow Changes w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 6 ---
+Steady and Unsteady Flows
+
+--- Slide 7 ---
+uniform and non-uniform Flows 
+ Uniform: 
+ Flow in which Conditions of Flow remains Constant from section to section at any given Time 
+ Example: Constant Discharge though a Constant Diameter of Pipe
+
+--- Slide 8 ---
+uniform and non-uniform Flows 
+ Non-Uniform: 
+ Flow in which Conditions of Flow Changes from section to section at any given Time 
+ Example: Constant Discharge though a Variable Diameter of Pipe
+
+--- Slide 9 ---
+uniform and non-uniform Flows
+
+--- Slide 10 ---
+Flow combinations 
+ Steady Uniform 
+ Steady Non-Uniform 
+ Unsteady Non-Uniform
+
+--- Slide 11 ---
+Steady Uniform 
+ Conditions do not change with position in the stream or with time
+
+--- Slide 12 ---
+Steady Non-Uniform 
+ Conditions change from point to point in the stream but do not change with time
+
+--- Slide 13 ---
+Unsteady Uniform 
+ At a given instant in time the conditions at every point are the same, but will change with time
+
+--- Slide 14 ---
+Unsteady Non-Uniform 
+ Every condition of the flow may change from point to point and with time at every point
+
+
+### FILE: Unit III\III_1 - Introduction, Types of Flow.pptx (17 slides)
+
+--- Slide 1 ---
+Contents 
+ Fluid Kinematics 
+ Methods of Fluid Motion 
+ Types of Flow 
+ Steady Unsteady 
+ Uniform Non-Uniform 
+ Flow Combinations
+
+--- Slide 2 ---
+Fluid kinematics 
+ Branch of fluid mechanics which deals with response of fluids in motion without considering forces and energies in them. 
+ The study of Kinematics is often referred to as the geometry of motion. 
+ Velocity at any point in a fluid field at any time is studied.
+
+--- Slide 3 ---
+Fluid motion - perspective 
+ Eulerian: 
+ Velocity, Acceleration, Pressure, Density, etc. are described at a Point in a flow field. 
+ Lagrangian: 
+ A Single Particle is followed during its motion and its Velocity, Acceleration, Density, etc. are described. 
+ Eulerian 
+ Lagrangian
+
+--- Slide 4 ---
+Fluid motion - perspective 
+ Eulerian: 
+ Sit and observe a fixed area from a fixed point.
+
+--- Slide 5 ---
+Fluid motion - perspective 
+ Lagrangian: 
+ Travel with the flow and observe what happens around you.
+
+--- Slide 6 ---
+Types of flow 
+ Steady and Unsteady Flows 
+ Uniform and Non-Uniform Flows 
+ Laminar and Turbulent Flows 
+ Compressible and Incompressible Flows 
+ Rotational and Irrotational Flows 
+ One, Two and Three Dimensional Flows
+
+--- Slide 7 ---
+Steady and Unsteady Flows 
+ Steady: 
+ Flow in which Conditions of Flow remains Constant w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 8 ---
+Steady and Unsteady Flows 
+ Unsteady: 
+ Flow in which Conditions of Flow Changes w.r.t. Time at a particular section or point. 
+ Flow conditions: Velocity, Pressure, Density or Cross-sectional Area etc.
+
+--- Slide 9 ---
+Steady and Unsteady Flows
+
+--- Slide 10 ---
+uniform and non-uniform Flows 
+ Uniform: 
+ Flow in which Conditions of Flow remains Constant from section to section at any given Time 
+ Example: Constant Discharge though a Constant Diameter of Pipe
+
+--- Slide 11 ---
+uniform and non-uniform Flows 
+ Non-Uniform: 
+ Flow in which Conditions of Flow Changes from section to section at any given Time 
+ Example: Constant Discharge though a Variable Diameter of Pipe
+
+--- Slide 12 ---
+uniform and non-uniform Flows
+
+--- Slide 13 ---
+Flow combinations 
+ Steady Uniform 
+ Steady Non-Uniform 
+ Unsteady Non-Uniform
+
+--- Slide 14 ---
+Steady Uniform 
+ Conditions do not change with position in the stream or with time
+
+--- Slide 15 ---
+Steady Non-Uniform 
+ Conditions change from point to point in the stream but do not change with time
+
+--- Slide 16 ---
+Unsteady Uniform 
+ At a given instant in time the conditions at every point are the same, but will change with time
+
+--- Slide 17 ---
+Unsteady Non-Uniform 
+ Every condition of the flow may change from point to point and with time at every point
+
+
+### FILE: Unit III\III_2 & 3 - Types of Flow, Pathline, Streakline.pptx (19 slides)
+
+--- Slide 1 ---
+Types of flow 
+ Steady and Unsteady Flows 
+ Uniform and Non-Uniform Flows 
+ Laminar and Turbulent Flows 
+ Compressible and Incompressible Flows 
+ Rotational and Irrotational Flows 
+ One, Two and Three Dimensional Flows
+
+--- Slide 2 ---
+Laminar and Turbulent Flows 
+ Laminar: 
+ The fluid flow in laminations (layers) is termed as laminar flow
+
+--- Slide 3 ---
+Laminar and Turbulent Flows 
+ Turbulent: 
+ The fluid flow layers intermix with each other is termed as turbulent flow 
+ Highly disordered fluid motion that typically occurs at higher velocities and is characterized by velocity fluctuations
+
+--- Slide 4 ---
+Laminar and Turbulent Flows
+
+--- Slide 5 ---
+Laminar and Turbulent Flows – Reynolds Number 
+ Reynolds Number (Re): 
+ Reynolds number is used to differentiate between laminar and turbulent flows
+
+--- Slide 6 ---
+Laminar and Turbulent Flows – Reynolds Number 
+ Pipe Flow 
+ Laminar 
+ Turbulent 
+ Streamflow 
+ Laminar 
+ Turbulent
+
+--- Slide 7 ---
+Compressible and Incompressible Flows 
+ Compressible: 
+ Flow in which Density of the Fluid changes from point to point 
+ Density is not Constant 
+ Example: Gases
+
+--- Slide 8 ---
+Compressible and Incompressible Flows 
+ Incompressible: 
+ Flow in which Density of the Fluid remains nearly constant throughout 
+ Density is Constant 
+ Example: Generally all Liquids
+
+--- Slide 9 ---
+Rotational and Irrotational Flows 
+ Rotational: 
+ Flow in which the fluid particles while flowing along the Stream-lines, also rotate about their own axis 
+ Irrotational: 
+ Flow in which the fluid particles while flowing along the Stream-lines, do not  rotate about their own axis
+
+--- Slide 10 ---
+Rotational and Irrotational Flows
+
+--- Slide 11 ---
+One, Two and Three Dimensional Flows 
+ The terms one, two or three dimensional flow refers to the number of space coordinate required to describe a flow. 
+ It appears that any physical flow is generally three-dimensional. 
+ But these are difficult to calculate and thus simplification is necessary. This is achieved by ignoring changes to flow in any of the directions, thus reducing the complexity. 
+ It may be possible to reduce a three-dimensional problem into a two-dimensional  or even an one-dimensional problem.
+
+--- Slide 12 ---
+One, Two and Three Dimensional Flows 
+ One Dimensional Flow: 
+ If the flow parameters (such as velocity, pressure, depth etc.) at a given instant in time only vary in the one direction; 
+ In the direction of flow and not across the cross-section 
+ Across the cross-section and not along the flow
+
+--- Slide 13 ---
+One, Two and Three Dimensional Flows 
+ Two Dimensional Flow: 
+ If it can be assumed that the flow parameters vary in the direction of flow and in one other direction at right angles to the flow.
+
+--- Slide 14 ---
+One, Two and Three Dimensional Flows 
+ Three Dimensional Flow: 
+ If the flow parameters vary in all three directions of flow
+
+--- Slide 15 ---
+Path Line 
+ It is trace made by single particle over a period of time.
+
+--- Slide 16 ---
+Streak Line 
+ It is the locus of fluid particles that have passed sequentially through a prescribed point in the flow. 
+ It is an instantaneous picture of the position of all particles in flow that have passed through a given point.
+
+--- Slide 17 ---
+Path line and Streak Line
+
+--- Slide 18 ---
+Streamline 
+ It show the mean direction of a number of particles at the same instance of time. 
+ Lines that are tangent to the velocity fields. 
+ Streamlines are instantaneous flow patterns
+
+--- Slide 19 ---
+Streamline 
+ Character of Streamline: 
+ Streamlines can not cross each other. (otherwise, the cross point will have two tangential lines.) 
+ Streamline can't be a folding line, but a smooth curve. 
+ Streamline cluster density reflects the magnitude of velocity (Dense streamlines mean large velocity; while sparse streamlines mean small velocity).
+
+
+### FILE: Unit IV\IV_1 - Dynamics & Euler Derivation.pptx (15 slides)
+
+--- Slide 1 ---
+Contents 
+ Summary to Units II and III 
+ Introduction to Unit IV 
+ Euler Equation – Derivation
+
+--- Slide 2 ---
+Fluid Mechanics 
+ Fluid Statics 
+ Fluids in Motion 
+ Kinematics - not considering the forces 
+ Dynamics - considering the forces
+
+--- Slide 3 ---
+Fluid STATICS 
+ Pressure at a Point 
+ Pascal’s Law 
+ Pressure variation 
+ with Temperature 
+ with Density 
+ with Depth 
+ Hydrostatic Pressure 
+ Vertical, Horizontal, Inclined
+
+--- Slide 4 ---
+Fluid Kinematics - not considering the forces 
+ Types of Flows 
+ Steady and Unsteady Flows 
+ Uniform and Non-Uniform Flows 
+ Laminar and Turbulent Flows 
+ Compressible and Incompressible Flows 
+ Rotational and Irrotational Flows 
+ One, Two and Three Dimensional Flows
+
+--- Slide 5 ---
+Fluid Kinematics - not considering the forces 
+ Path Line 
+ Streak Line 
+ Streamline
+
+--- Slide 6 ---
+Fluid dynamics - considering the forces 
+ The dynamic behavior of fluid flow is analyzed by the Newton’s second law of motion 
+ - relates acceleration with the forces 
+ Fx=m. ax
+
+--- Slide 7 ---
+Fluid dynamics - considering the forces 
+ Forces 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Force due to Viscosity, Fν 
+ Force due to Turbulence, Ft 
+ Force due to Compressibility, Fc 
+ Fx=m. ax 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x 
+ In fluid dynamics, fluid is assumed to be incompressible and non-viscous
+
+--- Slide 8 ---
+Fluid dynamics - considering the forces 
+ If Flow is Incompressible 
+ Reynold’s Equation of Motion 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x 
+ If Turbulence is neglected 
+ Navier-Stokes Equation 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x
+
+--- Slide 9 ---
+Fluid dynamics - considering the forces 
+ If Flow is Ideal (i.e. non-viscous) 
+ Euler’s Equation of Motion 
+ Fx= (Fg)x+ (Fp) x 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x
+
+--- Slide 10 ---
+Euler equation - Derivation 
+ Equation of motion in which forces due to gravity and pressure are considered. 
+ Derived by considering a fluid element along a Streamline 
+ Fx= (Fg)x+ (Fp) x
+
+--- Slide 11 ---
+Euler equation - Derivation 
+ Consider Cylindrical element; c/s area dA, length ds 
+ Forces 
+ Gravity Force, Fg 
+ Pressure Force, Fp
+
+--- Slide 12 ---
+Euler equation - Derivation 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Fs=m. as
+
+--- Slide 13 ---
+Euler equation - Derivation 
+ , v is a function of s and t 
+ , for Steady Flow
+
+--- Slide 14 ---
+Euler equation - Derivation
+
+--- Slide 15 ---
+Euler equation - Derivation 
+ Euler’s Equation of Motion
+
+
+### FILE: Unit IV\IV_2 & 3 - Bernoulli Equation.pptx (14 slides)
+
+--- Slide 1 ---
+Contents 
+ Bernoulli’s Equation 
+ Numerical
+
+--- Slide 2 ---
+Fluid dynamics - considering the forces 
+ The dynamic behavior of fluid flow is analyzed by the Newton’s second law of motion 
+ - relates acceleration with the forces 
+ Fx=m. ax
+
+--- Slide 3 ---
+Fluid dynamics - considering the forces 
+ Forces 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Force due to Viscosity, Fν 
+ Force due to Turbulence, Ft 
+ Force due to Compressibility, Fc 
+ Fx=m. ax 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x 
+ In fluid dynamics, fluid is assumed to be incompressible and non-viscous
+
+--- Slide 4 ---
+Euler equation - Derivation 
+ Equation of motion in which forces due to gravity and pressure are considered. 
+ Derived by considering a fluid element along a Streamline 
+ Fx= (Fg)x+ (Fp) x
+
+--- Slide 5 ---
+Euler equation - Derivation 
+ Euler’s Equation of Motion
+
+--- Slide 6 ---
+Bernoulli’s equation – From Euler’s Equation 
+ Bernoulli’s Equation is obtained by Integrating the Equation of Motion 
+ For Incompressible Flow, ρ = constant 
+ Bernoulli’s Equation
+
+--- Slide 7 ---
+Bernoulli’s equation 
+ Bernoulli’s Equation 
+ = Pressure energy per unit weight of fluid or Pressure Head 
+ = Kinetic energy per unit weight or Kinetic Head 
+ z 
+ = Potential energy per unit weight or Potential Head 
+ Assumptions: 
+ The Fluid is Ideal – Viscosity is Zero 
+ The Flow is Steady 
+ The Flow is Incompressible 
+ The Flow is Irrotational
+
+--- Slide 8 ---
+Bernoulli’s equation 
+ Bernoulli’s Equation 
+ = Pressure energy per unit weight of fluid or Pressure Head 
+ = Kinetic energy per unit weight or Kinetic Head 
+ z 
+ = Potential energy per unit weight or Potential Head 
+ Bernoulli’s Theorem states that in a steady, ideal flow of an incompressible fluid, the total energy at any point of the fluid is constant. 
+ The total energy consists of pressure energy, kinetic energy and potential energy (or datum energy)
+
+--- Slide 9 ---
+Bernoulli’s equation – For Real Fluid 
+ Bernoulli’s equation is derived on the assumption that the fluid is Inviscid and therefore frictionless 
+ – But all fluids are viscous and offer resistance 
+ is the loss of energy between points 1 and 2 
+ Bernoulli’s equation for real fluids between points 1 and 2:
+
+--- Slide 10 ---
+Numerical 
+ Q1. Water is flowing through a pipe of 5cm diameter under a pressure of 29.43N/cm2 (gauge) and with a mean velocity of 2m/s. Find the total head or total energy per unit weight of the water at a cross-section, which is 5m above the datum line. 
+ Ans. 35.204m
+
+--- Slide 11 ---
+Numerical 
+ Q2. A pipe, through which water is flowing, is having diameters, 20cm and 10cm at the cross-sections 1 and 2 respectively. The velocity of water at section 1 is given 4m/s. Find the velocity head at section 1 and 2 and also rate of discharge. 
+ Continuity equation - Kinematics 
+ Ans. Velocity Head @1: 0.815 m 
+ Velocity Head @2: 83.047 m 
+ Rate of Discharge: 125.6 lits
+
+--- Slide 12 ---
+Numerical 
+ Q3. Water is flowing through a pipe having diameters 20cm and 10cm at sections 1 and 2 respectively. The rate of flow through pipe is 35lit/s. The section 1 is 6m above datum and section 2 is 4m above datum. If the pressure at section 1 is 39.24 N/cm2, find the intensity of pressure at section 2. 
+ Ans. P2= 40.27 N/cm2
+
+--- Slide 13 ---
+Numerical 
+ Q4. Water is flowing through a pipe having diameter 300mm and 200mm at the bottom and upper end respectively. The intensity of pressure at the bottom end is 24.525N/cm2 and the pressure at the upper end is 9.81N/cm2. Determine the difference in datum head if the rate of flow through the pipe is 40lit/s. 
+ Ans. Z2 -Z1 = 13.70 m
+
+--- Slide 14 ---
+Numerical 
+ Q5. Water is flowing through a taper pipe of length 100m having diameters 600mm at the upper end and 300mm at the lower end, at the rate of 50lit/s. The pipe has a slope of 1 in 30. Find the pressure at the lower end if the pressure at the higher level is 19.62N/cm2. 
+ Ans. P2= 22.857 N/cm2
+
+
+### FILE: Unit IV\IV_4 - Head Loss.pptx (8 slides)
+
+--- Slide 1 ---
+Contents 
+ Numerical 
+ Euler’s Equation 
+ Bernoulli’s Equation – Ideal Fluid 
+ Bernoulli’s Equation – Real Fluid
+
+--- Slide 2 ---
+Fluid dynamics - considering the forces 
+ If Flow is Ideal (i.e. non-viscous and incompressible) 
+ Euler’s Equation of Motion 
+ Fx= (Fg)x+ (Fp) x 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x
+
+--- Slide 3 ---
+Euler equation & BERNOULLI’S EQUATION 
+ Euler’s Equation of Motion 
+ Bernoulli’s Equation
+
+--- Slide 4 ---
+Bernoulli’s equation 
+ Bernoulli’s Equation 
+ = Pressure energy per unit weight of fluid or Pressure Head 
+ = Kinetic energy per unit weight or Kinetic Head 
+ z 
+ = Potential energy per unit weight or Potential Head 
+ Bernoulli’s Equation for Ideal Fluid
+
+--- Slide 5 ---
+Bernoulli’s equation – For Real Fluid 
+ Bernoulli’s equation is derived on the assumption that the fluid is Inviscid and therefore frictionless 
+ – But all fluids are viscous and offer resistance 
+ is the loss of energy between points 1 and 2 
+ Bernoulli’s equation for real fluids between points 1 and 2:
+
+--- Slide 6 ---
+Numerical 
+ Q1. A pipe of diameter 400mm carries water at a velocity of 25m/s. The pressures at the points A and B are given as 29.43N/cm2 and 22.563N/cm2 respectively while the datum head at A and B are 28m and 30m. Find the loss of head between A and B. 
+ Bernoulli’s Equation for Real Fluid 
+ Bernoulli’s Equation for Ideal Fluid
+
+--- Slide 7 ---
+Numerical 
+ Q2. A conical tube of length 2m is fixed vertically with its smaller end upwards. The velocity of flow at the smaller end is 5m/s while at the lower end is 2m/s. The pressure head at the smaller end is 2.5m of liquid. The loss of head in the tube is , where v1 is the velocity at the smaller end and v2 at the lower end respectively. Determine the pressure head at the lower end. Flow take place in the downward direction.
+
+--- Slide 8 ---
+Numerical 
+ Q3. A pipeline carrying oil of specific gravity 0.87, changes in diameter from 200mm at position A to 500mm at position B, which is 4m higher. If the pressures at A and B are 9.81N/cm2 and 5.886N/cm2 respectively and the discharge is 200lit/s, determine the loss of head and direction of flow.
+
+
+### FILE: Unit IV\IV_5 - Bernoulli Application.pptx (15 slides)
+
+--- Slide 1 ---
+Contents 
+ Application of Bernoulli’s Principle
+
+--- Slide 2 ---
+Fluid dynamics - considering the forces 
+ If Flow is Ideal (i.e. non-viscous and incompressible) 
+ Euler’s Equation of Motion 
+ Fx= (Fg)x+ (Fp) x 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x
+
+--- Slide 3 ---
+Euler equation & BERNOULLI’S EQUATION 
+ Euler’s Equation of Motion 
+ Bernoulli’s Equation
+
+--- Slide 4 ---
+Bernoulli’s equation 
+ Bernoulli’s Equation 
+ = Pressure energy per unit weight of fluid or Pressure Head 
+ = Kinetic energy per unit weight or Kinetic Head 
+ z 
+ = Potential energy per unit weight or Potential Head 
+ Bernoulli’s Equation for Ideal Fluid 
+ Bernoulli’s Equation for Real Fluid
+
+--- Slide 5 ---
+Bernoulli’s Principle - Applications
+
+--- Slide 6 ---
+Bernoulli’s Principle - Applications
+
+--- Slide 7 ---
+Bernoulli’s Principle - Applications 
+ Airfoil
+
+--- Slide 8 ---
+Bernoulli’s Principle - Applications 
+ Airfoil
+
+--- Slide 9 ---
+Bernoulli’s Principle - Applications 
+ Constricted Arteries
+
+--- Slide 10 ---
+Bernoulli’s Principle - Applications
+
+--- Slide 11 ---
+Bernoulli’s Principle - Applications
+
+--- Slide 12 ---
+Bernoulli’s Principle - Applications
+
+--- Slide 13 ---
+Bernoulli’s Principle – ApplicationsInstruments 
+ Venturi meter
+
+--- Slide 14 ---
+Bernoulli’s Principle – ApplicationsInstruments 
+ Orifice meter
+
+--- Slide 15 ---
+Bernoulli’s Principle – ApplicationsInstruments 
+ Pitot Tube
+
+
+### FILE: Unit IV\IV_6, 7 & 8 - Venturimeter.pptx (21 slides)
+
+--- Slide 1 ---
+Contents 
+ Application of Bernoulli’s Principle 
+ Measuring Devices 
+ Venturimeter 
+ Orificemeter 
+ Pitot Tube
+
+--- Slide 2 ---
+Bernoulli’s equation 
+ Bernoulli’s Equation 
+ = Pressure energy per unit weight of fluid or Pressure Head 
+ = Kinetic energy per unit weight or Kinetic Head 
+ z 
+ = Potential energy per unit weight or Potential Head 
+ Bernoulli’s Equation for Ideal Fluid 
+ Bernoulli’s Equation for Real Fluid
+
+--- Slide 3 ---
+Bernoulli’s Principle – Applicationsmeasuring devices 
+ Venturimeter
+
+--- Slide 4 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturimeter 
+ Venturimeter is a device used for measuring rate of flow of a fluid flowing through a pipe. 
+ Short Converging Part 
+ Throat 
+ Diverging Part
+
+--- Slide 5 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturimeter
+
+--- Slide 6 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturimeter
+
+--- Slide 7 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturimeter 
+ Short Converging Part / Converging Cone 
+ Function: Accelerate the flow and create Pressure Difference between Inlet to Converging part and the Throat. 
+ Angle of is 14 ° to 20 °
+
+--- Slide 8 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturimeter 
+ Throat 
+ Function: Stabilize the Flow and facilitate the provision of Pressure Tapping 
+ Diameter Ratio: d/D = 0.4 to 0.7 
+ D=Diameter of Pipeline 
+ d = Diameter of Throat
+
+--- Slide 9 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturimeter 
+ Diverging Part / Diverging Cone 
+ Function: Reduce the velocity and Increase the Pressure to its original value to the extent it is practically possible 
+ Angle of is 5 ° to 7°
+
+--- Slide 10 ---
+Bernoulli’s Principle – Applicationsmeasuring devices – Venturi-meter
+
+--- Slide 11 ---
+Bernoulli’s Principle – Applicationsmeasuring devices – Venturi-meter
+
+--- Slide 12 ---
+Bernoulli’s Principle – Applicationsmeasuring devices – Venturi-meter
+
+--- Slide 13 ---
+Bernoulli’s Principle – Applicationsmeasuring devices – Venturi-meter
+
+--- Slide 14 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturi-meter
+
+--- Slide 15 ---
+Bernoulli’s Principle – Applicationsmeasuring devices - Venturi-meter
+
+--- Slide 16 ---
+Numerical 
+ Q1. A horizontal venturimeter with inlet and throat diameters 30cm and 15cm respectively is used to measure the flow of water. The reading of differential manometer connected to the inlet and the throat is 20cm of mercury. Determine the rate of flow. Take Cd=0.98.
+
+--- Slide 17 ---
+Numerical 
+ Q2. An oil of sp. gr. 0.8 is flowing through a venturi-meter having inlet diameter 20cm and throat diameter 10cm. The oil-mercury differential manometer shows a reading of 25cm. Calculate the discharge of oil through the horizontal venturi-meter. Take Cd=0.98
+
+--- Slide 18 ---
+Numerical 
+ Q3. A horizontal venturi-meter with inlet diameter 20cm and throat diameter 10cm is used to measure the flow of oil of sp. gr. 0.8. The discharge of oil through venturi-meter is 60lit/s. Find the reading of the oil-mercury differential manometer. Take Cd=0.98.
+
+--- Slide 19 ---
+Numerical 
+ Q4. A horizontal venturi-meter with inlet diameter 20cm and throat diameter 10cm is used to measure the flow of water. The pressure at inlet is 17.658 N/cm2 and the vacuum pressure at the throat is 30cm of mercury. Find the discharge of water through the pipe. Take Cd=0.98.
+
+--- Slide 20 ---
+Bernoulli’s Principle – ApplicationsInstruments 
+ Orifice meter
+
+--- Slide 21 ---
+Bernoulli’s Principle – ApplicationsInstruments 
+ Pitot Tube
+
+
+### FILE: Unit V\V_1 - DA and Buckingham.pptx (32 slides)
+
+--- Slide 1 ---
+Contents 
+ Introduction to Unit V 
+ Forces in Fluids
+
+--- Slide 2 ---
+DIMENSIONAL ANALYSIS 
+ Dimensions 
+ Engineering deals with Definite and Measured Quantities. 
+ Engineering Entities can be expressed in relatively small number of dimensions - Length, Mass, Time and Temperature. 
+ Application of Fluid Mechanics in design makes use of experiments results. – These results often difficult to interpret. 
+ DA provides a strategy for choosing relevant data. 
+ Used to help Analyze Fluid Flow. Especially when fluid flow is too complex for mathematical analysis.
+
+--- Slide 3 ---
+EXAMPLE 
+ A resisting force R of a supersonic plane during flight can be considered as dependent upon the length of the aircraft l, velocity V, air viscosity μ, air density ρ and bulk modulus of air K. 
+ Express the functional relationship between these variables and the resisting force.
+
+--- Slide 4 ---
+Application of DIMENSIONAL ANALYSIS 
+ Design Experiments 
+ Informs which Measurements are Important 
+ It depends on the Correct Identification of Variables 
+ Relates these Variables together 
+ Experiments necessary to complete solution 
+ Uses principle of Dimensional Homogeneity 
+ Give Qualitative results which only become Quantitative from Experimental Analysis.
+
+--- Slide 5 ---
+DIMENSIONS AND UNITS 
+ Any physical situation can be described by familiar properties. 
+ e.g. length, velocity, area, volume, acceleration etc. 
+ These are known as Dimensions 
+ Dimensions are of no use without a Magnitude. 
+ i.e. a standardized unit - meter, kilometer, Kilogram, a yard etc. 
+ Dimensions can be Measured. 
+ Units used to Quantify these Dimensions. 
+ In Dimensional Analysis we are concerned with the nature of the dimension 
+ i.e. its quality not its quantity.
+
+--- Slide 6 ---
+DIMENSIONS AND UNITS
+
+--- Slide 7 ---
+Fluid Mechanics 
+ Fluid Statics 
+ Fluids in Motion 
+ Kinematics - not considering the forces 
+ Dynamics - not considering the forces
+
+--- Slide 8 ---
+Fluid dynamics - considering the forces 
+ The dynamic behavior of fluid flow is analyzed by the Newton’s second law of motion 
+ - relates acceleration with the forces 
+ Fx=m. ax
+
+--- Slide 9 ---
+Fluid dynamics - considering the forces 
+ Forces 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Force due to Viscosity, Fν 
+ Force due to Turbulence, Ft 
+ Force due to Compressibility, Fc 
+ Fx=m. ax 
+ Fx= (Fg)x+ (Fp) x+ (F ν) x+ (Ft) x+ (Fc)x
+
+--- Slide 10 ---
+FORCES in fluids 
+ Inertia Force, Fi 
+ Viscous Force, Fν 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Surface Tension Force, Fs 
+ Elastic Force, Fe
+
+--- Slide 11 ---
+Inertia Force, Fi 
+ Product of mass and acceleration of the flowing fluid and acts in the direction opposite to the direction of acceleration. 
+ Viscous Force, Fν 
+ It is the product of shear stress due to viscosity and surface area of the flow. 
+ Gravity Force, Fg 
+ It is the product of mass and acceleration due to gravity of the flowing fluid.
+
+--- Slide 12 ---
+Pressure Force, Fp 
+ It is the product of pressure intensity and cross-sectional area of the flowing fluid. 
+ Surface Tension Force, Fs 
+ It is equal to the surface tension and length of surface of the flowing fluid 
+ Elastic Force, Fe 
+ It is the product of elastic stress and area of flowing fluid.
+
+--- Slide 13 ---
+FORCES in fluids 
+ Inertia Force, Fi 
+ Viscous Force, Fν 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Surface Tension Force, Fs 
+ Elastic Force, Fe
+
+--- Slide 14 ---
+FORCES and dimensionless numbers 
+ Inertia Force, Fi 
+ Viscous Force, Fν 
+ Gravity Force, Fg 
+ Pressure Force, Fp 
+ Surface Tension Force, Fs 
+ Elastic Force, Fe 
+ Reynold’s Number, Re 
+ Froude’s Number, Fr 
+ Euler’s Number, Eu 
+ Weber’s Number, We 
+ Mach’s Number, M
+
+--- Slide 15 ---
+Dimensionless Numbers
+
+--- Slide 16 ---
+Reynold’s Number, Re 
+ It is defined as the ratio of inertia force of a flowing fluid and the viscous force of the fluid.
+
+--- Slide 17 ---
+Froude’s Number, Fe 
+ It is defined as the square root of the ratio of inertia force of a flowing fluid to the gravity force.
+
+--- Slide 18 ---
+Euler’s Number, Eu 
+ It is defined as the square root of the ratio of inertia force of a flowing fluid to the pressure force.
+
+--- Slide 19 ---
+Weber’s Number, We 
+ It is defined as the square root of the ratio of inertia force of a flowing fluid to the surface tension force.
+
+--- Slide 20 ---
+Mach’s Number, M 
+ It is defined as the square root of the ratio of inertia force of a flowing fluid to the elastic force.
+
+--- Slide 21 ---
+Buckingham’s π-Theorem - EXAMPLE 
+ A resisting force R of a supersonic plane during flight can be considered as dependent upon the length of the aircraft l, velocity V, air viscosity μ, air density ρ and bulk modulus of air K. Express the functional relationship between these variables and the resisting force.
+
+--- Slide 22 ---
+Buckingham’s π-Theorem 
+ “If there are n variables (independent and dependent variables) in a physical phenomenon and if these variables contain m fundamental dimensions, then the variables are arranged into (n-m) dimensionless terms. Each term is called π–Term”
+
+--- Slide 23 ---
+π-Terms 
+ Each π-Term is dimensionless and independent of the system. 
+ Each π-Term contains (m+1) variables 
+ m is the no. of fundamental dimensions and are called as repeating variables. 
+ . . 
+ . . 
+ . . 
+ These equations are solved by dimensional homogeneity
+
+--- Slide 24 ---
+method of selecting repeating variables 
+ No. of Repeating Variables = No. of Fundamental Dimensions 
+ Dependent variable should not be selected as RV 
+ 3 – Geometric, Flow and Fluid Properties 
+ Geometric Property – L, d, H 
+ Flow Property – V, a, ω 
+ Fluid Property – ρ, μ 
+ Should not form a dimensionless group 
+ RVs together must have same no. of fundamental dimensions 
+ No 2 repeating variables should have the same dimension 
+ . . 
+ . . 
+ . .
+
+--- Slide 25 ---
+DIMENSIONS AND UNITS
+
+--- Slide 26 ---
+Buckingham’s π-Theorem - EXAMPLE 
+ A resisting force R of a supersonic plane during flight can be considered as dependent upon the length of the aircraft l, velocity V, air viscosity μ, air density ρ and bulk modulus of air K. Express the functional relationship between these variables and the resisting force.
+
+--- Slide 27 ---
+Buckingham’s π-Theorem - EXAMPLE 
+ A resisting force R of a supersonic plane during flight can be considered as dependent upon the length of the aircraft l, velocity V, air viscosity μ, air density ρ and bulk modulus of air K. Express the functional relationship between these variables and the resisting force. 
+ . . 
+ . . 
+ . .
+
+--- Slide 28 ---
+method of selecting repeating variables 
+ No. of Repeating Variables = No. of Fundamental Dimensions 
+ Dependent variable should not be selected as RV 
+ 3 – Geometric, Flow and Fluid Properties 
+ Geometric Property – L, d, H 
+ Flow Property – V, a, ω 
+ Fluid Property – ρ, μ 
+ Should not form a dimensionless group 
+ RVs together must have same no. of fundamental dimensions 
+ No 2 repeating variables should have the same dimension 
+ . . 
+ . . 
+ . . 
+ R, l, V, μ, ρ and K
+
+--- Slide 29 ---
+Buckingham’s π-Theorem - EXAMPLE 
+ A resisting force R of a supersonic plane during flight can be considered as dependent upon the length of the aircraft l, velocity V, air viscosity μ, air density ρ and bulk modulus of air K. Express the functional relationship between these variables and the resisting force. 
+ . . 
+ . . 
+ . .
+
+--- Slide 30 ---
+Buckingham’s π-Theorem - EXAMPLE 
+ Each π-Term is solved by the principle of dimensional homogeneity. 
+ . . 
+ . . 
+ . . 
+ . . 
+ . . 
+ . . 
+ . . 
+ . .
+
+--- Slide 31 ---
+Buckingham’s π-Theorem - EXAMPLE
+
+--- Slide 32 ---
+Application of DIMENSIONAL ANALYSIS 
+ Design Experiments 
+ Informs which Measurements are Important 
+ It depends on the Correct Identification of Variables 
+ Relates these Variables together 
+ Experiments necessary to complete solution 
+ Uses principle of Dimensional Homogeneity 
+ Give Qualitative results which only become Quantitative from Experimental Analysis.
