@@ -10,37 +10,28 @@ const ALL_COMPONENTS = { ...ILLOS, ...WIDGETS };
 
 // Interactive tools that open in a pop-up window from a card in the reading column (the rest stay inline as figures).
 const DOCK_TOOLS = {
-  waterbudget: "Water-budget calculator",
-  abstractions: "Where does a storm's rain go?",
-  dalton: "Dalton's law",
-  tipping: "Tipping-bucket rain gauge",
-  gaugemap: "Rain gauges across India",
-  weighgauge: "Weighing-bucket gauge",
-  floatgauge: "Float (syphon) gauge",
-  network: "Optimum number of rain gauges",
-  dmc: "Double mass curve",
-  thiessen: "Thiessen polygons",
-  missing: "Missing rainfall",
-  storm: "Hyetograph and mass curve",
-  movavg: "Moving average",
-  risk: "Return period, risk and reliability",
-  idf: "Plotting position and IDF curves",
-  d8: "D8 flow direction",
-  hortonfit: "Horton's infiltration model",
-  phiindex: "φ-index and W-index finder",
-  scscn: "SCS Curve Number calculator",
-  pencalc: "Evapotranspiration calculator",
-  indiamap: "Water atlas of India",
-  wateratlas: "Water atlas of India"
+  blprofile: "Boundary layer profile and skin friction workbench",
+  normaldepth: "Mannings uniform flow and normal depth solver",
+  specificenergy: "Specific energy and channel transition simulator",
+  hydraulicjump: "Hydraulic jump and energy dissipation simulator",
+  jetimpact: "Impact of jet and moving vane simulator",
+  peltondesign: "Pelton wheel turbine design workbench",
+  pumpcharacteristics: "Centrifugal pump operating point simulator",
+  cfdmesh: "2D CFD grid and Courant CFL stability simulator"
 };
 
-// Icon shown on a tool's placeholder picture until a real screenshot exists.
+// Icon shown on a tool placeholder picture until a real screenshot exists.
 const TOOL_ICON = {
-  waterbudget: Calculator, abstractions: Droplets, dalton: Wind, tipping: CloudRain, gaugemap: MapIcon, weighgauge: Calculator, floatgauge: Droplets, network: MapIcon, dmc: LineChart,
-  thiessen: MapIcon, missing: Activity, storm: CloudRain, movavg: LineChart, risk: Calculator, idf: LineChart,
-  d8: Layers, hortonfit: Droplets, phiindex: Calculator, scscn: Calculator, pencalc: Wind, indiamap: MapIcon, wateratlas: MapIcon
+  blprofile: Activity,
+  normaldepth: Calculator,
+  specificenergy: LineChart,
+  hydraulicjump: Droplets,
+  jetimpact: Wind,
+  peltondesign: SlidersHorizontal,
+  pumpcharacteristics: LineChart,
+  cfdmesh: Layers
 };
-// Tools that have a real picture (a screenshot of the tool): assets/img/workbench/<tool>.webp. Regenerate with tools/tool_shots.py.
+
 const TOOL_IMG = new Set(Object.keys(DOCK_TOOLS));
 
 function ToolCard({ name, onOpen }) {
