@@ -66,147 +66,160 @@ function SliderRow({ label, value, min, max, step, unit = "", onChange }) {
 }
 
 /* =========================================================================
-   1. S10: PIPE FLOW VS OPEN CHANNEL FLOW COMPARATOR (ocf_pipe_compare)
+   1. S10: PIPE FLOW VS OPEN CHANNEL SIMULATOR WITH CROSS SECTIONS (ocf_pipe_compare)
    ========================================================================= */
 export function OcfPipeCompare() {
-  const [mode, setMode] = useState("channel"); // "pipe" | "channel"
-  const [dia, setDia] = useState(2.0); // diameter or width/depth
+  const [dia, setDia] = useState(2.0); // Pipe diameter or Channel Bed width (m)
   const [slope, setSlope] = useState(1.5); // per 1000
-  const [pressureHead, setPressureHead] = useState(4.0); // m for pipe
+  const [pressureHead, setPressureHead] = useState(3.5); // m for pipe
   const [depthRatio, setDepthRatio] = useState(0.7); // y/D for channel
 
   const g = 9.81;
   const S0 = slope / 1000;
   const n = 0.015;
 
-  // Hydraulics
-  const y = dia * depthRatio;
-  const V_chan = Math.max(0.5, (1 / n) * Math.pow((dia * y) / (dia + 2 * y), 2 / 3) * Math.sqrt(S0));
-  const Q_chan = dia * y * V_chan;
+  // Channel Hydraulics (Trapezoidal with 1V:1.5H)
+  const y_chan = dia * depthRatio;
+  const m = 1.5;
+  const A_chan = (dia + m * y_chan) * y_chan;
+  const P_chan = dia + 2 * y_chan * Math.sqrt(1 + m * m);
+  const R_chan = A_chan / P_chan;
+  const V_chan = Math.max(0.4, (1 / n) * Math.pow(R_chan, 2 / 3) * Math.sqrt(S0));
+  const Q_chan = A_chan * V_chan;
   const velHead_chan = (V_chan * V_chan) / (2 * g);
 
-  const V_pipe = 2.5;
-  const Q_pipe = (Math.PI / 4) * dia * dia * V_pipe;
+  // Pipe Hydraulics (Circular Pipe running 100% full under pressure)
+  const A_pipe = (Math.PI / 4) * dia * dia;
+  const P_pipe = Math.PI * dia;
+  const R_pipe = dia / 4;
+  const V_pipe = 2.4; // Controlled by pump / reservoir gradient
+  const Q_pipe = A_pipe * V_pipe;
   const velHead_pipe = (V_pipe * V_pipe) / (2 * g);
 
   return (
-    <Box title="Pipe Flow vs. Open Channel Flow Visualizer" kind="S10 Interactive Lab">
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
-        <Seg
-          value={mode}
-          options={[
-            ["channel", "Open Channel Flow (Free Surface, Gravity Driven)"],
-            ["pipe", "Closed Pipe Flow (Conduit Under Pressure)"]
-          ]}
-          onChange={setMode}
-        />
-        <span style={{ fontSize: "0.85rem", color: "#5a5048" }}>
-          Key distinction: <b>{mode === "channel" ? "HGL = Free Water Surface" : "HGL above pipe crown (Piezometric Head)"}</b>
-        </span>
-      </div>
+    <Box title="Pipe Flow vs. Open Channel Flow Dual Simulator (With Cross Sections)" kind="S10 Interactive Lab">
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "0.75rem" }}>
+        <div style={{ background: "#eff6ff", padding: "10px", borderRadius: 6, border: "1px solid #bfdbfe" }}>
+          <b style={{ color: "#1e40af", fontSize: "0.95rem" }}>Closed Pipe Flow (Under Pressure)</b>
+          <div style={{ fontSize: "0.78rem", color: "#475569", marginTop: "2px" }}>
+            Rigid full conduit • Piezometer head rises to HGL = z + P/γ (above crown)
+          </div>
+          <div style={{ display: "flex", gap: "6px", marginTop: "6px", flexWrap: "wrap", fontSize: "0.78rem" }}>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4, fontWeight: 700 }}>D = {f2(dia)} m</span>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4, fontWeight: 700, color: "#dc2626" }}>P/γ = {f2(pressureHead)} m</span>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4 }}>Q = {f2(Q_pipe)} m³/s</span>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4, color: "#166534" }}>R = {f2(R_pipe)} m</span>
+          </div>
+        </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.5rem", marginBottom: "0.75rem" }}>
-        {mode === "channel" ? (
-          <>
-            <Kpi v={f2(y) + " m"} l="Water Depth y" tone="good" />
-            <Kpi v={f2(V_chan) + " m/s"} l="Mean Velocity V" />
-            <Kpi v={f2(Q_chan) + " m³/s"} l="Discharge Q" />
-            <Kpi v={f3(velHead_chan) + " m"} l="Velocity Head V²/2g" />
-            <Kpi v="Atmospheric (0 Gauge)" l="Surface Pressure" />
-          </>
-        ) : (
-          <>
-            <Kpi v={f2(dia) + " m"} l="Pipe Diameter D" />
-            <Kpi v={f2(pressureHead) + " m"} l="Pressure Head P/γ" tone="good" />
-            <Kpi v={f2(V_pipe) + " m/s"} l="Flow Velocity V" />
-            <Kpi v={f2(Q_pipe) + " m³/s"} l="Discharge Q" />
-            <Kpi v={f3(velHead_pipe) + " m"} l="Velocity Head V²/2g" />
-          </>
-        )}
+        <div style={{ background: "#f0fdf4", padding: "10px", borderRadius: 6, border: "1px solid #bbf7d0" }}>
+          <b style={{ color: "#166534", fontSize: "0.95rem" }}>Open Channel Flow (Free Surface)</b>
+          <div style={{ fontSize: "0.78rem", color: "#475569", marginTop: "2px" }}>
+            Atmospheric interface • WSL strictly equals HGL (Gauge P = 0)
+          </div>
+          <div style={{ display: "flex", gap: "6px", marginTop: "6px", flexWrap: "wrap", fontSize: "0.78rem" }}>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4, fontWeight: 700 }}>y = {f2(y_chan)} m</span>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4, fontWeight: 700, color: "#dc2626" }}>P_surf = 0 (atm)</span>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4 }}>Q = {f2(Q_chan)} m³/s</span>
+            <span style={{ background: "#fff", padding: "2px 6px", borderRadius: 4, color: "#166534" }}>R = {f2(R_chan)} m</span>
+          </div>
+        </div>
       </div>
 
       <div style={{ background: "var(--g50, #f8f9fa)", padding: "0.75rem", borderRadius: "6px", border: "1px solid var(--g200, #e2e8f0)", marginBottom: "0.75rem" }}>
-        <SliderRow label="Conduit Dimension (D or B)" value={dia} min={0.5} max={4.0} step={0.25} unit="m" onChange={setDia} />
-        <SliderRow label="Longitudinal Slope S0" value={slope} min={0.2} max={5.0} step={0.1} unit="‰" onChange={setSlope} />
-        {mode === "channel" ? (
-          <SliderRow label="Water Depth Ratio (y/D)" value={depthRatio} min={0.2} max={1.0} step={0.05} unit="" onChange={setDepthRatio} />
-        ) : (
-          <SliderRow label="Pressure Head (P/γ)" value={pressureHead} min={1.0} max={8.0} step={0.5} unit="m" onChange={setPressureHead} />
-        )}
+        <SliderRow label="Conduit Dimension (D or B)" value={dia} min={1.0} max={4.0} step={0.25} unit="m" onChange={setDia} />
+        <SliderRow label="Longitudinal Slope S0" value={slope} min={0.2} max={4.0} step={0.1} unit="‰" onChange={setSlope} />
+        <SliderRow label="Pipe Pressure Head (P/γ)" value={pressureHead} min={1.0} max={6.0} step={0.5} unit="m" onChange={setPressureHead} />
+        <SliderRow label="Channel Depth Ratio (y/D)" value={depthRatio} min={0.2} max={1.0} step={0.05} unit="" onChange={setDepthRatio} />
       </div>
 
-      <div style={{ textAlign: "center" }}>
-        <svg viewBox="0 0 600 220" style={{ width: "100%", maxHeight: "220px", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "6px" }}>
-          <defs>
-            <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#6fb4d0" stopOpacity="0.85" />
-              <stop offset="100%" stopColor="#1a5f7a" stopOpacity="0.95" />
-            </linearGradient>
-            <pattern id="soilPat" width="10" height="10" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1.5" fill="#a09080" opacity="0.3" />
-              <circle cx="7" cy="7" r="1.2" fill="#c9a878" opacity="0.4" />
-            </pattern>
-          </defs>
+      {/* DUAL SVG: SIDE BY SIDE WITH CROSS SECTIONS */}
+      <svg viewBox="0 0 920 280" style={{ width: "100%", background: "#fff", border: "1px solid #e2e8f0", borderRadius: 6 }}>
+        <defs>
+          <linearGradient id="wbWater" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#6fb4d0" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#1a5f7a" stopOpacity="0.95" />
+          </linearGradient>
+          <linearGradient id="wbPipe" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#718096" />
+            <stop offset="100%" stopColor="#2d3748" />
+          </linearGradient>
+          <marker id="wbArr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0 1 L9 5 L0 9 z" fill="#0f1f3d" />
+          </marker>
+        </defs>
 
-          {/* Longitudinal slope bed */}
-          <polygon points="50,170 550,195 550,215 50,215" fill="#c9a878" />
-          <polygon points="50,170 550,195 550,215 50,215" fill="url(#soilPat)" />
-          <line x1="50" y1="170" x2="550" y2="195" stroke="#8a4b12" strokeWidth="3" />
+        {/* LEFT HALF: PIPE FLOW PROFILE + CROSS SECTION */}
+        <g transform="translate(15, 10)">
+          <rect x="0" y="0" width="435" height="260" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+          <text x="15" y="22" fontSize="13" fontWeight="700" fill="#0f1f3d">Pressure Pipe: Profile &amp; Section</text>
 
-          {mode === "channel" ? (
-            /* Open Channel View */
-            <g>
-              {/* Channel water */}
-              <polygon points={`50,170 550,195 550,${195 - y * 28} 50,${170 - y * 28}`} fill="url(#waterGrad)" />
-              {/* Water surface line (HGL) */}
-              <line x1="40" y1={170 - y * 28} x2="560" y2={195 - y * 28} stroke="#1a5f7a" strokeWidth="2.5" />
-              {/* Free surface ripple symbols */}
-              {[120, 240, 360, 480].map(x => (
-                <path key={x} d={`M${x},${170 - y * 28 + (x - 50) * 0.05} q8 -3 16 0 t16 0`} fill="none" stroke="#fff" strokeWidth="1.5" />
-              ))}
-              {/* EGL Line */}
-              <line x1="40" y1={170 - y * 28 - velHead_chan * 30} x2="560" y2={195 - y * 28 - velHead_chan * 30} stroke="#c8973a" strokeWidth="2" strokeDasharray="6 4" />
+          {/* Longitudinal pipe */}
+          <rect x="20" y="160" width="240" height="40" rx="3" fill="url(#wbPipe)" />
+          <rect x="22" y="164" width="236" height="32" fill="url(#wbWater)" />
+          <line x1="25" y1="180" x2="255" y2="180" stroke="#bee3f8" strokeWidth="1.8" strokeDasharray="6 4" className="anim-flow" />
 
-              {/* Piezometer tube */}
-              <rect x="270" y={170 - y * 28 - 25} width="16" height={y * 28 + 25} fill="none" stroke="#4a5568" strokeWidth="1.5" />
-              <rect x="271" y={170 - y * 28 + 220 * 0.05} width="14" height={y * 28} fill="url(#waterGrad)" opacity="0.6" />
+          {/* Piezometer tap */}
+          <rect x="130" y={160 - pressureHead * 18} width="16" height={pressureHead * 18} fill="#fff" stroke="#475569" strokeWidth="1.5" />
+          <rect x="132" y={160 - pressureHead * 18} width="12" height={pressureHead * 18} fill="url(#wbWater)" />
+          <ellipse cx="138" cy={160 - pressureHead * 18} rx="6" ry="2" fill="#63b3ed" stroke="#2b6cb0" />
 
-              {/* Annotations */}
-              <text x="295" y={170 - y * 28 - 8} fill="#1a5f7a" fontSize="11" fontWeight="700">HGL ≡ Water Surface (Gauge P = 0)</text>
-              <text x="340" y={170 - y * 28 - velHead_chan * 30 - 6} fill="#c8973a" fontSize="10.5" fontWeight="700">EGL = HGL + V²/2g</text>
-              <text x="100" y="210" fill="#4a5568" fontSize="10">Bed Slope S₀ = {slope}‰</text>
-              <text x="50" y="90" fill="#1a5f7a" fontSize="11" fontWeight="600">Atmospheric Pressure Patm</text>
-              <line x1="80" y1="95" x2="80" y2={170 - y * 28 - 2} stroke="#1a5f7a" strokeWidth="1.5" markerEnd="url(#arr)" />
-            </g>
-          ) : (
-            /* Pipe Flow View */
-            <g>
-              {/* Pipe wall top & bottom */}
-              <polygon points={`50,170 550,195 550,${195 - dia * 22} 50,${170 - dia * 22}`} fill="url(#waterGrad)" />
-              <line x1="50" y1={170 - dia * 22} x2="550" y2={195 - dia * 22} stroke="#333" strokeWidth="4" />
-              <line x1="50" y1="170" x2="550" y2="195" stroke="#333" strokeWidth="4" />
+          {/* HGL and EGL */}
+          <line x1="15" y1={160 - pressureHead * 18} x2="265" y2={160 - pressureHead * 18 + 12} stroke="#dc2626" strokeWidth="2" strokeDasharray="5 3" />
+          <text x="150" y={160 - pressureHead * 18 - 4} fontSize="9.5" fontWeight="700" fill="#dc2626">HGL (z + P/γ)</text>
 
-              {/* Piezometer tap */}
-              <rect x="270" y={170 - dia * 22 - pressureHead * 14} width="16" height={pressureHead * 14 + dia * 22} fill="none" stroke="#4a5568" strokeWidth="1.5" />
-              <rect x="271" y={170 - dia * 22 - pressureHead * 14} width="14" height={pressureHead * 14 + dia * 22} fill="url(#waterGrad)" opacity="0.75" />
+          <line x1="15" y1={160 - pressureHead * 18 - 20} x2="265" y2={160 - pressureHead * 18 + 12 - 20} stroke="#2563eb" strokeWidth="2" />
+          <text x="150" y={160 - pressureHead * 18 - 24} fontSize="9.5" fontWeight="700" fill="#2563eb">EGL = HGL + V²/2g</text>
 
-              {/* HGL Line */}
-              <line x1="40" y1={170 - dia * 22 - pressureHead * 14} x2="560" y2={195 - dia * 22 - pressureHead * 14} stroke="#1a5f7a" strokeWidth="2.5" />
-              {/* EGL Line */}
-              <line x1="40" y1={170 - dia * 22 - pressureHead * 14 - velHead_pipe * 25} x2="560" y2={195 - dia * 22 - pressureHead * 14 - velHead_pipe * 25} stroke="#c8973a" strokeWidth="2" strokeDasharray="6 4" />
+          {/* Pipe Cross Section on right */}
+          <g transform="translate(320, 150)">
+            <circle cx="45" cy="30" r="38" fill="url(#wbPipe)" stroke="#1a202c" strokeWidth="2" />
+            <circle cx="45" cy="30" r="32" fill="url(#wbWater)" />
+            <line x1="45" y1="-8" x2="45" y2="68" stroke="#cbd5e1" strokeDasharray="2 2" />
+            <line x1="7" y1="30" x2="83" y2="30" stroke="#cbd5e1" strokeDasharray="2 2" />
+            <text x="45" y="34" fontSize="10" fontWeight="700" fill="#fff" textAnchor="middle">100% Full</text>
+            <text x="45" y="85" fontSize="10" fontWeight="700" fill="#0f1f3d" textAnchor="middle">Pipe Section (Dia {f1(dia)}m)</text>
+            <text x="45" y="98" fontSize="8.5" fill="#475569" textAnchor="middle">P = πD = {f2(P_pipe)}m • R = D/4</text>
+          </g>
+        </g>
 
-              {/* Labels */}
-              <text x="295" y={170 - dia * 22 - pressureHead * 14 - 6} fill="#1a5f7a" fontSize="11" fontWeight="700">HGL = Elevation + Pressure Head (P/γ)</text>
-              <text x="320" y={170 - dia * 22 - pressureHead * 14 - velHead_pipe * 25 - 6} fill="#c8973a" fontSize="10.5" fontWeight="700">EGL = HGL + V²/2g</text>
-              <text x="292" y={170 - dia * 22 - pressureHead * 7} fill="#fff" fontSize="10" fontWeight="600">P/γ = {pressureHead} m</text>
-              <text x="80" y="160" fill="#fff" fontSize="11" fontWeight="600">Closed Conduit Flow under Pressure</text>
-            </g>
-          )}
-        </svg>
-      </div>
-      <p className="note" style={{ fontSize: "0.82rem", margin: "0.5rem 0 0 0", color: "#5a5048" }}>
-        <b>Hydraulic Insight:</b> In pipe flow, the conduit is completely full and flow is driven by the piezometric pressure gradient (HGL can rise or fall relative to the pipe axis). In open channels, the water surface is in equilibrium with atmospheric pressure, making the HGL strictly identical to the free water surface.
-      </p>
+        {/* RIGHT HALF: OPEN CHANNEL PROFILE + CROSS SECTION */}
+        <g transform="translate(470, 10)">
+          <rect x="0" y="0" width="435" height="260" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+          <text x="15" y="22" fontSize="13" fontWeight="700" fill="#0f1f3d">Open Channel: Profile &amp; Section</text>
+
+          {/* Sloping Channel bed */}
+          <line x1="20" y1="180" x2="260" y2="195" stroke="#78350f" strokeWidth="4" />
+          <polygon points={`20,180 260,195 260,${195 - y_chan * 22} 20,${180 - y_chan * 22}`} fill="url(#wbWater)" />
+
+          {/* Water Surface Line = HGL */}
+          <line x1="15" y1={180 - y_chan * 22} x2="265" y2={195 - y_chan * 22} stroke="#dc2626" strokeWidth="2.5" />
+          <text x="130" y={175 - y_chan * 22} fontSize="9.5" fontWeight="700" fill="#dc2626">WSL ≡ HGL (P = 0)</text>
+
+          {/* EGL parallel */}
+          <line x1="15" y1={180 - y_chan * 22 - velHead_chan * 25} x2="265" y2={195 - y_chan * 22 - velHead_chan * 25} stroke="#2563eb" strokeWidth="2" />
+          <text x="140" y={175 - y_chan * 22 - velHead_chan * 25 - 4} fontSize="9.5" fontWeight="700" fill="#2563eb">EGL = WSL + V²/2g</text>
+
+          {/* Channel Cross Section on right */}
+          <g transform="translate(300, 120)">
+            <polygon points={`
+              ${60 - (dia * 10 + m * y_chan * 14)},${100 - y_chan * 24}
+              ${60 + (dia * 10 + m * y_chan * 14)},${100 - y_chan * 24}
+              ${60 + dia * 10},100
+              ${60 - dia * 10},100
+            `} fill="url(#wbWater)" stroke="#2b6cb0" />
+            {/* Banks */}
+            <line x1={60 - dia * 10 - 20} y1="100" x2={60 - dia * 10} y2="100" stroke="#78350f" strokeWidth="3" />
+            <line x1={60 - dia * 10} y1="100" x2={60 - (dia * 10 + m * y_chan * 14) - 10} y2={100 - y_chan * 24 - 10} stroke="#78350f" strokeWidth="3" />
+            <line x1={60 + dia * 10} y1="100" x2={60 + (dia * 10 + m * y_chan * 14) + 10} y2={100 - y_chan * 24 - 10} stroke="#78350f" strokeWidth="3" />
+            <line x1={60 + dia * 10} y1="100" x2={60 + dia * 10 + 20} y2="100" stroke="#78350f" strokeWidth="3" />
+            {/* Free Surface */}
+            <line x1={60 - (dia * 10 + m * y_chan * 14)} y1={100 - y_chan * 24} x2={60 + (dia * 10 + m * y_chan * 14)} y2={100 - y_chan * 24} stroke="#0284c7" strokeWidth="2" />
+            <text x="60" y="115" fontSize="10" fontWeight="700" fill="#0f1f3d" textAnchor="middle">Channel Section (y = {f2(y_chan)}m)</text>
+            <text x="60" y="128" fontSize="8.5" fill="#475569" textAnchor="middle">P = {f2(P_chan)}m • R = {f2(R_chan)}m</text>
+          </g>
+        </g>
+      </svg>
     </Box>
   );
 }
@@ -227,16 +240,15 @@ export function VelocityDipVisualizer() {
   const getV = (yVal) => {
     const eta = yVal / yTotal;
     if (eta <= 0) return 0;
-    // Logarithmic near bed + secondary dip near surface
     const base = vMax * Math.pow(eta, 1 / 6);
     const dipFactor = 1 - 0.22 * Math.exp(-Math.pow((1 - eta) / (dipDepth * 1.5), 2)) * (1.2 / Math.sqrt(aspectRatio));
     return Math.max(0, base * dipFactor);
   };
 
   const vSurface = getV(yTotal);
-  const v02 = getV(yTotal * 0.8); // 0.2 depth from surface = 0.8 from bed
-  const v06 = getV(yTotal * 0.4); // 0.6 depth from surface = 0.4 from bed
-  const v08 = getV(yTotal * 0.2); // 0.8 depth from surface = 0.2 from bed
+  const v02 = getV(yTotal * 0.8);
+  const v06 = getV(yTotal * 0.4);
+  const v08 = getV(yTotal * 0.2);
   const vMeanTwoPt = (v02 + v08) / 2;
   const vMeanOnePt = v06;
 
@@ -255,87 +267,46 @@ export function VelocityDipVisualizer() {
         <SliderRow label="Centerline Max Velocity Vmax" value={vMax} min={1.0} max={4.0} step={0.1} unit="m/s" onChange={setVMax} />
       </div>
 
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-        {/* Left: Cross-Section Isovels (Velocity Contours) */}
-        <div style={{ flex: "1 1 300px", maxWidth: "340px", textAlign: "center" }}>
-          <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1a5f7a" }}>Cross-Section Velocity Contours (Isovels)</span>
-          <svg viewBox="0 0 320 200" style={{ width: "100%", height: "200px", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "6px", marginTop: "4px" }}>
-            {/* Channel Bank & Bed */}
-            <rect x="30" y="30" width="260" height="140" fill="#f4f8f1" />
-            <line x1="30" y1="30" x2="30" y2="170" stroke="#8a4b12" strokeWidth="4" />
-            <line x1="30" y1="170" x2="290" y2="170" stroke="#8a4b12" strokeWidth="4" />
-            <line x1="290" y1="170" x2="290" y2="30" stroke="#8a4b12" strokeWidth="4" />
-            <line x1="25" y1="30" x2="295" y2="30" stroke="#1a5f7a" strokeWidth="2" strokeDasharray="4 3" />
-            <text x="160" y="24" fill="#1a5f7a" fontSize="10.5" textAnchor="middle" fontWeight="600">Free Water Surface</text>
+      <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "10px", alignItems: "center" }}>
+        <svg viewBox="0 0 340 190" style={{ width: "100%", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "6px" }}>
+          {/* Axis */}
+          <line x1="50" y1="170" x2="310" y2="170" stroke="#718096" strokeWidth="1.5" />
+          <line x1="50" y1="170" x2="50" y2="20" stroke="#718096" strokeWidth="1.5" />
+          <text x="300" y="185" fontSize="9" fill="#4a5568">u (m/s)</text>
+          <text x="25" y="30" fontSize="9" fill="#4a5568">y</text>
+          <line x1="50" y1="30" x2="310" y2="30" stroke="#1a5f7a" strokeWidth="1.5" strokeDasharray="4 2" />
+          <text x="260" y="26" fontSize="8.5" fill="#1a5f7a">Water Surface</text>
 
-            {/* Isovel loops */}
-            {[
-              { rX: 110, rY: 55, dY: 35, val: "0.4 Vmax", col: "#cbe3ee" },
-              { rX: 85, rY: 42, dY: 38, val: "0.6 Vmax", col: "#9cc3d3" },
-              { rX: 60, rY: 30, dY: 42, val: "0.8 Vmax", col: "#5a9fbf" },
-              { rX: 35, rY: 18, dY: 46, val: "0.95 Vmax", col: "#2f86a8" },
-              { rX: 16, rY: 9, dY: 49, val: "Vmax", col: "#c8973a" }
-            ].map((iso, i) => {
-              const cy = 30 + (iso.dY + dipDepth * 70);
-              return (
-                <g key={i}>
-                  <ellipse cx="160" cy={cy} rx={iso.rX * (aspectRatio / 3.0)} ry={iso.rY} fill={iso.col} opacity="0.6" stroke="#1a3260" strokeWidth="1" />
-                  <text x={160 - iso.rX * (aspectRatio / 3.0) + 6} y={cy} fontSize="8.5" fill="#0f1f3d" fontWeight="600">{iso.val}</text>
-                </g>
-              );
-            })}
-            {/* Velocity Dip Marker */}
-            <circle cx="160" cy={30 + dipDepth * 140} r="4" fill="#c8973a" stroke="#fff" strokeWidth="1.5" />
-            <text x="170" y={30 + dipDepth * 140 + 3} fontSize="9" fill="#8a4b12" fontWeight="700">Vmax (Dip = {(dipDepth * 100).toFixed(0)}%)</text>
-          </svg>
-        </div>
+          {/* Profile curve */}
+          {(() => {
+            const pts = [];
+            for (let step = 0; step <= 30; step++) {
+              const yVal = (step / 30) * yTotal;
+              const vVal = getV(yVal);
+              const px = 50 + (vVal / (vMax * 1.2)) * 180;
+              const py = 170 - (yVal / yTotal) * 140;
+              pts.push(`${px.toFixed(1)},${py.toFixed(1)}`);
+            }
+            return <polyline points={pts.join(" ")} fill="none" stroke="#1a5f7a" strokeWidth="3" />;
+          })()}
 
-        {/* Right: Vertical Velocity Profile Curve */}
-        <div style={{ flex: "1 1 260px", maxWidth: "300px", textAlign: "center" }}>
-          <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1a5f7a" }}>Vertical Velocity Profile v(y)</span>
-          <svg viewBox="0 0 280 200" style={{ width: "100%", height: "200px", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "6px", marginTop: "4px" }}>
-            <line x1="50" y1="20" x2="50" y2="170" stroke="#4a5568" strokeWidth="2" />
-            <line x1="50" y1="170" x2="260" y2="170" stroke="#4a5568" strokeWidth="2" />
-            <text x="50" y="14" fontSize="9" fill="#4a5568">y (Depth)</text>
-            <text x="250" y="185" fontSize="9" fill="#4a5568">v (m/s)</text>
+          {/* Measurement Points */}
+          <circle cx={50 + (v06 / (vMax * 1.2)) * 180} cy={170 - 0.4 * 140} r="4" fill="#c8973a" stroke="#fff" strokeWidth="1.5" />
+          <text x={50 + (v06 / (vMax * 1.2)) * 180 + 6} y={170 - 0.4 * 140 + 3} fontSize="8.5" fill="#c8973a" fontWeight="700">v₀.₆ = {f2(v06)}</text>
 
-            {/* Grid & gauging depth lines */}
-            {[0.2, 0.4, 0.6, 0.8, 1.0].map(eta => (
-              <line key={eta} x1="45" y1={170 - eta * 140} x2="255" y2={170 - eta * 140} stroke="#e2e8f0" strokeDasharray="3 3" />
-            ))}
-            <line x1="45" y1={170 - 140} x2="255" y2={170 - 140} stroke="#1a5f7a" strokeWidth="1.5" />
-            <text x="25" y={170 - 140 + 3} fontSize="8" fill="#1a5f7a">Surface</text>
-            <text x="25" y={170 - 0.8 * 140 + 3} fontSize="8" fill="#5a5048">0.2y</text>
-            <text x="25" y={170 - 0.4 * 140 + 3} fontSize="8" fill="#c8973a" fontWeight="700">0.6y</text>
-            <text x="25" y={170 - 0.2 * 140 + 3} fontSize="8" fill="#5a5048">0.8y</text>
-            <text x="25" y="173" fontSize="8" fill="#4a5568">Bed</text>
+          <circle cx={50 + (getV(yMaxPos) / (vMax * 1.2)) * 180} cy={170 - (1 - dipDepth) * 140} r="4" fill="#e53e3e" stroke="#fff" strokeWidth="1.5" />
+          <text x={50 + (getV(yMaxPos) / (vMax * 1.2)) * 180 + 6} y={170 - (1 - dipDepth) * 140 + 3} fontSize="8.5" fill="#e53e3e" fontWeight="700">Vmax dip</text>
+        </svg>
 
-            {/* Profile curve */}
-            {(() => {
-              const pts = [];
-              for (let step = 0; step <= 30; step++) {
-                const yVal = (step / 30) * yTotal;
-                const vVal = getV(yVal);
-                const px = 50 + (vVal / (vMax * 1.2)) * 180;
-                const py = 170 - (yVal / yTotal) * 140;
-                pts.push(`${px.toFixed(1)},${py.toFixed(1)}`);
-              }
-              return <polyline points={pts.join(" ")} fill="none" stroke="#1a5f7a" strokeWidth="3" />;
-            })()}
-
-            {/* Highlighted measurement points */}
-            <circle cx={50 + (v06 / (vMax * 1.2)) * 180} cy={170 - 0.4 * 140} r="4" fill="#c8973a" stroke="#fff" strokeWidth="1.5" />
-            <text x={50 + (v06 / (vMax * 1.2)) * 180 + 6} y={170 - 0.4 * 140 + 3} fontSize="8.5" fill="#c8973a" fontWeight="700">v₀.₆ = {f2(v06)}</text>
-
-            <circle cx={50 + (getV(yMaxPos) / (vMax * 1.2)) * 180} cy={170 - (1 - dipDepth) * 140} r="4" fill="#e53e3e" stroke="#fff" strokeWidth="1.5" />
-            <text x={50 + (getV(yMaxPos) / (vMax * 1.2)) * 180 + 6} y={170 - (1 - dipDepth) * 140 + 3} fontSize="8.5" fill="#e53e3e" fontWeight="700">Vmax dip</text>
-          </svg>
+        <div style={{ background: "#f8fafc", padding: "12px", borderRadius: 6, border: "1px solid #cbd5e1" }}>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0f1f3d" }}>IS:1192 Current Metering Standards</div>
+          <div style={{ fontSize: "0.8rem", color: "#334155", marginTop: "4px", lineHeight: 1.45 }}>
+            • <b>Shallow streams (&lt; 0.6m):</b> Single point reading at 0.6 depth: <b>V ≈ v₀.₆</b>.<br/>
+            • <b>Deep streams (≥ 0.6m):</b> Two-point average at 0.2 and 0.8 depth: <b>V ≈ (v₀.₂ + v₀.₈)/2</b>.<br/>
+            Notice that both rules closely match the integrated true average of the non-uniform profile!
+          </div>
         </div>
       </div>
-
-      <p className="note" style={{ fontSize: "0.82rem", margin: "0.5rem 0 0 0", color: "#5a5048" }}>
-        <b>Hydraulic Principle:</b> In narrow open channels ($B/y &lt; 5$), secondary transverse circulation vortices drag slower fluid from the water surface inward and downward, pulling the maximum velocity point down to <b>$0.05y - 0.25y$</b> below the free surface. In very wide rivers ($B/y &gt; 10$), the sidewall restraint vanishes and the maximum velocity approaches the free surface.
-      </p>
     </Box>
   );
 }
@@ -348,12 +319,6 @@ export function AlphaBetaExplorer() {
   const [mExponent, setMExponent] = useState(6); // for power law v = v_max (y/y0)^(1/m)
   const [floodplainRatio, setFloodplainRatio] = useState(0.4); // V_fp / V_mc
 
-  // Analytical derivations:
-  // Power law: v = Vmax * eta^(1/m)
-  // Mean V = Vmax * m / (m+1)
-  // Beta = (m+1)^2 / (m*(m+2))
-  // Alpha = (m+1)^3 * (m+2) / (m^2 * (m+3)) -- wait, exact integral:
-  // integral v^3 dy / (V^3 * y0) = (m+1)^3 / (m^3) * [ m / (m+3) ] = (m+1)^3 / [ m^2 * (m+3) ]
   const { alpha, beta, meanVelRatio, why } = useMemo(() => {
     if (profileType === "power") {
       const m = mExponent;
@@ -364,10 +329,9 @@ export function AlphaBetaExplorer() {
         alpha: a,
         beta: b,
         meanVelRatio: vRatio,
-        why: `For 1/m = 1/${m}: V = ${f3(vRatio)} Vmax, β = ${f3(b)}, α = ${f3(a)}. Notice α > β > 1.0!`
+        why: `For power law exponent 1/m = 1/${m}: Mean V = ${f3(vRatio)} Vmax, β = ${f3(b)}, α = ${f3(a)}. Notice α > β > 1.0!`
       };
     } else if (profileType === "compound") {
-      // 2-stage channel: Main channel (Area 60%, Velocity 1.0), Floodplain (Area 40%, Velocity r)
       const A1 = 0.6, A2 = 0.4, V1 = 1.0, V2 = floodplainRatio;
       const Vmean = A1 * V1 + A2 * V2;
       const b = (A1 * V1 * V1 + A2 * V2 * V2) / (Vmean * Vmean);
@@ -376,30 +340,27 @@ export function AlphaBetaExplorer() {
         alpha: a,
         beta: b,
         meanVelRatio: Vmean,
-        why: `Two-stage compound section: high velocity differential inflates α to ${f2(a)} and β to ${f2(b)}!`
+        why: `Compound channel with floodplain velocity ${f2(floodplainRatio)}: severe velocity contrast gives high α = ${f3(a)} and β = ${f3(b)}!`
       };
     } else {
-      // Linear profile: v = 2 Vmean * eta
-      // integral v^2 = 4 V^2 / 3 -> beta = 4/3 = 1.333
-      // integral v^3 = 8 V^3 / 4 = 2 -> alpha = 2.0
       return {
-        alpha: 2.0,
-        beta: 1.333,
+        alpha: 1.333,
+        beta: 1.155,
         meanVelRatio: 0.5,
-        why: "Triangular / linear shear velocity distribution: α = 2.00, β = 1.33."
+        why: "Linear Couette shear distribution v = Vmax (y/y0): analytical α = 1.333, β = 1.155."
       };
     }
   }, [profileType, mExponent, floodplainRatio]);
 
   return (
-    <Box title="Kinetic Energy (α) & Momentum (β) Correction Factors" kind="S11 Mathematical Lab">
-      <div style={{ display: "flex", gap: "0.5rem", marginBottom: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
+    <Box title="Kinetic Energy (α) & Momentum (β) Integration Explorer" kind="S11 Visual Simulator">
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
         <Seg
           value={profileType}
           options={[
-            ["power", "Power-Law Profile v ∝ y^(1/m)"],
+            ["power", "Turbulent Power-Law Profile (v ∝ y^(1/m))"],
             ["compound", "Compound Channel (Main + Floodplain)"],
-            ["linear", "Extreme Linear Gradient"]
+            ["linear", "Linear Shear Profile (v ∝ y)"]
           ]}
           onChange={setProfileType}
         />
@@ -407,73 +368,25 @@ export function AlphaBetaExplorer() {
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.5rem", marginBottom: "0.75rem" }}>
         <Kpi v={f3(alpha)} l="Coriolis Coeff α (Energy)" tone="good" />
-        <Kpi v={f3(beta)} l="Boussinesq Coeff β (Mom.)" tone="good" />
-        <Kpi v={f3(alpha - beta)} l="Difference (α − β) > 0" />
-        <Kpi v={f2((alpha - 1) * 100) + "%"} l="Energy Head Excess" tone={alpha > 1.2 ? "warn" : ""} />
-        <Kpi v={f2(meanVelRatio) + " Vmax"} l="Mean Velocity V" />
+        <Kpi v={f3(beta)} l="Boussinesq Coeff β (Momentum)" />
+        <Kpi v={f3(alpha - beta)} l="Difference (α - β ≥ 0)" />
+        <Kpi v={f3(meanVelRatio)} l="Mean V / Vmax" />
       </div>
 
       <div style={{ background: "var(--g50, #f8f9fa)", padding: "0.75rem", borderRadius: "6px", border: "1px solid var(--g200, #e2e8f0)", marginBottom: "0.75rem" }}>
-        {profileType === "power" && (
-          <SliderRow label="Power Law Exponent m (1/m)" value={mExponent} min={2} max={10} step={1} unit="" onChange={setMExponent} />
+        {profileType === "power" ? (
+          <SliderRow label="Power Law Exponent m" value={mExponent} min={2} max={10} step={1} unit="" onChange={setMExponent} />
+        ) : profileType === "compound" ? (
+          <SliderRow label="Floodplain Velocity Ratio (V_fp / V_mc)" value={floodplainRatio} min={0.1} max={0.9} step={0.05} unit="" onChange={setFloodplainRatio} />
+        ) : (
+          <div style={{ fontSize: "0.85rem", color: "#5a5048" }}>Linear laminar shear: analytical constants α = 4/3 ≈ 1.333, β = 7/6 ≈ 1.155.</div>
         )}
-        {profileType === "compound" && (
-          <SliderRow label="Floodplain Velocity Ratio (Vfp / Vmc)" value={floodplainRatio} min={0.1} max={0.9} step={0.05} unit="" onChange={setFloodplainRatio} />
-        )}
-        <div style={{ fontSize: "0.82rem", color: "#4a5568", marginTop: "0.3rem" }}>
-          <b>Physical Formulae:</b> &alpha; = &int; v&sup3; dA / (V&sup3; A) &ge; 1.0, &nbsp; &beta; = &int; v&sup2; dA / (V&sup2; A) &ge; 1.0. Always &alpha; &gt; &beta; &ge; 1.0.
-        </div>
       </div>
 
-      <div style={{ textAlign: "center" }}>
-        <svg viewBox="0 0 540 160" style={{ width: "100%", maxHeight: "160px", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "6px" }}>
-          <rect x="40" y="20" width="220" height="110" fill="#f8fafc" stroke="#e2e8f0" />
-          <text x="150" y="15" fill="#1a5f7a" fontSize="10.5" textAnchor="middle" fontWeight="700">Velocity Flux Weights</text>
-          <line x1="40" y1="130" x2="260" y2="130" stroke="#333" strokeWidth="2" />
-          <line x1="40" y1="20" x2="40" y2="130" stroke="#333" strokeWidth="2" />
-
-          {/* Kinetic Energy Head vs True Head */}
-          <rect x="290" y="25" width="230" height="100" rx="6" fill="#f0f7fa" stroke="#1a5f7a" strokeWidth="1" />
-          <text x="405" y="45" fill="#0f1f3d" fontSize="11" textAnchor="middle" fontWeight="700">Impact on Total Energy Head E</text>
-          <text x="310" y="70" fill="#4a5568" fontSize="10">Standard 1D Assumption: E = y + V² / (2g)</text>
-          <text x="310" y="90" fill="#1a5f7a" fontSize="10.5" fontWeight="600">Rigorous Non-Uniform Flow: E = y + α·V² / (2g)</text>
-          <text x="310" y="110" fill="#c8973a" fontSize="10">Momentum Force: F_M = γ·z̄·A + β·ρ·Q·V</text>
-
-          {/* Curves in plot */}
-          {(() => {
-            const ptsV = [], ptsV2 = [], ptsV3 = [];
-            for (let i = 0; i <= 20; i++) {
-              const eta = i / 20;
-              const v = profileType === "power" ? Math.pow(eta, 1 / mExponent) : profileType === "linear" ? eta : (eta < 0.4 ? floodplainRatio : 1.0);
-              const pxV = 40 + v * 190;
-              const pxV2 = 40 + v * v * 190;
-              const pxV3 = 40 + Math.pow(v, 3) * 190;
-              const py = 130 - eta * 105;
-              ptsV.push(`${pxV.toFixed(1)},${py.toFixed(1)}`);
-              ptsV2.push(`${pxV2.toFixed(1)},${py.toFixed(1)}`);
-              ptsV3.push(`${pxV3.toFixed(1)},${py.toFixed(1)}`);
-            }
-            return (
-              <>
-                <polyline points={ptsV.join(" ")} fill="none" stroke="#1a5f7a" strokeWidth="2.5" />
-                <polyline points={ptsV2.join(" ")} fill="none" stroke="#2d6a4f" strokeWidth="1.8" strokeDasharray="4 3" />
-                <polyline points={ptsV3.join(" ")} fill="none" stroke="#c8973a" strokeWidth="1.8" strokeDasharray="2 2" />
-              </>
-            );
-          })()}
-          <text x="180" y="145" fill="#1a5f7a" fontSize="9">v (solid)</text>
-          <text x="215" y="145" fill="#2d6a4f" fontSize="9">v² (dash)</text>
-          <text x="250" y="145" fill="#c8973a" fontSize="9">v³ (dots)</text>
-        </svg>
-      </div>
       <p className="note" style={{ fontSize: "0.82rem", margin: "0.4rem 0 0 0", color: "#5a5048" }}>{why}</p>
     </Box>
   );
 }
-
-/* =========================================================================
-   4. S12 & S13: COWAN'S METHOD FOR MANNING'S n (manning_cowan_calc)
-   ========================================================================= */
 export function CowanRoughnessExplorer() {
   const [n0, setN0] = useState(0.020); // base material
   const [n1, setN1] = useState(0.005); // surface irregularity
