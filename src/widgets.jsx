@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { Plot, path, Legend, C } from "./charts.jsx";
 import { ILLOS } from "./illos.jsx";
+import { UNIT2_COMPONENTS } from "./unit2_widgets.jsx";
 
 const f1 = v => (isFinite(v) ? (+v).toFixed(1) : "-");
 const f2 = v => (isFinite(v) ? (+v).toFixed(2) : "-");
@@ -716,5 +717,6 @@ export const WIDGETS = {
   peltondesign: PeltonWheelWorkbench,
   pumpcharacteristics: CentrifugalPumpWorkbench,
   cfdmesh: CFDMeshWorkbench,
+  ...UNIT2_COMPONENTS,
   ...ILLOS
 };
