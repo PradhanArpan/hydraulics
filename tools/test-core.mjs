@@ -97,3 +97,36 @@ test("normal depth computation matches Manning discharge", () => {
   near(Qcalc, Q, 1e-4);
 });
 
+test("qMax: at E the critical depth is 2E/3 and q = qMax(E)", () => {
+  const E = 1.6, q = H.qMax(E);
+  near(H.criticalDepth(q), (2 * E) / 3, 1e-9);
+  near(H.specificEnergy(H.criticalDepth(q), q), E, 1e-9);
+});
+
+test("depthAtEnergy round-trips on both branches and rejects E below minimum", () => {
+  const q = 2, yc = H.criticalDepth(q);
+  const sub = H.depthAtEnergy(1.8, q, "sub"), sup = H.depthAtEnergy(1.8, q, "sup");
+  assert.ok(sub > yc && sup < yc);
+  near(H.specificEnergy(sub, q), 1.8, 1e-7);
+  near(H.specificEnergy(sup, q), 1.8, 1e-7);
+  assert.ok(Number.isNaN(H.depthAtEnergy(1.0, q, "sub")));
+});
+
+test("contraction: subcritical depth falls, supercritical depth rises, choked below bMin", () => {
+  const Q = 6, b1 = 3;
+  const sub = H.contractionResponse(Q, b1, 1.5, 2.5);
+  assert.ok(!sub.choked && sub.y2 < 1.5);
+  const sup = H.contractionResponse(Q, b1, 0.4, 2.5);
+  assert.ok(!sup.choked && sup.y2 > 0.4);
+  const edge = H.contractionResponse(Q, b1, 1.5, sub.bMin + 1e-6);
+  assert.ok(!edge.choked);
+  near(edge.y2, H.criticalDepth(Q / sub.bMin), 1e-3); // critical at the throat
+  assert.ok(H.contractionResponse(Q, b1, 1.5, sub.bMin - 0.01).choked);
+});
+
+test("choked hump: upstream depth equals y1 exactly at dzMax, and rises above it", () => {
+  const q = 2, y1 = 1.5, r = H.humpResponse(q, y1, 0.2);
+  near(H.chokedUpstream(q, r.dzMax), y1, 1e-6);
+  assert.ok(H.chokedUpstream(q, r.dzMax + 0.2) > y1);
+});
+

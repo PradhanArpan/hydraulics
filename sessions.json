@@ -773,6 +773,12 @@
       "num": 5,
       "title": "Computation of Normal Depth & Uniform Flow",
       "hook": "How do engineers quickly solve the non-linear implicit Manning equation for water depth without manual trial and error?",
+      "outcomes": [
+        "Explain why normal depth is implicit in Manning's equation",
+        "Apply the Bisection and Newton-Raphson methods to solve for normal depth yn",
+        "Use Excel Goal Seek or Python to calculate uniform flow depth"
+      ],
+      "legacyFile": "sessions/S14.md",
       "co": "CO2",
       "refs": "T2 §16.9; T3 §6.1–6.3",
       "software": [
@@ -781,7 +787,7 @@
       ],
       "lab": "L05",
       "keywords": "normal depth y0 Newton-Raphson section factor tractive force",
-      "file": "sessions/S14.md",
+      "file": "sessions/v2/D11.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -820,11 +826,17 @@
     },
     {
       "id": "S16",
-      "day": 16,
+      "day": 13,
       "unit": 2,
       "num": 7,
-      "title": "Channel Transitions: Width Contractions & Humps",
-      "hook": "Why does raising the channel floor cause the water level to drop in subcritical flow, while causing it to rise in supercritical flow?",
+      "title": "Channel Transitions: Humps and Narrowings",
+      "hook": "Why does the water surface dip over a bump on the bed in calm flow, and rise in fast flow?",
+      "outcomes": [
+        "Predict whether water surface rises or dips over bed steps in sub- and supercritical flow",
+        "Calculate the maximum step height dz_max before channel choking occurs",
+        "Find the minimum contracted throat width b_min that avoids afflux backwater"
+      ],
+      "legacyFile": "sessions/S16.md",
       "co": "CO2",
       "refs": "T2 §15.9–15.11; T3 §3.5–3.8",
       "software": [
@@ -833,7 +845,7 @@
       ],
       "lab": "L05",
       "keywords": "channel transition bed hump width contraction choking condition",
-      "file": "sessions/S16.md",
+      "file": "sessions/v2/D13.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -877,6 +889,12 @@
       "num": 9,
       "title": "Gradually Varied Flow (GVF) & Surface Profiles",
       "hook": "How do river engineers accurately predict how many kilometers upstream a newly constructed reservoir will submerge farm lands?",
+      "outcomes": [
+        "Explain the GVF governing equation dy/dx = (S0 - Sf)/(1 - Fr^2)",
+        "Classify the 12 water surface profiles across Mild, Steep, Critical, Horizontal, and Adverse slopes",
+        "Compute backwater curve reach lengths using the Direct Step Method"
+      ],
+      "legacyFile": "sessions/S18.md",
       "co": "CO2",
       "refs": "T2 §17.1–17.5; T3 §9.1–9.6",
       "software": [
@@ -885,7 +903,7 @@
       ],
       "lab": "L05",
       "keywords": "gradually varied flow backwater curve M1 profile Direct Step Method",
-      "file": "sessions/S18.md",
+      "file": "sessions/v2/D16.md",
       "enabled": true,
       "ready": true,
       "labs": [

@@ -168,3 +168,33 @@ export function solveNormalDepthRect(Q, b, S, n) {
   return bisect(f, 1e-4, 20);
 }
 
+// ---- transitions: hump and width contraction (Day 13; added by Claude) ----
+// Largest discharge per metre width a rectangular section can pass at specific energy E (flow is critical).
+export const qMax = E => Math.sqrt(G) * Math.pow((2 * E) / 3, 1.5);
+
+// Depth that carries q at specific energy E, on the subcritical ("sub") or supercritical ("sup") branch.
+// Returns NaN if E is below the minimum energy for q.
+export function depthAtEnergy(E, q, branch) {
+  const yc = criticalDepth(q);
+  if (E < 1.5 * yc - 1e-12) return NaN;
+  const f = d => specificEnergy(d, q) - E;
+  return branch === "sup" ? bisect(f, 1e-4, yc) : bisect(f, yc, E + 1);
+}
+
+// Width contraction from b1 to b2 (no energy loss), upstream depth y1 carrying total discharge Q.
+// Returns { choked, bMin, y2, q2, E1 }. bMin is the narrowest width that still passes Q.
+export function contractionResponse(Q, b1, y1, b2) {
+  const q1 = Q / b1, q2 = Q / b2;
+  const E1 = specificEnergy(y1, q1);
+  const branch = y1 >= criticalDepth(q1) ? "sub" : "sup";
+  const bMin = Q / qMax(E1);
+  if (b2 < bMin - 1e-12) return { choked: true, bMin, y2: criticalDepth(Q / bMin), q2, E1 };
+  return { choked: false, bMin, y2: depthAtEnergy(E1, q2, branch), q2, E1 };
+}
+
+// Subcritical flow meets a hump too high to pass (dz > E1 - Ec): the water piles up upstream until
+// E1' = Ec + dz. Returns the new upstream depth y1'. Afflux = y1' - y1.
+export function chokedUpstream(q, dz) {
+  return depthAtEnergy(1.5 * criticalDepth(q) + dz, q, "sub");
+}
+
