@@ -42,10 +42,73 @@ function checkHtml(json) {
     '<div class="fb" hidden></div>' + (it.hint ? '<div class="hint" hidden>' + inline(it.hint) + '</div>' : "") + (it.solution ? '<div class="solx" hidden>' + inline(it.solution) + '</div>' : "") + '</div>').join("");
 }
 
+/* ---- Lesson Flow v2 blocks: plain "key: value" text, no JSON, so backslashes in TeX need no escaping ---- */
+function kv(text) {
+  const o = {};
+  String(text).split("\n").forEach(l => {
+    const m = l.match(/^(\w+):\s*(.*)$/);
+    if (m) (o[m[1]] = o[m[1]] || []).push(m[2].trim());
+  });
+  return o;
+}
+const first = (o, k) => (o[k] && o[k][0]) || "";
+const safeSrc = s => (/^(https?:\/\/|media\/|\.\/)/.test(s) ? s : "");
+
+// ```steps  — a derivation revealed one step at a time. Each step: say / eq (TeX) / why. Steps separated by a line of ---
+function stepsHtml(body) {
+  const steps = body.split(/\n-{3,}\n/).map(kv).filter(s => s.say || s.eq);
+  if (!steps.length) return '<div class="callout warn">Steps block is empty.</div>';
+  let h = '<div class="dsteps" data-n="' + steps.length + '"><ol class="dsteps__list">';
+  steps.forEach((s, i) => {
+    h += '<li class="dstep"' + (i ? " hidden" : "") + '><div class="dstep__say">' + inline(first(s, "say")) + "</div>" +
+      (s.eq ? '<div class="dstep__eq">' + s.eq.map(e => math(e, true)).join("") + "</div>" : "") +
+      (s.why ? '<div class="dstep__why"><b>Why:</b> ' + inline(first(s, "why")) + "</div>" : "") + "</li>";
+  });
+  return h + '</ol><div class="dsteps__ctl"><button type="button" class="btn" data-k="next"></button> <button type="button" class="btn ghost" data-k="all">Show all steps</button></div></div>';
+}
+
+// ```predict — commit to an answer first, then see why. Fields: q, o (repeat), a (1-based right option), why
+function predictHtml(body) {
+  const o = kv(body), opts = o.o || [];
+  if (!first(o, "q") || opts.length < 2) return '<div class="callout warn">Predict block needs q: and at least two o: lines.</div>';
+  let h = '<div class="predict" data-a="' + (+first(o, "a") - 1) + '"><div class="predict__tag">Predict first</div><div class="predict__q">' + inline(first(o, "q")) + '</div><div class="predict__opts">';
+  opts.forEach((t, i) => { h += '<button type="button" class="predict__opt" data-i="' + i + '">' + inline(t) + "</button>"; });
+  return h + '</div><div class="predict__why" hidden aria-live="polite"><b></b> ' + inline(first(o, "why")) + "</div></div>";
+}
+
+// ```clip — real flow footage. kind: youtube | mp4 | link; src; start/end (s); tag: real | simulation | schematic;
+// caption; notice (separate points with ;); credit; creditUrl
+function clipHtml(body) {
+  const o = kv(body), kind = first(o, "kind"), src = first(o, "src");
+  if (!safeSrc(src)) return '<div class="callout warn">Clip needs a src that starts with https:// or media/.</div>';
+  const start = +first(o, "start") || 0, end = +first(o, "end") || 0;
+  let media = "";
+  if (kind === "youtube") {
+    const id = (src.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/) || [])[1];
+    if (!id) return '<div class="callout warn">Could not read the YouTube id from ' + esc(src) + "</div>";
+    media = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + "?rel=0" + (start ? "&start=" + start : "") + (end ? "&end=" + end : "") +
+      '" title="' + esc(first(o, "caption")) + '" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+  } else if (kind === "mp4") {
+    media = '<video controls preload="metadata" playsinline src="' + esc(src) + (start || end ? "#t=" + start + (end ? "," + end : "") : "") + '"></video>';
+  } else {
+    media = '<a class="clip__link" href="' + esc(src) + '" target="_blank" rel="noopener">Watch the video ↗</a>';
+  }
+  const tag = first(o, "tag") || "real";
+  const notice = (first(o, "notice") ? first(o, "notice").split(";").map(s => s.trim()).filter(Boolean) : []);
+  const credit = first(o, "credit");
+  const cu = safeSrc(first(o, "creditUrl"));
+  return '<figure class="clip"><div class="clip__media">' + media + '</div><figcaption><span class="clip__tag clip__tag--' + esc(tag) + '">' + esc(tag) + "</span> " + inline(first(o, "caption")) +
+    (notice.length ? '<ul class="clip__notice"><li class="clip__nt">What to notice</li>' + notice.map(n => "<li>" + inline(n) + "</li>").join("") + "</ul>" : "") +
+    (credit ? '<div class="clip__credit">Source: ' + (cu ? '<a href="' + esc(cu) + '" target="_blank" rel="noopener">' + esc(credit) + " ↗</a>" : esc(credit)) + "</div>" : "") + "</figcaption></figure>";
+}
+
 export function renderMd(src) {
   src = String(src).replace(/\r\n?/g, "\n");
   const store = {};
   const put = html => { const k = key(); store[k] = html; return "\n\n" + k + "\n\n"; };
+  src = src.replace(/```steps\s*\n([\s\S]*?)\n```/g, (m, b) => put(stepsHtml(b)));
+  src = src.replace(/```predict\s*\n([\s\S]*?)\n```/g, (m, b) => put(predictHtml(b)));
+  src = src.replace(/```clip\s*\n([\s\S]*?)\n```/g, (m, b) => put(clipHtml(b)));
   src = src.replace(/```quiz\s*\n([\s\S]*?)\n```/g, (m, j) => put(quizHtml(j)));
   src = src.replace(/```check\s*\n([\s\S]*?)\n```/g, (m, j) => put(checkHtml(j)));
   src = src.replace(/```[\s\S]*?```/g, m => put(marked.parse(m)));
@@ -138,6 +201,30 @@ export function enhance(root) {
     c.querySelector(".btn:not(.ghost)").addEventListener("click", test);
     inp.addEventListener("keydown", e => { if (e.key === "Enter") test(); });
     c.querySelectorAll("[data-k]").forEach(b => b.addEventListener("click", () => { const el = c.querySelector("." + b.dataset.k); el.hidden = !el.hidden; }));
+  });
+  root.querySelectorAll(".dsteps").forEach(d => {
+    const steps = [...d.querySelectorAll(".dstep")], next = d.querySelector('[data-k="next"]'), all = d.querySelector('[data-k="all"]');
+    let shown = 1;
+    const paint = () => {
+      steps.forEach((s, i) => { s.hidden = i >= shown; });
+      const done = shown >= steps.length;
+      next.hidden = done; all.hidden = done;
+      next.textContent = "Next step (" + (shown + 1) + " of " + steps.length + ")";
+    };
+    next.addEventListener("click", () => { shown = Math.min(steps.length, shown + 1); paint(); steps[shown - 1].scrollIntoView({ block: "nearest", behavior: "smooth" }); });
+    all.addEventListener("click", () => { shown = steps.length; paint(); });
+    paint();
+  });
+  root.querySelectorAll(".predict").forEach(p => {
+    const ans = +p.dataset.a, why = p.querySelector(".predict__why");
+    p.querySelectorAll(".predict__opt").forEach(b => b.addEventListener("click", () => {
+      if (p.dataset.done) return;
+      p.dataset.done = "1";
+      const pick = +b.dataset.i;
+      p.querySelectorAll(".predict__opt").forEach((x, j) => { x.disabled = true; if (j === ans) x.classList.add("right"); else if (x === b) x.classList.add("wrong"); });
+      why.hidden = false;
+      why.querySelector("b").textContent = pick === ans ? "Yes." : "Not quite.";
+    }));
   });
   root.querySelectorAll(".quiz").forEach(q => {
     const score = q.querySelector(".qscore"), items = q.querySelectorAll(".qitem");

@@ -4,9 +4,10 @@ import { createPortal } from "react-dom";
 import { renderMd, enhance, esc } from "./md.js";
 import { WIDGETS } from "./widgets.jsx";
 import { ILLOS } from "./illos.jsx";
+import { V2_WIDGETS } from "./v2/index.js";
 import { Menu, Search, Sun, Moon, X, Check, Printer, Lock, Laptop, ChevronRight, SquareArrowOutUpRight, Calculator, CloudRain, Droplets, Activity, LineChart, Layers, Map as MapIcon, Wind, SlidersHorizontal, Key, RefreshCw, UploadCloud, Download } from "lucide-react";
 
-const ALL_COMPONENTS = { ...ILLOS, ...WIDGETS };
+const ALL_COMPONENTS = { ...ILLOS, ...WIDGETS, ...V2_WIDGETS };
 
 // Interactive tools that open in a pop-up window from a card in the reading column (the rest stay inline as figures).
 const DOCK_TOOLS = {
@@ -258,6 +259,22 @@ function splitTabs(src) {
   }
   if (last !== null) parts.push({ name: last, md: src.slice(idx) });
   return parts.length ? parts : [{ name: "", md: src }];
+}
+
+// Lesson Flow v2: <!--beat:id|Label--> markers split one session into a single scrolling story (no tabs).
+const BEAT_RE = /<!--\s*beat:\s*([\w-]+)\s*(?:\|\s*(.+?))?\s*-->/g;
+const isBeatDoc = src => /<!--\s*beat:/.test(src || "");
+function splitBeats(src) {
+  const parts = [];
+  let m, last = null, idx = 0;
+  BEAT_RE.lastIndex = 0;
+  while ((m = BEAT_RE.exec(src))) {
+    if (last) parts.push({ ...last, md: src.slice(idx, m.index) });
+    last = { id: m[1], name: m[2] || m[1] };
+    idx = BEAT_RE.lastIndex;
+  }
+  if (last) parts.push({ ...last, md: src.slice(idx) });
+  return parts;
 }
 
 /* ---------- Search Modal ---------- */
@@ -1058,9 +1075,10 @@ function SessionView({ data, id, preview, markVisited, visited }) {
   const i = vis.findIndex(x => x.id === id);
   const prev = vis[i - 1];
   const next = vis[i + 1];
-  const parts = src ? splitTabs(src) : [];
+  const beatMode = isBeatDoc(src);
+  const parts = src ? (beatMode ? splitBeats(src) : splitTabs(src)) : [];
   const locked = !s.enabled && !preview;
-  const curHeads = (heads[tab] || []).filter(h => h.lv === "H2");
+  const curHeads = (beatMode ? parts.flatMap((_, j) => heads[j] || []) : heads[tab] || []).filter(h => h.lv === "H2");
 
   const pick = j => {
     setTab(j);
@@ -1083,6 +1101,12 @@ function SessionView({ data, id, preview, markVisited, visited }) {
         <h1 className="fb-title">{s.title}</h1>
         {s.hook && <p className="fb-lede">{s.hook}</p>}
         {meta && <p className="fb-meta">{meta}</p>}
+        {beatMode && (s.outcomes || []).length > 0 && (
+          <div className="outcomes">
+            <b>By the end you can:</b>
+            <ul>{s.outcomes.map((o, k) => <li key={k}>{o}</li>)}</ul>
+          </div>
+        )}
 
         {!locked && (
           <div className="fb-actions">
@@ -1111,9 +1135,10 @@ function SessionView({ data, id, preview, markVisited, visited }) {
           </div>
         ) : (
           <>
-            {parts.length > 1 && <SessionTabs parts={parts} tab={tab} pick={pick} />}
+            {!beatMode && parts.length > 1 && <SessionTabs parts={parts} tab={tab} pick={pick} />}
             {parts.map((p, j) => (
-              <div key={id + j} role={parts.length > 1 ? "tabpanel" : undefined} id={"panel-" + j} aria-labelledby={parts.length > 1 ? "tab-" + j : undefined} hidden={j !== tab}>
+              <div key={id + j} className={beatMode ? "beat beat--" + p.id : undefined} role={!beatMode && parts.length > 1 ? "tabpanel" : undefined} id={beatMode ? "beat-" + p.id : "panel-" + j} aria-labelledby={!beatMode && parts.length > 1 ? "tab-" + j : undefined} hidden={!beatMode && j !== tab}>
+                {beatMode && <p className="beat__label">{p.name}</p>}
                 <Content
                   md={p.md}
                   idPrefix={"t" + j + "-"}

@@ -661,6 +661,12 @@
       "num": 1,
       "title": "Introduction to Free Surface Flow & Channel Geometry",
       "hook": "Why does the presence of a free surface at constant atmospheric pressure make open channel hydraulics far richer and more complex than closed pipe flow?",
+      "outcomes": [
+        "Explain why the gauge pressure at the free water surface is always zero",
+        "Compute wetted area A, perimeter P, hydraulic radius R, and hydraulic depth D",
+        "Distinguish steady vs unsteady and uniform vs varied channel flows"
+      ],
+      "legacyFile": "sessions/S10.md",
       "co": "CO2",
       "refs": "T2 §15.1–15.4; T3 §2.1–2.4",
       "software": [
@@ -669,7 +675,7 @@
       ],
       "lab": "L02",
       "keywords": "geometric elements hydraulic radius hydraulic depth open channel flow",
-      "file": "sessions/S10.md",
+      "file": "sessions/v2/D07.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -682,6 +688,12 @@
       "num": 2,
       "title": "Velocity Distribution & Kinetic Energy / Momentum Factors",
       "hook": "Why is the point of maximum velocity in an open channel depressed 5% to 25% below the free surface rather than right at the top?",
+      "outcomes": [
+        "Identify where maximum velocity occurs and explain the velocity dip",
+        "Calculate mean velocity V using IS:1192 0.6y single-point and 0.2y/0.8y two-point standards",
+        "Apply the Coriolis factor α and Boussinesq factor β to energy and momentum equations"
+      ],
+      "legacyFile": "sessions/S11.md",
       "co": "CO2",
       "refs": "T2 §15.5; T3 §2.5–2.7",
       "software": [
@@ -690,7 +702,7 @@
       ],
       "lab": "L02",
       "keywords": "velocity distribution Coriolis factor α Boussinesq factor β streamline curvature",
-      "file": "sessions/S11.md",
+      "file": "sessions/v2/D08.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -705,6 +717,12 @@
       "num": 3,
       "title": "Uniform Flow: Chezy's & Manning's Equations",
       "hook": "How did Robert Manning formulate an empirical equation in 1889 that remains the supreme global standard for river and canal design today?",
+      "outcomes": [
+        "Explain how downslope gravity pull balances bed shear friction in uniform flow",
+        "Show why opposing hydrostatic load triangles cancel out",
+        "Calculate discharge using Manning's equation and composite roughness using Cowan's method"
+      ],
+      "legacyFile": "sessions/S12.md",
       "co": "CO2",
       "refs": "T2 §16.1–16.4; T3 §5.1–5.4",
       "software": [
@@ -713,7 +731,7 @@
       ],
       "lab": "L03",
       "keywords": "Manning equation Chezy formula roughness coefficient n Cowan method",
-      "file": "sessions/S12.md",
+      "file": "sessions/v2/D09.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -728,6 +746,12 @@
       "num": 4,
       "title": "Most Economical (Hydraulically Efficient) Sections",
       "hook": "For a fixed volume of excavation and lining material, what exact mathematical geometry delivers the highest possible discharge?",
+      "outcomes": [
+        "State the geometric conditions for economical rectangular and trapezoidal sections",
+        "Prove why b = 2y and R = y/2 minimizes concrete lining perimeter",
+        "Explain why a circular pipe achieves peak discharge before it is 100% full"
+      ],
+      "legacyFile": "sessions/S13.md",
       "co": "CO2",
       "refs": "T2 §16.5–16.8; T3 §7.1–7.4",
       "software": [
@@ -736,7 +760,7 @@
       ],
       "lab": "L03",
       "keywords": "hydraulically efficient section half-hexagon minimum wetted perimeter maximum discharge",
-      "file": "sessions/S13.md",
+      "file": "sessions/v2/D10.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -767,11 +791,17 @@
     },
     {
       "id": "S15",
-      "day": 15,
+      "day": 12,
       "unit": 2,
       "num": 6,
-      "title": "Specific Energy Concept & Critical Flow",
-      "hook": "Why does a channel with a given specific energy have two physically possible depths, and why is critical flow the most unstable state?",
+      "title": "Specific Energy and Critical Flow",
+      "hook": "One flow, two possible depths: which one does the channel choose, and why does the depth in the middle matter?",
+      "outcomes": [
+        "Explain why the same flow can be deep and slow or shallow and fast",
+        "Find the critical depth and the minimum specific energy for a rectangular channel",
+        "Use the Froude number to say whether ripples can travel upstream"
+      ],
+      "legacyFile": "sessions/S15.md",
       "co": "CO2",
       "refs": "T2 §15.6–15.8; T3 §3.1–3.4",
       "software": [
@@ -780,7 +810,7 @@
       ],
       "lab": "L05",
       "keywords": "specific energy critical depth Froude number alternate depths",
-      "file": "sessions/S15.md",
+      "file": "sessions/v2/D12.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -813,11 +843,17 @@
     },
     {
       "id": "S17",
-      "day": 17,
+      "day": 14,
       "unit": 2,
       "num": 8,
-      "title": "Hydraulic Jump Mechanics & Stilling Basins",
-      "hook": "How does a stationary standing shockwave dissipate over 70% of a dam's catastrophic kinetic energy within just a few meters?",
+      "title": "The Hydraulic Jump",
+      "hook": "Why is there a wall of white water below every spillway, and where does the energy go?",
+      "outcomes": [
+        "Find the depth after a jump, the energy lost and the length for a rectangular channel",
+        "Explain why momentum, not energy, is used across a jump",
+        "Say what happens to the jump when the tailwater is too low or too high"
+      ],
+      "legacyFile": "sessions/S17.md",
       "co": "CO2",
       "refs": "T2 §15.12–15.15; T3 §15.1–15.5",
       "software": [
@@ -826,7 +862,7 @@
       ],
       "lab": "L04",
       "keywords": "hydraulic jump Bélanger equation energy dissipation stilling basin",
-      "file": "sessions/S17.md",
+      "file": "sessions/v2/D14.md",
       "enabled": true,
       "ready": true,
       "labs": [
