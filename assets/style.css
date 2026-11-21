@@ -2570,3 +2570,96 @@ svg.paused *, svg.paused { animation-play-state: paused !important; }
   color: #0d47a1;
   border: 1px solid #bbdefb;
 }
+
+/* =========================================================================
+   ENHANCED HYDRAULICS ANIMATIONS & FLUID INTERACTION STYLES
+   ========================================================================= */
+
+@keyframes waterShimmer {
+  0% { stop-color: #38bdf8; }
+  50% { stop-color: #0284c7; }
+  100% { stop-color: #38bdf8; }
+}
+
+@keyframes surfaceWaveSlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-48px); }
+}
+
+@keyframes vortexSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes vortexPulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+
+@keyframes rippleExpand {
+  0% { r: 4px; opacity: 0.9; stroke-width: 2px; }
+  100% { r: 52px; opacity: 0; stroke-width: 0.8px; }
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  25% { opacity: 0.85; }
+  75% { opacity: 0.7; }
+  100% { transform: translateY(-38px) scale(1.2); opacity: 0; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.4)); }
+  50% { filter: drop-shadow(0 0 7px rgba(220, 38, 38, 0.85)); }
+}
+
+.anim-flow-fast {
+  stroke-dasharray: 10 5;
+  animation: flow 0.9s linear infinite;
+}
+
+.anim-flow-smooth {
+  stroke-dasharray: 12 6;
+  animation: flow 2.2s linear infinite;
+}
+
+.anim-wave-surface {
+  animation: surfaceWaveSlow 3.2s linear infinite;
+}
+
+.anim-vortex {
+  transform-origin: center;
+  animation: vortexSpin 2s linear infinite;
+}
+
+.anim-pulse-vortex {
+  transform-origin: center;
+  animation: vortexPulse 2.4s ease-in-out infinite;
+}
+
+.anim-ripple-sub {
+  transform-origin: center;
+  animation: rippleExpand 2.2s cubic-bezier(0.1, 0.7, 0.4, 1) infinite;
+}
+
+.anim-bubble-fast {
+  animation: bubbleFloat 1.8s ease-in-out infinite;
+}
+
+.anim-probe-glow {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+/* Interactive SVG hover micro-interactions */
+.illo svg line, .illo svg path, .illo svg circle, .illo svg rect {
+  transition: opacity 0.15s ease;
+}
+
+.illo-control-panel {
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 10px rgba(15, 31, 61, 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.illo-control-panel:hover {
+  box-shadow: 0 4px 16px rgba(15, 31, 61, 0.09);
+}

@@ -134,15 +134,28 @@ export function OcfPipeCompare() {
       </div>
 
       {/* DUAL SVG: SIDE BY SIDE WITH CROSS SECTIONS */}
-      <svg viewBox="0 0 920 280" style={{ width: "100%", background: "#fff", border: "1px solid #e2e8f0", borderRadius: 6 }}>
+      <svg viewBox="0 0 920 290" style={{ width: "100%", background: "#fff", border: "1px solid #e2e8f0", borderRadius: 8 }} filter="drop-shadow(0 2px 8px rgba(0,0,0,0.05))">
         <defs>
           <linearGradient id="wbWater" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#6fb4d0" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#1a5f7a" stopOpacity="0.95" />
+            <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.9" />
+            <stop offset="50%" stopColor="#0284c7" stopOpacity="0.92" />
+            <stop offset="100%" stopColor="#0369a1" stopOpacity="0.98" />
           </linearGradient>
           <linearGradient id="wbPipe" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#718096" />
-            <stop offset="100%" stopColor="#2d3748" />
+            <stop offset="0%" stopColor="#475569" />
+            <stop offset="30%" stopColor="#94a3b8" />
+            <stop offset="70%" stopColor="#334155" />
+            <stop offset="100%" stopColor="#1e293b" />
+          </linearGradient>
+          <linearGradient id="wbGlass" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="rgba(255,255,255,0.7)" />
+            <stop offset="25%" stopColor="rgba(255,255,255,0.2)" />
+            <stop offset="80%" stopColor="rgba(255,255,255,0.4)" />
+            <stop offset="100%" stopColor="rgba(203,213,225,0.8)" />
+          </linearGradient>
+          <linearGradient id="wbSoil" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#78350f" />
+            <stop offset="100%" stopColor="#451a03" />
           </linearGradient>
           <marker id="wbArr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0 1 L9 5 L0 9 z" fill="#0f1f3d" />
@@ -150,73 +163,99 @@ export function OcfPipeCompare() {
         </defs>
 
         {/* LEFT HALF: PIPE FLOW PROFILE + CROSS SECTION */}
-        <g transform="translate(15, 10)">
-          <rect x="0" y="0" width="435" height="260" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
-          <text x="15" y="22" fontSize="13" fontWeight="700" fill="#0f1f3d">Pressure Pipe: Profile &amp; Section</text>
+        <g transform="translate(15, 12)">
+          <rect x="0" y="0" width="435" height="266" rx="8" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1.2" />
+          <text x="18" y="24" fontSize="13.5" fontWeight="800" fill="#1e3a8a">Closed Conduit Flow (Pressurized)</text>
 
-          {/* Longitudinal pipe */}
-          <rect x="20" y="160" width="240" height="40" rx="3" fill="url(#wbPipe)" />
-          <rect x="22" y="164" width="236" height="32" fill="url(#wbWater)" />
-          <line x1="25" y1="180" x2="255" y2="180" stroke="#bee3f8" strokeWidth="1.8" strokeDasharray="6 4" className="anim-flow" />
+          {/* Longitudinal pipe casing */}
+          <rect x="20" y="165" width="245" height="42" rx="4" fill="url(#wbPipe)" stroke="#0f172a" strokeWidth="1.5" />
+          {/* Water body inside pipe */}
+          <rect x="22" y="169" width="241" height="34" fill="url(#wbWater)" />
+          {/* Smooth animated streamlines at varying speeds */}
+          <line x1="25" y1="174" x2="260" y2="174" stroke="#e0f2fe" strokeWidth="1.2" strokeDasharray="8 6" className="anim-flow-smooth" opacity="0.75" />
+          <line x1="25" y1="186" x2="260" y2="186" stroke="#ffffff" strokeWidth="2.2" strokeDasharray="14 7" className="anim-flow-fast" opacity="0.95" />
+          <line x1="25" y1="198" x2="260" y2="198" stroke="#e0f2fe" strokeWidth="1.2" strokeDasharray="8 6" className="anim-flow-smooth" opacity="0.75" />
 
-          {/* Piezometer tap */}
-          <rect x="130" y={160 - pressureHead * 18} width="16" height={pressureHead * 18} fill="#fff" stroke="#475569" strokeWidth="1.5" />
-          <rect x="132" y={160 - pressureHead * 18} width="12" height={pressureHead * 18} fill="url(#wbWater)" />
-          <ellipse cx="138" cy={160 - pressureHead * 18} rx="6" ry="2" fill="#63b3ed" stroke="#2b6cb0" />
+          {/* Piezometer tube column */}
+          <rect x="135" y={165 - pressureHead * 18} width="16" height={pressureHead * 18 + 4} fill="url(#wbGlass)" stroke="#64748b" strokeWidth="1.5" />
+          <rect x="137" y={165 - pressureHead * 18 + 2} width="12" height={pressureHead * 18 + 2} fill="url(#wbWater)" />
+          <ellipse cx="143" cy={165 - pressureHead * 18 + 2} rx="6" ry="2.5" fill="#38bdf8" stroke="#0284c7" />
 
           {/* HGL and EGL */}
-          <line x1="15" y1={160 - pressureHead * 18} x2="265" y2={160 - pressureHead * 18 + 12} stroke="#dc2626" strokeWidth="2" strokeDasharray="5 3" />
-          <text x="150" y={160 - pressureHead * 18 - 4} fontSize="9.5" fontWeight="700" fill="#dc2626">HGL (z + P/γ)</text>
+          <line x1="15" y1={165 - pressureHead * 18 + 2} x2="265" y2={165 - pressureHead * 18 + 14} stroke="#dc2626" strokeWidth="2" strokeDasharray="6 3" />
+          <text x="156" y={165 - pressureHead * 18} fontSize="9.5" fontWeight="800" fill="#dc2626">HGL (Piezometric Head)</text>
 
-          <line x1="15" y1={160 - pressureHead * 18 - 20} x2="265" y2={160 - pressureHead * 18 + 12 - 20} stroke="#2563eb" strokeWidth="2" />
-          <text x="150" y={160 - pressureHead * 18 - 24} fontSize="9.5" fontWeight="700" fill="#2563eb">EGL = HGL + V²/2g</text>
+          <line x1="15" y1={165 - pressureHead * 18 - 20} x2="265" y2={165 - pressureHead * 18 - 8} stroke="#2563eb" strokeWidth="2.2" />
+          <text x="156" y={165 - pressureHead * 18 - 22} fontSize="9.5" fontWeight="800" fill="#2563eb">EGL = HGL + V²/2g</text>
 
-          {/* Pipe Cross Section on right */}
-          <g transform="translate(320, 150)">
-            <circle cx="45" cy="30" r="38" fill="url(#wbPipe)" stroke="#1a202c" strokeWidth="2" />
-            <circle cx="45" cy="30" r="32" fill="url(#wbWater)" />
-            <line x1="45" y1="-8" x2="45" y2="68" stroke="#cbd5e1" strokeDasharray="2 2" />
-            <line x1="7" y1="30" x2="83" y2="30" stroke="#cbd5e1" strokeDasharray="2 2" />
-            <text x="45" y="34" fontSize="10" fontWeight="700" fill="#fff" textAnchor="middle">100% Full</text>
-            <text x="45" y="85" fontSize="10" fontWeight="700" fill="#0f1f3d" textAnchor="middle">Pipe Section (Dia {f1(dia)}m)</text>
-            <text x="45" y="98" fontSize="8.5" fill="#475569" textAnchor="middle">P = πD = {f2(P_pipe)}m • R = D/4</text>
+          {/* Pipe Cross Section on right with concentric isovels */}
+          <g transform="translate(325, 145)">
+            <circle cx="45" cy="40" r="42" fill="url(#wbPipe)" stroke="#0f172a" strokeWidth="2" />
+            <circle cx="45" cy="40" r="36" fill="url(#wbWater)" />
+            {/* Concentric velocity contours */}
+            <circle cx="45" cy="40" r="28" fill="none" stroke="#e0f2fe" strokeWidth="1" strokeDasharray="3 2" opacity="0.7" />
+            <circle cx="45" cy="40" r="18" fill="none" stroke="#bae6fd" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.85" />
+            <circle cx="45" cy="40" r="8" fill="#38bdf8" stroke="#ffffff" strokeWidth="1.5" />
+
+            <line x1="45" y1="-4" x2="45" y2="84" stroke="#cbd5e1" strokeDasharray="2 2" />
+            <line x1="1" y1="40" x2="89" y2="40" stroke="#cbd5e1" strokeDasharray="2 2" />
+            <text x="45" y="44" fontSize="9" fontWeight="800" fill="#ffffff" textAnchor="middle">Vmax</text>
+            <text x="45" y="96" fontSize="10" fontWeight="700" fill="#0f1f3d" textAnchor="middle">Pipe Section (Dia {f1(dia)}m)</text>
+            <text x="45" y="109" fontSize="8.5" fill="#475569" textAnchor="middle">P = πD = {f2(P_pipe)}m • R = D/4</text>
           </g>
         </g>
 
         {/* RIGHT HALF: OPEN CHANNEL PROFILE + CROSS SECTION */}
-        <g transform="translate(470, 10)">
-          <rect x="0" y="0" width="435" height="260" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
-          <text x="15" y="22" fontSize="13" fontWeight="700" fill="#0f1f3d">Open Channel: Profile &amp; Section</text>
+        <g transform="translate(470, 12)">
+          <rect x="0" y="0" width="435" height="266" rx="8" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1.2" />
+          <text x="18" y="24" fontSize="13.5" fontWeight="800" fill="#166534">Open Channel Flow (Free Surface)</text>
 
           {/* Sloping Channel bed */}
-          <line x1="20" y1="180" x2="260" y2="195" stroke="#78350f" strokeWidth="4" />
-          <polygon points={`20,180 260,195 260,${195 - y_chan * 22} 20,${180 - y_chan * 22}`} fill="url(#wbWater)" />
+          <line x1="20" y1="185" x2="260" y2="200" stroke="#78350f" strokeWidth="6" strokeLinecap="round" />
+          <polygon points={`20,185 260,200 260,${200 - y_chan * 22} 20,${185 - y_chan * 22}`} fill="url(#wbWater)" />
+
+          {/* Animated Water Surface Waves */}
+          <path
+            d={`M 15,${185 - y_chan * 22} Q 70,${183 - y_chan * 22} 130,${186 - y_chan * 22} T 265,${200 - y_chan * 22}`}
+            fill="none"
+            stroke="#38bdf8"
+            strokeWidth="3"
+            className="anim-wave-surface"
+          />
+
+          {/* Flow streamlines at depth */}
+          <line x1="25" y1={185 - y_chan * 14} x2="255" y2={200 - y_chan * 14} stroke="#ffffff" strokeWidth="1.8" strokeDasharray="12 6" className="anim-flow-smooth" opacity="0.9" />
+          <line x1="25" y1={185 - y_chan * 6} x2="255" y2={200 - y_chan * 6} stroke="#bae6fd" strokeWidth="1.2" strokeDasharray="8 6" className="anim-flow-smooth" opacity="0.6" />
 
           {/* Water Surface Line = HGL */}
-          <line x1="15" y1={180 - y_chan * 22} x2="265" y2={195 - y_chan * 22} stroke="#dc2626" strokeWidth="2.5" />
-          <text x="130" y={175 - y_chan * 22} fontSize="9.5" fontWeight="700" fill="#dc2626">WSL ≡ HGL (P = 0)</text>
+          <text x="135" y={178 - y_chan * 22} fontSize="9.5" fontWeight="800" fill="#dc2626">WSL ≡ HGL (Gauge P = 0)</text>
 
           {/* EGL parallel */}
-          <line x1="15" y1={180 - y_chan * 22 - velHead_chan * 25} x2="265" y2={195 - y_chan * 22 - velHead_chan * 25} stroke="#2563eb" strokeWidth="2" />
-          <text x="140" y={175 - y_chan * 22 - velHead_chan * 25 - 4} fontSize="9.5" fontWeight="700" fill="#2563eb">EGL = WSL + V²/2g</text>
+          <line x1="15" y1={185 - y_chan * 22 - velHead_chan * 25} x2="265" y2={200 - y_chan * 22 - velHead_chan * 25} stroke="#2563eb" strokeWidth="2.2" />
+          <text x="145" y={178 - y_chan * 22 - velHead_chan * 25 - 4} fontSize="9.5" fontWeight="800" fill="#2563eb">EGL = WSL + V²/2g</text>
 
           {/* Channel Cross Section on right */}
-          <g transform="translate(300, 120)">
+          <g transform="translate(305, 125)">
             <polygon points={`
-              ${60 - (dia * 10 + m * y_chan * 14)},${100 - y_chan * 24}
-              ${60 + (dia * 10 + m * y_chan * 14)},${100 - y_chan * 24}
-              ${60 + dia * 10},100
-              ${60 - dia * 10},100
-            `} fill="url(#wbWater)" stroke="#2b6cb0" />
+              ${60 - (dia * 10 + m * y_chan * 14)},${105 - y_chan * 24}
+              ${60 + (dia * 10 + m * y_chan * 14)},${105 - y_chan * 24}
+              ${60 + dia * 10},105
+              ${60 - dia * 10},105
+            `} fill="url(#wbWater)" stroke="#0284c7" strokeWidth="1.5" />
             {/* Banks */}
-            <line x1={60 - dia * 10 - 20} y1="100" x2={60 - dia * 10} y2="100" stroke="#78350f" strokeWidth="3" />
-            <line x1={60 - dia * 10} y1="100" x2={60 - (dia * 10 + m * y_chan * 14) - 10} y2={100 - y_chan * 24 - 10} stroke="#78350f" strokeWidth="3" />
-            <line x1={60 + dia * 10} y1="100" x2={60 + (dia * 10 + m * y_chan * 14) + 10} y2={100 - y_chan * 24 - 10} stroke="#78350f" strokeWidth="3" />
-            <line x1={60 + dia * 10} y1="100" x2={60 + dia * 10 + 20} y2="100" stroke="#78350f" strokeWidth="3" />
-            {/* Free Surface */}
-            <line x1={60 - (dia * 10 + m * y_chan * 14)} y1={100 - y_chan * 24} x2={60 + (dia * 10 + m * y_chan * 14)} y2={100 - y_chan * 24} stroke="#0284c7" strokeWidth="2" />
-            <text x="60" y="115" fontSize="10" fontWeight="700" fill="#0f1f3d" textAnchor="middle">Channel Section (y = {f2(y_chan)}m)</text>
-            <text x="60" y="128" fontSize="8.5" fill="#475569" textAnchor="middle">P = {f2(P_chan)}m • R = {f2(R_chan)}m</text>
+            <line x1={60 - dia * 10 - 22} y1="105" x2={60 - dia * 10} y2="105" stroke="#78350f" strokeWidth="4" />
+            <line x1={60 - dia * 10} y1="105" x2={60 - (dia * 10 + m * y_chan * 14) - 12} y2={105 - y_chan * 24 - 12} stroke="#78350f" strokeWidth="4" />
+            <line x1={60 + dia * 10} y1="105" x2={60 + (dia * 10 + m * y_chan * 14) + 12} y2={105 - y_chan * 24 - 12} stroke="#78350f" strokeWidth="4" />
+            <line x1={60 + dia * 10} y1="105" x2={60 + dia * 10 + 22} y2="105" stroke="#78350f" strokeWidth="4" />
+
+            {/* Isovel dip core in cross section */}
+            <ellipse cx="60" cy={105 - y_chan * 18} rx={dia * 4.5} ry={y_chan * 4.5} fill="#fef08a" opacity="0.85" stroke="#ca8a04" strokeWidth="1" />
+            <circle cx="60" cy={105 - y_chan * 18} r="2.5" fill="#dc2626" />
+
+            {/* Free Surface line */}
+            <line x1={60 - (dia * 10 + m * y_chan * 14)} y1={105 - y_chan * 24} x2={60 + (dia * 10 + m * y_chan * 14)} y2={105 - y_chan * 24} stroke="#38bdf8" strokeWidth="2.5" />
+            <text x="60" y="120" fontSize="10" fontWeight="700" fill="#0f1f3d" textAnchor="middle">Channel Section (y = {f2(y_chan)}m)</text>
+            <text x="60" y="133" fontSize="8.5" fill="#475569" textAnchor="middle">P = {f2(P_chan)}m • R = {f2(R_chan)}m</text>
           </g>
         </g>
       </svg>
@@ -228,20 +267,19 @@ export function OcfPipeCompare() {
    2. S10: VELOCITY DISTRIBUTION & SURFACE "VELOCITY DIP" (velocity_dip_sim)
    ========================================================================= */
 export function VelocityDipVisualizer() {
-  const [aspectRatio, setAspectRatio] = useState(2.0); // b/y
+  const [aspectRatio, setAspectRatio] = useState(2.2); // b/y
   const [vMax, setVMax] = useState(2.4); // m/s
   const yTotal = 2.0; // m depth
 
-  // The velocity dip: max velocity occurs at depth (0.05 + 0.20 / aspectRatio) * y below free surface
-  const dipDepth = Math.min(0.28, Math.max(0.04, 0.05 + 0.35 / (aspectRatio + 0.5))); // fraction below surface
-  const yMaxPos = yTotal * (1 - dipDepth); // distance from bed
+  // The velocity dip: max velocity occurs at depth below surface
+  const dipFraction = Math.min(0.28, Math.max(0.02, 0.04 + 0.35 / (aspectRatio + 0.6))); 
+  const yMaxPos = yTotal * (1 - dipFraction);
 
-  // Velocity profile calculation at fractional depths
   const getV = (yVal) => {
     const eta = yVal / yTotal;
     if (eta <= 0) return 0;
     const base = vMax * Math.pow(eta, 1 / 6);
-    const dipFactor = 1 - 0.22 * Math.exp(-Math.pow((1 - eta) / (dipDepth * 1.5), 2)) * (1.2 / Math.sqrt(aspectRatio));
+    const dipFactor = 1 - 0.22 * Math.exp(-Math.pow((1 - eta) / (dipFraction * 1.5), 2)) * (1.2 / Math.sqrt(aspectRatio));
     return Math.max(0, base * dipFactor);
   };
 
@@ -253,58 +291,129 @@ export function VelocityDipVisualizer() {
   const vMeanOnePt = v06;
 
   return (
-    <Box title="Open Channel Velocity Distribution & Surface Velocity Dip" kind="S10 Visual Simulator">
+    <Box title="Open Channel Velocity Distribution & 2D Secondary Flow Dip Simulator" kind="S10 Hydrodynamic Lab">
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.5rem", marginBottom: "0.75rem" }}>
         <Kpi v={f2(vMax) + " m/s"} l="Max Velocity Vmax" tone="good" />
-        <Kpi v={f2(dipDepth * 100) + "% below surface"} l="Dip Position" />
+        <Kpi v={f1(dipFraction * 100) + "% depth"} l="Dip Position (Below Surface)" tone={dipFraction > 0.1 ? "warn" : "good"} />
         <Kpi v={f2(vSurface) + " m/s"} l="Surface Velocity" />
         <Kpi v={f2(vMeanOnePt) + " m/s"} l="1-Point Mean (v₀.₆)" />
         <Kpi v={f2(vMeanTwoPt) + " m/s"} l="2-Point Mean (v₀.₂+v₀.₈)/2" tone="good" />
       </div>
 
       <div style={{ background: "var(--g50, #f8f9fa)", padding: "0.75rem", borderRadius: "6px", border: "1px solid var(--g200, #e2e8f0)", marginBottom: "0.75rem" }}>
-        <SliderRow label="Aspect Ratio (B / y)" value={aspectRatio} min={0.8} max={8.0} step={0.2} unit="" onChange={setAspectRatio} />
-        <SliderRow label="Centerline Max Velocity Vmax" value={vMax} min={1.0} max={4.0} step={0.1} unit="m/s" onChange={setVMax} />
+        <SliderRow label="Aspect Ratio (Width/Depth B/y)" value={aspectRatio} min={0.8} max={8.0} step={0.2} unit="" onChange={setAspectRatio} />
+        <SliderRow label="Peak Centerline Velocity Vmax" value={vMax} min={1.0} max={4.0} step={0.1} unit="m/s" onChange={setVMax} />
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "10px", alignItems: "center" }}>
-        <svg viewBox="0 0 340 190" style={{ width: "100%", background: "#fff", border: "1px solid #e2e8f0", borderRadius: "6px" }}>
-          {/* Axis */}
-          <line x1="50" y1="170" x2="310" y2="170" stroke="#718096" strokeWidth="1.5" />
-          <line x1="50" y1="170" x2="50" y2="20" stroke="#718096" strokeWidth="1.5" />
-          <text x="300" y="185" fontSize="9" fill="#4a5568">u (m/s)</text>
-          <text x="25" y="30" fontSize="9" fill="#4a5568">y</text>
-          <line x1="50" y1="30" x2="310" y2="30" stroke="#1a5f7a" strokeWidth="1.5" strokeDasharray="4 2" />
-          <text x="260" y="26" fontSize="8.5" fill="#1a5f7a">Water Surface</text>
-
-          {/* Profile curve */}
-          {(() => {
-            const pts = [];
-            for (let step = 0; step <= 30; step++) {
-              const yVal = (step / 30) * yTotal;
-              const vVal = getV(yVal);
-              const px = 50 + (vVal / (vMax * 1.2)) * 180;
-              const py = 170 - (yVal / yTotal) * 140;
-              pts.push(`${px.toFixed(1)},${py.toFixed(1)}`);
-            }
-            return <polyline points={pts.join(" ")} fill="none" stroke="#1a5f7a" strokeWidth="3" />;
-          })()}
-
-          {/* Measurement Points */}
-          <circle cx={50 + (v06 / (vMax * 1.2)) * 180} cy={170 - 0.4 * 140} r="4" fill="#c8973a" stroke="#fff" strokeWidth="1.5" />
-          <text x={50 + (v06 / (vMax * 1.2)) * 180 + 6} y={170 - 0.4 * 140 + 3} fontSize="8.5" fill="#c8973a" fontWeight="700">v₀.₆ = {f2(v06)}</text>
-
-          <circle cx={50 + (getV(yMaxPos) / (vMax * 1.2)) * 180} cy={170 - (1 - dipDepth) * 140} r="4" fill="#e53e3e" stroke="#fff" strokeWidth="1.5" />
-          <text x={50 + (getV(yMaxPos) / (vMax * 1.2)) * 180 + 6} y={170 - (1 - dipDepth) * 140 + 3} fontSize="8.5" fill="#e53e3e" fontWeight="700">Vmax dip</text>
-        </svg>
-
-        <div style={{ background: "#f8fafc", padding: "12px", borderRadius: 6, border: "1px solid #cbd5e1" }}>
-          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0f1f3d" }}>IS:1192 Current Metering Standards</div>
-          <div style={{ fontSize: "0.8rem", color: "#334155", marginTop: "4px", lineHeight: 1.45 }}>
-            • <b>Shallow streams (&lt; 0.6m):</b> Single point reading at 0.6 depth: <b>V ≈ v₀.₆</b>.<br/>
-            • <b>Deep streams (≥ 0.6m):</b> Two-point average at 0.2 and 0.8 depth: <b>V ≈ (v₀.₂ + v₀.₈)/2</b>.<br/>
-            Notice that both rules closely match the integrated true average of the non-uniform profile!
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", alignItems: "center" }}>
+        {/* Left: 1D Vertical Velocity Profile */}
+        <div style={{ background: "#ffffff", padding: "8px", borderRadius: 6, border: "1px solid #e2e8f0" }}>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0f1f3d", marginBottom: "4px", textAlign: "center" }}>
+            Vertical Profile along Centerline u(y)
           </div>
+          <svg viewBox="0 0 320 200" style={{ width: "100%", background: "#f8fafc", borderRadius: 4 }}>
+            {/* Axis */}
+            <line x1="45" y1="175" x2="300" y2="175" stroke="#64748b" strokeWidth="1.5" />
+            <line x1="45" y1="175" x2="45" y2="25" stroke="#64748b" strokeWidth="1.5" />
+            <text x="290" y="190" fontSize="9" fill="#475569" fontWeight="700">u (m/s)</text>
+            <text x="20" y="35" fontSize="9" fill="#475569" fontWeight="700">y (depth)</text>
+
+            <line x1="45" y1="35" x2="300" y2="35" stroke="#0284c7" strokeWidth="1.5" strokeDasharray="4 2" />
+            <text x="230" y="30" fontSize="8.5" fill="#0284c7" fontWeight="700">Free Surface</text>
+
+            {/* Profile curve */}
+            {(() => {
+              const pts = [];
+              for (let step = 0; step <= 30; step++) {
+                const yVal = (step / 30) * yTotal;
+                const vVal = getV(yVal);
+                const px = 45 + (vVal / (vMax * 1.25)) * 220;
+                const py = 175 - (yVal / yTotal) * 140;
+                pts.push(`${px.toFixed(1)},${py.toFixed(1)}`);
+              }
+              return (
+                <>
+                  <polygon points={`45,175 ${pts.join(" ")} 45,35`} fill="rgba(56,189,248,0.15)" />
+                  <polyline points={pts.join(" ")} fill="none" stroke="#0284c7" strokeWidth="2.5" />
+                </>
+              );
+            })()}
+
+            {/* Measurement Points */}
+            <circle cx={45 + (v06 / (vMax * 1.25)) * 220} cy={175 - 0.4 * 140} r="4.5" fill="#ca8a04" stroke="#ffffff" strokeWidth="1.5" />
+            <text x={45 + (v06 / (vMax * 1.25)) * 220 + 7} y={175 - 0.4 * 140 + 3} fontSize="8.5" fill="#a16207" fontWeight="800">v₀.₆ = {f2(v06)}</text>
+
+            <circle cx={45 + (getV(yMaxPos) / (vMax * 1.25)) * 220} cy={175 - (1 - dipFraction) * 140} r="5" fill="#dc2626" stroke="#ffffff" strokeWidth="1.5" className="anim-probe-glow" />
+            <text x={45 + (getV(yMaxPos) / (vMax * 1.25)) * 220 + 7} y={175 - (1 - dipFraction) * 140 + 3} fontSize="8.5" fill="#dc2626" fontWeight="800">
+              Vmax = {f2(vMax)} (Dipped)
+            </text>
+          </svg>
+        </div>
+
+        {/* Right: 2D Cross Section with Secondary Flow Vortices */}
+        <div style={{ background: "#ffffff", padding: "8px", borderRadius: 6, border: "1px solid #e2e8f0" }}>
+          <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0f1f3d", marginBottom: "4px", textAlign: "center" }}>
+            2D Secondary Circulation &amp; Isovels (B/y = {aspectRatio})
+          </div>
+          <svg viewBox="0 0 320 200" style={{ width: "100%", background: "#f8fafc", borderRadius: 4 }}>
+            {/* Canal boundaries */}
+            {(() => {
+              const halfW = Math.min(130, Math.max(50, aspectRatio * 25));
+              const cx = 160;
+              const yBed = 170;
+              const ySurf = 50;
+              return (
+                <g>
+                  {/* Water fill */}
+                  <rect x={cx - halfW} y={ySurf} width={halfW * 2} height={yBed - ySurf} fill="url(#wbWater)" />
+                  {/* Channel walls */}
+                  <line x1={cx - halfW} y1={ySurf} x2={cx - halfW} y2={yBed} stroke="#78350f" strokeWidth="4" />
+                  <line x1={cx - halfW} y1={yBed} x2={cx + halfW} y2={yBed} stroke="#78350f" strokeWidth="4" />
+                  <line x1={cx + halfW} y1={yBed} x2={cx + halfW} y2={ySurf} stroke="#78350f" strokeWidth="4" />
+                  <line x1={cx - halfW} y1={ySurf} x2={cx + halfW} y2={ySurf} stroke="#38bdf8" strokeWidth="2.5" />
+
+                  {/* High velocity dipped core */}
+                  <ellipse
+                    cx={cx}
+                    cy={ySurf + (yBed - ySurf) * dipFraction}
+                    rx={Math.min(halfW * 0.6, 45)}
+                    ry={14}
+                    fill="#fef08a"
+                    stroke="#ca8a04"
+                    strokeWidth="1.5"
+                    opacity="0.85"
+                  />
+                  <circle cx={cx} cy={ySurf + (yBed - ySurf) * dipFraction} r="3" fill="#dc2626" />
+                  <text x={cx} y={ySurf + (yBed - ySurf) * dipFraction + 4} fontSize="8" fontWeight="800" fill="#854d0e" textAnchor="middle">
+                    Vmax Core
+                  </text>
+
+                  {/* Secondary circulation vortex loops (Prandtl's 2nd kind) */}
+                  <g opacity={aspectRatio < 4.5 ? 0.9 : 0.35}>
+                    <path
+                      d={`M ${cx - halfW * 0.7},${ySurf + 12} Q ${cx - halfW * 0.25},${ySurf + 8} ${cx - 15},${ySurf + 30} Q ${cx - halfW * 0.3},${yBed - 20} ${cx - halfW * 0.8},${yBed - 30} Z`}
+                      fill="none"
+                      stroke="#ef4444"
+                      strokeWidth="1.5"
+                      strokeDasharray="4 2"
+                      className="anim-flow-smooth"
+                    />
+                    <path
+                      d={`M ${cx + halfW * 0.7},${ySurf + 12} Q ${cx + halfW * 0.25},${ySurf + 8} ${cx + 15},${ySurf + 30} Q ${cx + halfW * 0.3},${yBed - 20} ${cx + halfW * 0.8},${yBed - 30} Z`}
+                      fill="none"
+                      stroke="#ef4444"
+                      strokeWidth="1.5"
+                      strokeDasharray="4 2"
+                      className="anim-flow-smooth"
+                    />
+                  </g>
+                  <text x={cx} y={yBed + 18} fontSize="9" fill="#475569" textAnchor="middle" fontWeight="600">
+                    {aspectRatio < 3.5 ? "Narrow Channel: Strong corner circulation plunges Vmax!" : "Wide Channel: Aspect ratio B/y > 5 weakens dip effect."}
+                  </text>
+                </g>
+              );
+            })()}
+          </svg>
         </div>
       </div>
     </Box>
@@ -347,7 +456,7 @@ export function AlphaBetaExplorer() {
         alpha: 1.333,
         beta: 1.155,
         meanVelRatio: 0.5,
-        why: "Linear Couette shear distribution v = Vmax (y/y0): analytical α = 1.333, β = 1.155."
+        why: "Linear Couette shear distribution v = Vmax (y/y0): analytical α = 4/3 ≈ 1.333, β = 7/6 ≈ 1.155."
       };
     }
   }, [profileType, mExponent, floodplainRatio]);
@@ -381,6 +490,65 @@ export function AlphaBetaExplorer() {
         ) : (
           <div style={{ fontSize: "0.85rem", color: "#5a5048" }}>Linear laminar shear: analytical constants α = 4/3 ≈ 1.333, β = 7/6 ≈ 1.155.</div>
         )}
+      </div>
+
+      {/* Graphical Proof: u/V vs (u/V)^2 vs (u/V)^3 */}
+      <div style={{ background: "#ffffff", padding: "10px", borderRadius: 6, border: "1px solid #cbd5e1", marginBottom: "0.5rem" }}>
+        <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0f1f3d", marginBottom: "6px" }}>
+          Flux Weighting Comparison: Velocity (u/V) vs. Momentum (u/V)² vs. Energy (u/V)³
+        </div>
+        <svg viewBox="0 0 540 160" style={{ width: "100%", background: "#f8fafc", borderRadius: 4 }}>
+          {/* Axis */}
+          <line x1="50" y1="140" x2="500" y2="140" stroke="#64748b" strokeWidth="1.5" />
+          <line x1="50" y1="140" x2="50" y2="15" stroke="#64748b" strokeWidth="1.5" />
+          <text x="470" y="153" fontSize="9" fill="#475569" fontWeight="700">Flux Weight</text>
+          <text x="20" y="25" fontSize="9" fill="#475569" fontWeight="700">y / y₀</text>
+
+          {/* Reference Line at Weight = 1.0 */}
+          <line x1={50 + (1.0 / 2.5) * 400} y1="140" x2={50 + (1.0 / 2.5) * 400} y2="15" stroke="#cbd5e1" strokeDasharray="3 3" />
+          <text x={50 + (1.0 / 2.5) * 400} y="12" fontSize="8" fill="#64748b" textAnchor="middle">Mean = 1.0</text>
+
+          {/* Render 3 Curves */}
+          {(() => {
+            const ptsV = [], ptsM = [], ptsE = [];
+            for (let i = 0; i <= 30; i++) {
+              const eta = i / 30; // 0 to 1
+              let uRatio = 0;
+              if (profileType === "power") {
+                uRatio = Math.pow(Math.max(0.001, eta), 1 / mExponent) / (mExponent / (mExponent + 1));
+              } else if (profileType === "compound") {
+                const uVal = eta < 0.4 ? floodplainRatio : 1.0;
+                uRatio = uVal / meanVelRatio;
+              } else {
+                uRatio = (2 * eta); // mean is 1.0
+              }
+              const pxV = 50 + (uRatio / 2.5) * 400;
+              const pxM = 50 + (Math.pow(uRatio, 2) / 2.5) * 400;
+              const pxE = 50 + (Math.pow(uRatio, 3) / 2.5) * 400;
+              const py = 140 - eta * 120;
+              ptsV.push(`${pxV.toFixed(1)},${py.toFixed(1)}`);
+              ptsM.push(`${pxM.toFixed(1)},${py.toFixed(1)}`);
+              ptsE.push(`${pxE.toFixed(1)},${py.toFixed(1)}`);
+            }
+            return (
+              <g>
+                <polyline points={ptsV.join(" ")} fill="none" stroke="#2563eb" strokeWidth="2" />
+                <polyline points={ptsM.join(" ")} fill="none" stroke="#059669" strokeWidth="2.5" />
+                <polyline points={ptsE.join(" ")} fill="none" stroke="#dc2626" strokeWidth="3" />
+              </g>
+            );
+          })()}
+
+          {/* Legend */}
+          <circle cx="90" cy="30" r="4" fill="#2563eb" />
+          <text x="100" y="33" fontSize="9" fill="#1e40af" fontWeight="700">Mass: u/V (Mean = 1.0)</text>
+
+          <circle cx="230" cy="30" r="4" fill="#059669" />
+          <text x="240" y="33" fontSize="9" fill="#065f46" fontWeight="700">Momentum: (u/V)² (Mean = β = {f3(beta)})</text>
+
+          <circle cx="390" cy="30" r="4" fill="#dc2626" />
+          <text x="400" y="33" fontSize="9" fill="#991b1b" fontWeight="800">Energy: (u/V)³ (Mean = α = {f3(alpha)})</text>
+        </svg>
       </div>
 
       <p className="note" style={{ fontSize: "0.82rem", margin: "0.4rem 0 0 0", color: "#5a5048" }}>{why}</p>
