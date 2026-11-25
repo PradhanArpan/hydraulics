@@ -198,3 +198,151 @@ export function chokedUpstream(q, dz) {
   return depthAtEnergy(1.5 * criticalDepth(q) + dz, q, "sub");
 }
 
+// ============================================================================
+// UNIT I: BOUNDARY LAYER THEORY (CO1)
+// ============================================================================
+
+export const reynolds = (U, L, nu = 1e-6) => (U * L) / nu;
+
+// Laminar boundary layer on a flat plate (Blasius solution)
+export function blLaminar(x, U, nu = 1e-6, rho = 1000) {
+  const Rex = reynolds(U, x, nu);
+  if (Rex <= 0) return { Rex: 0, delta: 0, Cf: 0, tau0: 0, deltaStar: 0, theta: 0, H: 2.59 };
+  const sqrtRe = Math.sqrt(Rex);
+  const delta = (5.0 * x) / sqrtRe;
+  const Cf = 0.664 / sqrtRe;
+  const tau0 = Cf * 0.5 * rho * U * U;
+  const deltaStar = (1.72 * x) / sqrtRe;
+  const theta = (0.664 * x) / sqrtRe;
+  const H = deltaStar / theta; // ~2.59
+  return { Rex, delta, Cf, tau0, deltaStar, theta, H };
+}
+
+// Turbulent boundary layer (1/7th power law)
+export function blTurbulent(x, U, nu = 1e-6, rho = 1000) {
+  const Rex = reynolds(U, x, nu);
+  if (Rex <= 0) return { Rex: 0, delta: 0, Cf: 0, tau0: 0, deltaStar: 0, theta: 0, H: 1.286, uStar: 0, deltaPrime: 0 };
+  const reFifth = Math.pow(Rex, 0.2);
+  const delta = (0.37 * x) / reFifth;
+  const Cf = 0.059 / reFifth;
+  const tau0 = Cf * 0.5 * rho * U * U;
+  const uStar = Math.sqrt(tau0 / rho);
+  const deltaPrime = uStar > 0 ? (11.6 * nu) / uStar : 0;
+  const deltaStar = delta / 8;
+  const theta = (7 * delta) / 72;
+  const H = deltaStar / theta; // 1.2857
+  return { Rex, delta, Cf, tau0, deltaStar, theta, H, uStar, deltaPrime };
+}
+
+// Theoretical deficit thickness ratios for assumed velocity profiles (u/U = f(eta))
+export function blDeficitRatios(profile) {
+  if (profile === "linear") {
+    // u/U = eta
+    return { name: "Linear", deltaStarFrac: 0.5, thetaFrac: 1 / 6, H: 3.0 };
+  } else if (profile === "parabolic") {
+    // u/U = 2*eta - eta^2
+    return { name: "Parabolic", deltaStarFrac: 1 / 3, thetaFrac: 2 / 15, H: 2.5 };
+  } else if (profile === "cubic") {
+    // u/U = 1.5*eta - 0.5*eta^3
+    return { name: "Cubic", deltaStarFrac: 3 / 8, thetaFrac: 39 / 280, H: 280 / 104 };
+  } else if (profile === "power17") {
+    // u/U = eta^(1/7)
+    return { name: "1/7th Power Law", deltaStarFrac: 1 / 8, thetaFrac: 7 / 72, H: 72 / 56 };
+  }
+  return { name: "Blasius", deltaStarFrac: 1.72 / 5.0, thetaFrac: 0.664 / 5.0, H: 2.59 };
+}
+
+// Boundary classification (Nikuradse criteria: k vs deltaPrime)
+export function classifyBoundary(k, deltaPrime) {
+  if (deltaPrime <= 0) return { regime: "unknown", label: "Undefined", ratio: 0 };
+  const ratio = k / deltaPrime;
+  if (ratio < 0.25) return { regime: "smooth", label: "Hydraulically Smooth (k < 0.25 δ')", ratio };
+  if (ratio <= 6.0) return { regime: "transitional", label: "Transitional Regime (0.25 δ' ≤ k ≤ 6.0 δ')", ratio };
+  return { regime: "rough", label: "Hydraulically Rough (k > 6.0 δ')", ratio };
+}
+
+// Total drag on a flat plate with optional mixed laminar-turbulent boundary layer
+export function plateDrag(L, W, U, nu = 1e-6, rho = 1000, Re_cr = 5e5) {
+  const ReL = reynolds(U, L, nu);
+  let CD = 0;
+  let isMixed = false;
+  if (ReL <= Re_cr) {
+    CD = 1.328 / Math.sqrt(ReL);
+  } else {
+    isMixed = true;
+    CD = 0.074 / Math.pow(ReL, 0.2) - 1740 / ReL;
+  }
+  const qDyn = 0.5 * rho * U * U;
+  const area = W * L;
+  const dragOneSide = CD * qDyn * area;
+  return { ReL, CD, isMixed, dragOneSide, dragBothSides: 2 * dragOneSide };
+}
+
+// ============================================================================
+// UNIT III: IMPACT OF JETS (CO3)
+// ============================================================================
+
+export function jetForceStationaryFlat(d, V, rho = 1000) {
+  const a = (Math.PI / 4) * d * d;
+  const Q = a * V;
+  const F = rho * a * V * V;
+  return { a, Q, F };
+}
+
+export function jetForceStationaryInclined(d, V, thetaDeg, rho = 1000) {
+  const a = (Math.PI / 4) * d * d;
+  const Q = a * V;
+  const th = (thetaDeg * Math.PI) / 180;
+  const Fn = rho * a * V * V * Math.sin(th);
+  const Fx = Fn * Math.sin(th);
+  const Fy = Fn * Math.cos(th);
+  const Q1 = (Q / 2) * (1 + Math.cos(th));
+  const Q2 = (Q / 2) * (1 - Math.cos(th));
+  return { a, Q, Fn, Fx, Fy, Q1, Q2, ratio1: Q1 / Q, ratio2: Q2 / Q };
+}
+
+export function jetForceStationaryCurved(d, V, deflectionDeg = 180, rho = 1000) {
+  const a = (Math.PI / 4) * d * d;
+  const Q = a * V;
+  const th = (deflectionDeg * Math.PI) / 180;
+  // If jet enters center and deflects by (180 - th) or enters tangent:
+  // For symmetrical vane entering tangent: Fx = rho * a * V^2 * (1 + cos(phi))
+  const Fx = rho * a * V * V * (1 + Math.cos(Math.PI - th));
+  const hemiRatio = Fx / (rho * a * V * V);
+  return { a, Q, Fx, hemiRatio };
+}
+
+export function jetForceMovingFlat(d, V, u, mode = "single", rho = 1000) {
+  const a = (Math.PI / 4) * d * d;
+  const uRel = Math.max(0, V - u);
+  if (mode === "single") {
+    // Single moving plate: mass striking per sec = rho * a * (V - u)
+    const F = rho * a * uRel * uRel;
+    const work = F * u;
+    const efficiency = V > 0 ? (2 * u * uRel * uRel) / (V * V * V) : 0;
+    return { a, F, work, efficiency, optU: V / 3, maxEta: 8 / 27 };
+  } else {
+    // Series of moving plates on a wheel: all flow struck = rho * a * V
+    const F = rho * a * V * uRel;
+    const work = F * u;
+    const efficiency = V > 0 ? (2 * u * uRel) / (V * V) : 0;
+    return { a, F, work, efficiency, optU: V / 2, maxEta: 0.5 };
+  }
+}
+
+export function jetVelocityTriangle(V1, u, beta2Deg, kFriction = 1.0, rho = 1000, d = 0.05) {
+  const a = (Math.PI / 4) * d * d;
+  const Q = a * V1;
+  const Vr1 = Math.max(0, V1 - u);
+  const Vw1 = V1;
+  const Vr2 = kFriction * Vr1;
+  const beta2Rad = (beta2Deg * Math.PI) / 180;
+  const Vw2 = Vr2 * Math.cos(beta2Rad) - u;
+  // Work done per unit mass = u * (Vw1 + Vw2) if Vw2 in same or reverse
+  const workPerSec = rho * Q * u * (Vw1 + Vw2);
+  const kineticPower = 0.5 * rho * Q * V1 * V1;
+  const efficiency = kineticPower > 0 ? Math.max(0, workPerSec / kineticPower) : 0;
+  return { a, Q, Vr1, Vw1, Vr2, Vw2, workPerSec, efficiency };
+}
+
+

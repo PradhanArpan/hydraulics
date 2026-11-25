@@ -460,6 +460,12 @@
       "num": 1,
       "title": "Physical Concepts of Boundary Layer Theory",
       "hook": "Why does a fluid flow adhere completely to solid boundaries, creating a microscopic shear zone that dictates the drag on submarines and river channels?",
+      "outcomes": [
+        "State the no-slip condition and explain why boundary layers form on solid walls",
+        "Identify the nominal boundary layer thickness delta_0.99 where u = 0.99 U_inf",
+        "Calculate local Reynolds number Re_x and determine laminar to turbulent transition point"
+      ],
+      "legacyFile": "sessions/S01.md",
       "co": "CO1",
       "refs": "T1 §13.1–13.3; T2 §13.1–13.4",
       "software": [
@@ -468,7 +474,7 @@
       ],
       "lab": "L01",
       "keywords": "no-slip condition Prandtl hypothesis viscous flow transition Reynolds number",
-      "file": "sessions/S01.md",
+      "file": "sessions/v2/D01.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -483,6 +489,12 @@
       "num": 2,
       "title": "Boundary Layer Thickness Definitions",
       "hook": "How much does a boundary layer displace the external streamlines outward, and what fraction of fluid momentum is lost to wall friction?",
+      "outcomes": [
+        "Define and compute displacement thickness delta* as the outward shift of outer streamlines",
+        "Calculate momentum thickness theta and link it directly to total skin friction drag",
+        "Evaluate the shape factor H = delta* / theta to assess velocity profile fullness"
+      ],
+      "legacyFile": "sessions/S02.md",
       "co": "CO1",
       "refs": "T1 §13.4; T2 §13.5",
       "software": [
@@ -491,7 +503,7 @@
       ],
       "lab": "L01",
       "keywords": "displacement thickness momentum thickness energy thickness shape factor H",
-      "file": "sessions/S02.md",
+      "file": "sessions/v2/D02.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -506,6 +518,12 @@
       "num": 3,
       "title": "Von Kármán Momentum Integral Equation",
       "hook": "How can an integral momentum balance across a simple rectangular control volume solve boundary layer growth without solving full Navier-Stokes equations?",
+      "outcomes": [
+        "Explain the Von Kármán momentum integral equation tau_0 = rho * U^2 * d(theta)/dx",
+        "Apply wall and outer-edge boundary conditions to solve for velocity profile shape",
+        "Calculate laminar boundary layer thickness and local skin friction using Blasius solutions"
+      ],
+      "legacyFile": "sessions/S03.md",
       "co": "CO1",
       "refs": "T1 §13.5; T2 §13.6",
       "software": [
@@ -514,7 +532,7 @@
       ],
       "lab": "L08",
       "keywords": "Von Kármán equation momentum integral wall shear stress shear velocity",
-      "file": "sessions/S03.md",
+      "file": "sessions/v2/D03.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -527,6 +545,12 @@
       "num": 4,
       "title": "Laminar Boundary Layer on a Flat Plate",
       "hook": "Why does the boundary layer thickness grow precisely as the square root of distance (√x) in laminar flow?",
+      "outcomes": [
+        "Apply the 1/7th power law and Blasius equations to laminar and turbulent boundary layers",
+        "Explain why turbulent boundary layer thickness grows as x^(4/5) compared to laminar x^(1/2)",
+        "Calculate total skin friction drag force on submerged plates in turbulent flow"
+      ],
+      "legacyFile": "sessions/S04.md",
       "co": "CO1",
       "refs": "T1 §13.6; T2 §13.7",
       "software": [
@@ -535,7 +559,7 @@
       ],
       "lab": "L08",
       "keywords": "Blasius solution cubic profile laminar growth local skin friction",
-      "file": "sessions/S04.md",
+      "file": "sessions/v2/D04.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -550,6 +574,12 @@
       "num": 5,
       "title": "Turbulent Boundary Layer on a Flat Plate",
       "hook": "Why does turbulence cause a boundary layer to expand five times thicker than laminar flow, yet drastically resist flow separation?",
+      "outcomes": [
+        "Explain why a laminar sublayer delta' = 11.6 * nu / u_* persists even inside turbulent flow",
+        "Compute shear velocity u_* = sqrt(tau_0 / rho) from bed shear stress",
+        "Classify boundaries into hydrodynamically smooth, transitional, or rough using Nikuradse's criteria"
+      ],
+      "legacyFile": "sessions/S05.md",
       "co": "CO1",
       "refs": "T1 §13.7; T2 §13.8",
       "software": [
@@ -558,7 +588,7 @@
       ],
       "lab": "L08",
       "keywords": "1/7th power law turbulent boundary layer law of the wall eddy viscosity",
-      "file": "sessions/S05.md",
+      "file": "sessions/v2/D05.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -571,6 +601,12 @@
       "num": 6,
       "title": "Laminar Sublayer & Boundary Roughness",
       "hook": "Can a microscopically rough concrete surface behave as hydrodynamically glass-smooth under low flow velocities?",
+      "outcomes": [
+        "Explain how an adverse pressure gradient (dp/dx > 0) causes flow deceleration and boundary layer separation",
+        "Identify the separation point where wall shear stress vanishes (tau_0 = 0)",
+        "Differentiate skin friction drag from form (pressure) drag and evaluate separation control methods"
+      ],
+      "legacyFile": "sessions/S06.md",
       "co": "CO1",
       "refs": "T1 §13.8; T2 §13.9",
       "software": [
@@ -579,7 +615,7 @@
       ],
       "lab": "L08",
       "keywords": "laminar sublayer Nikuradse roughness hydrodynamically smooth rough boundary",
-      "file": "sessions/S06.md",
+      "file": "sessions/v2/D06.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -918,6 +954,12 @@
       "num": 1,
       "title": "Impulse-Momentum Principle & Jet Hydrodynamics",
       "hook": "How much dynamic force can a 50 mm jet of water exert when blasted at 30 meters per second against a solid barrier?",
+      "outcomes": [
+        "Apply the impulse-momentum principle to calculate dynamic thrust of fluid jets",
+        "Compute the impact force F_x = rho * a * V^2 on a fixed vertical flat plate",
+        "Explain why impact force quadruples when jet velocity is doubled"
+      ],
+      "legacyFile": "sessions/S19.md",
       "co": "CO3",
       "refs": "T1 §12.1–12.3; T2 §14.1–14.3",
       "software": [
@@ -926,7 +968,7 @@
       ],
       "lab": "L09",
       "keywords": "impulse-momentum jet hydrodynamics momentum flux nozzle coefficient",
-      "file": "sessions/S19.md",
+      "file": "sessions/v2/D17.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -941,6 +983,12 @@
       "num": 2,
       "title": "Force of Jet on Stationary Flat Plates",
       "hook": "When a high-speed jet strikes an inclined plate, how is the incoming water stream mathematically divided into forward and backward flows?",
+      "outcomes": [
+        "Calculate normal force F_n = rho * a * V^2 * sin(theta) on a fixed inclined plate",
+        "Resolve impact force into horizontal and vertical components",
+        "Compute the division of discharge into forward (Q_1) and backward (Q_2) streams"
+      ],
+      "legacyFile": "sessions/S20.md",
       "co": "CO3",
       "refs": "T1 §12.4; T2 §14.4–14.5",
       "software": [
@@ -949,7 +997,7 @@
       ],
       "lab": "L09",
       "keywords": "stationary flat plate inclined plate normal force discharge division",
-      "file": "sessions/S20.md",
+      "file": "sessions/v2/D18.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -964,6 +1012,12 @@
       "num": 3,
       "title": "Force of Jet on Stationary Curved Vanes",
       "hook": "Why does curving a plate into a 180° hemispherical bucket precisely double the force exerted by an impinging water jet?",
+      "outcomes": [
+        "Explain why a curved vane produces higher impact force than a flat plate",
+        "Prove why a 180-degree hemispherical cup experiences exactly twice the force of a flat plate (F = 2 rho a V^2)",
+        "Evaluate tangential entry curved vanes and resolve dynamic reaction forces"
+      ],
+      "legacyFile": "sessions/S21.md",
       "co": "CO3",
       "refs": "T1 §12.5; T2 §14.6–14.7",
       "software": [
@@ -972,7 +1026,7 @@
       ],
       "lab": "L09",
       "keywords": "curved vane hemispherical cup tangential entry dynamic thrust",
-      "file": "sessions/S21.md",
+      "file": "sessions/v2/D19.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -985,6 +1039,12 @@
       "num": 4,
       "title": "Force of Jet on Moving Flat Plates",
       "hook": "Why can a series of flat plates on a rotating wheel reach an efficiency of 50%, while a single moving plate can never exceed 29.6%?",
+      "outcomes": [
+        "Distinguish mass flow striking a single moving plate rho * a * (V - u) from a series of plates on a wheel rho * a * V",
+        "Prove why the theoretical maximum efficiency of a single moving plate is 29.6% at u = V/3",
+        "Prove why a series of flat vanes on a wheel achieves a maximum efficiency of 50% at u = V/2"
+      ],
+      "legacyFile": "sessions/S22.md",
       "co": "CO3",
       "refs": "T1 §12.6; T2 §14.8–14.9",
       "software": [
@@ -993,7 +1053,7 @@
       ],
       "lab": "L09",
       "keywords": "moving flat plate series of plates work done maximum efficiency",
-      "file": "sessions/S22.md",
+      "file": "sessions/v2/D20.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -1008,6 +1068,12 @@
       "num": 5,
       "title": "Force of Jet on Moving Curved Vanes",
       "hook": "Under what kinematic conditions can a series of curved vanes extract nearly 100% of the kinetic energy from a moving water jet?",
+      "outcomes": [
+        "Draw and interpret inlet and outlet velocity triangles for moving curved vanes",
+        "Calculate relative velocity V_r and blade speed u for shockless tangential entry",
+        "Evaluate whirl velocities V_w and calculate runner power and hydraulic efficiency"
+      ],
+      "legacyFile": "sessions/S23.md",
       "co": "CO3",
       "refs": "T1 §12.7; T2 §14.10",
       "software": [
@@ -1016,7 +1082,7 @@
       ],
       "lab": "L09",
       "keywords": "moving curved vane wheel periphery runner power optimum speed ratio",
-      "file": "sessions/S23.md",
+      "file": "sessions/v2/D21.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -1031,6 +1097,12 @@
       "num": 6,
       "title": "Jet Striking a Series of Radial Vanes",
       "hook": "How does the law of conservation of angular momentum govern the energy transfer between swirling water and a rotating wheel?",
+      "outcomes": [
+        "Apply the moment of momentum theorem to determine shaft torque T = m_dot * (V_w1 * r_1 - V_w2 * r_2)",
+        "Explain why flow velocity V_f produces zero torque about the shaft",
+        "Calculate shaft power P = T * omega and runner torque developed"
+      ],
+      "legacyFile": "sessions/S24.md",
       "co": "CO3",
       "refs": "T1 §12.8; T2 §14.11",
       "software": [
@@ -1039,7 +1111,7 @@
       ],
       "lab": "L11",
       "keywords": "radial vanes Euler turbine equation angular momentum torque developed",
-      "file": "sessions/S24.md",
+      "file": "sessions/v2/D23.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -1052,6 +1124,12 @@
       "num": 7,
       "title": "Dynamic Velocity Triangles at Inlet and Outlet",
       "hook": "How do engineers draw and solve velocity vector triangles to visualize the 3D kinematics of water entering and leaving a moving blade?",
+      "outcomes": [
+        "Construct inlet velocity triangles and compute blade inlet angle tan(theta) = V_f1 / (V_w1 - u_1)",
+        "Construct outlet velocity triangles and compute exit speed V_2 and direction alpha_2",
+        "Evaluate blade friction effects k = V_r2 / V_r1 on runner efficiency"
+      ],
+      "legacyFile": "sessions/S25.md",
       "co": "CO3",
       "refs": "T1 §12.9; T2 §14.12",
       "software": [
@@ -1060,7 +1138,7 @@
       ],
       "lab": "L11",
       "keywords": "velocity triangles whirl velocity flow velocity blade angles",
-      "file": "sessions/S25.md",
+      "file": "sessions/v2/D25.md",
       "enabled": true,
       "ready": true,
       "labs": [
@@ -1075,6 +1153,12 @@
       "num": 8,
       "title": "Work Done, Runner Power & Hydraulic Efficiency",
       "hook": "Why does setting the outlet whirl velocity to zero maximize the energy conversion efficiency in hydraulic runners?",
+      "outcomes": [
+        "State and derive the Euler turbine equation H_e = (V_w1 * u_1 - V_w2 * u_2) / g",
+        "Differentiate impulse head, centrifugal head, and reaction pressure head components",
+        "Explain why radial discharge (V_w2 = 0) minimizes lost exit kinetic energy"
+      ],
+      "legacyFile": "sessions/S26.md",
       "co": "CO3",
       "refs": "T1 §12.10; T2 §14.13",
       "software": [
@@ -1083,7 +1167,7 @@
       ],
       "lab": "L11",
       "keywords": "Euler head hydraulic efficiency runner power shockless entry",
-      "file": "sessions/S26.md",
+      "file": "sessions/v2/D24.md",
       "enabled": true,
       "ready": true,
       "labs": [],
@@ -1096,6 +1180,12 @@
       "num": 9,
       "title": "Jet Propulsion & Fluid Dynamic Reaction on Vessels",
       "hook": "How do modern high-speed ferries and naval combat vessels use water jet propulsion to achieve 50+ knots without external propellers?",
+      "outcomes": [
+        "Identify Pelton wheel components: nozzle spear, runner buckets, deflector, and breaking jet",
+        "Explain bucket splitter geometry and why deflection is limited to ~165 degrees",
+        "Size a Pelton runner using standard design rules for jet ratio m, speed ratio phi, and bucket count Z"
+      ],
+      "legacyFile": "sessions/S27.md",
       "co": "CO3",
       "refs": "T1 §12.11; T2 §14.14",
       "software": [
@@ -1104,7 +1194,7 @@
       ],
       "lab": "L09",
       "keywords": "jet propulsion propulsive efficiency reaction on vessel hydro-jet",
-      "file": "sessions/S27.md",
+      "file": "sessions/v2/D26.md",
       "enabled": true,
       "ready": true,
       "labs": [],

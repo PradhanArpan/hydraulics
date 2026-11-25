@@ -130,3 +130,62 @@ test("choked hump: upstream depth equals y1 exactly at dzMax, and rises above it
   assert.ok(H.chokedUpstream(q, r.dzMax + 0.2) > y1);
 });
 
+// ---- Unit I: Boundary Layer Theory tests ----
+test("boundary layer: deficit thickness ratios match textbook values", () => {
+  const lin = H.blDeficitRatios("linear");
+  near(lin.deltaStarFrac, 0.5, 1e-9);
+  near(lin.thetaFrac, 1 / 6, 1e-9);
+  near(lin.H, 3.0, 1e-9);
+
+  const parab = H.blDeficitRatios("parabolic");
+  near(parab.deltaStarFrac, 1 / 3, 1e-9);
+  near(parab.thetaFrac, 2 / 15, 1e-9);
+  near(parab.H, 2.5, 1e-9);
+
+  const pow = H.blDeficitRatios("power17");
+  near(pow.deltaStarFrac, 1 / 8, 1e-9);
+  near(pow.thetaFrac, 7 / 72, 1e-9);
+  near(pow.H, 72 / 56, 1e-9);
+});
+
+test("boundary layer: Blasius laminar and turbulent formulas", () => {
+  const lam = H.blLaminar(1.0, 2.0, 1e-6);
+  near(lam.Rex, 2e6, 1e-3);
+  near(lam.delta, (5.0 * 1.0) / Math.sqrt(2e6), 1e-7);
+  near(lam.Cf, 0.664 / Math.sqrt(2e6), 1e-7);
+
+  const turb = H.blTurbulent(1.0, 2.0, 1e-6);
+  near(turb.delta, (0.37 * 1.0) / Math.pow(2e6, 0.2), 1e-7);
+  near(turb.H, 1.2857, 1e-3);
+});
+
+test("boundary classification: Nikuradse smooth, transitional, rough", () => {
+  assert.equal(H.classifyBoundary(0.0001, 0.001).regime, "smooth");
+  assert.equal(H.classifyBoundary(0.002, 0.001).regime, "transitional");
+  assert.equal(H.classifyBoundary(0.010, 0.001).regime, "rough");
+});
+
+// ---- Unit III: Impact of Jets tests ----
+test("jet impact: stationary vertical, inclined, and curved plates", () => {
+  const d = 0.05, V = 20;
+  const flat = H.jetForceStationaryFlat(d, V);
+  near(flat.F, 1000 * ((Math.PI / 4) * 0.0025) * 400, 1e-3);
+
+  const inc = H.jetForceStationaryInclined(d, V, 30);
+  near(inc.Fn, flat.F * 0.5, 1e-3);
+  near(inc.Q1 + inc.Q2, inc.Q, 1e-9);
+
+  const hemi = H.jetForceStationaryCurved(d, V, 180);
+  near(hemi.Fx, 2 * flat.F, 1e-3);
+});
+
+test("jet impact: moving plates efficiency limits (single 8/27, series 50%)", () => {
+  const d = 0.05, V = 30;
+  const singleOpt = H.jetForceMovingFlat(d, V, V / 3, "single");
+  near(singleOpt.efficiency, 8 / 27, 1e-4);
+
+  const seriesOpt = H.jetForceMovingFlat(d, V, V / 2, "series");
+  near(seriesOpt.efficiency, 0.5, 1e-4);
+});
+
+

@@ -9,8 +9,19 @@ import GVFExplorer from "./GVFExplorer.jsx";
 import WeirFlumeRating from "./WeirFlumeRating.jsx";
 import TransitionFlume from "./TransitionFlume.jsx";
 
+// Unit I: Boundary Layer Theory
+import FlatPlateBL from "./FlatPlateBL.jsx";
+import ThicknessAreas from "./ThicknessAreas.jsx";
+import WallZoom from "./WallZoom.jsx";
+import SeparationLab from "./SeparationLab.jsx";
+
+// Unit III: Impact of Jets
+import JetForceLab from "./JetForceLab.jsx";
+import VelocityTriangle from "./VelocityTriangle.jsx";
+
 // Lesson Flow v2 widgets, used from markdown as ::widget[<id>]
 export const V2_WIDGETS = {
+  // Unit II (Open Channel Flow)
   specific_energy_flume: SpecificEnergyFlume,
   jump_lab: JumpLab,
   cross_section: CrossSection,
@@ -20,5 +31,15 @@ export const V2_WIDGETS = {
   normal_depth_solver: NormalDepthSolver,
   gvf_explorer: GVFExplorer,
   weir_flume_rating: WeirFlumeRating,
-  transition_flume: TransitionFlume
+  transition_flume: TransitionFlume,
+
+  // Unit I (Boundary Layer Theory)
+  flat_plate_bl: FlatPlateBL,
+  thickness_areas: ThicknessAreas,
+  wall_zoom: WallZoom,
+  separation_lab: SeparationLab,
+
+  // Unit III (Impact of Jets)
+  jet_force_lab: JetForceLab,
+  velocity_triangle: VelocityTriangle
 };
