@@ -123,6 +123,13 @@
       "title": "References",
       "hook": "Standard textbooks, design handbooks, USACE engineering manuals, and IS codes.",
       "file": "pages/references.md"
+    },
+    {
+      "id": "formulas",
+      "ni": "∑",
+      "title": "Formula sheet",
+      "hook": "Master formula decoder, GATE/ESE cheat-sheets, and instant hydraulic calculation workbenches across all 5 units.",
+      "file": "pages/formulas.md"
     }
   ],
   "software": [
