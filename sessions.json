@@ -1215,13 +1215,14 @@
       ],
       "lab": "L11",
       "keywords": "hydroelectric layout net head impulse vs reaction overall efficiency",
-      "file": "sessions/S28.md",
+      "file": "sessions/v2/D27.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L10"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S28.md"
     },
     {
       "id": "S29",
@@ -1238,11 +1239,12 @@
       ],
       "lab": "L11",
       "keywords": "Pelton wheel spear nozzle bucket splitter servomotor governing",
-      "file": "sessions/S29.md",
+      "file": "sessions/v2/D28.md",
       "enabled": true,
       "ready": true,
       "labs": [],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S29.md"
     },
     {
       "id": "S30",
@@ -1259,13 +1261,14 @@
       ],
       "lab": "L11",
       "keywords": "speed ratio φ jet ratio m Tygun formula multi-jet Pelton",
-      "file": "sessions/S30.md",
+      "file": "sessions/v2/D29.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L10"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S30.md"
     },
     {
       "id": "S31",
@@ -1282,13 +1285,14 @@
       ],
       "lab": "L11",
       "keywords": "Francis turbine spiral casing degree of reaction radial discharge",
-      "file": "sessions/S31.md",
+      "file": "sessions/v2/D30.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L11"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S31.md"
     },
     {
       "id": "S32",
@@ -1305,13 +1309,14 @@
       ],
       "lab": "L11",
       "keywords": "Kaplan turbine axial flow draft tube recovery elbow draft tube",
-      "file": "sessions/S32.md",
+      "file": "sessions/v2/D31.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L11"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S32.md"
     },
     {
       "id": "S33",
@@ -1328,11 +1333,12 @@
       ],
       "lab": "L11",
       "keywords": "specific speed Ns unit quantities model testing Moody formula",
-      "file": "sessions/S33.md",
+      "file": "sessions/v2/D32.md",
       "enabled": true,
       "ready": true,
       "labs": [],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S33.md"
     },
     {
       "id": "S34",
@@ -1349,13 +1355,14 @@
       ],
       "lab": "L11",
       "keywords": "characteristic curves Muschel curves Thoma cavitation factor cavitation pitting",
-      "file": "sessions/S34.md",
+      "file": "sessions/v2/D33.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L12"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S34.md"
     },
     {
       "id": "S35",
@@ -1372,13 +1379,14 @@
       ],
       "lab": "L10",
       "keywords": "centrifugal pump backward curved vanes manometric head volute casing",
-      "file": "sessions/S35.md",
+      "file": "sessions/v2/D34.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L12"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S35.md"
     },
     {
       "id": "S36",
@@ -1395,11 +1403,12 @@
       ],
       "lab": "L10",
       "keywords": "duty point pumps in series and parallel NPSH pump priming",
-      "file": "sessions/S36.md",
+      "file": "sessions/v2/D36.md",
       "enabled": true,
       "ready": true,
       "labs": [],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S36.md"
     },
     {
       "id": "S37",
@@ -1416,11 +1425,12 @@
       ],
       "lab": "L12",
       "keywords": "computational fluid dynamics CFD workflow hydraulic simulation virtual prototyping",
-      "file": "sessions/S37.md",
+      "file": "sessions/v2/D38.md",
       "enabled": true,
       "ready": true,
       "labs": [],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S37.md"
     },
     {
       "id": "S38",
@@ -1437,11 +1447,12 @@
       ],
       "lab": "L12",
       "keywords": "Navier-Stokes conservation form continuity equation RANS equations",
-      "file": "sessions/S38.md",
+      "file": "sessions/v2/D39.md",
       "enabled": true,
       "ready": true,
       "labs": [],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S38.md"
     },
     {
       "id": "S39",
@@ -1458,11 +1469,12 @@
       ],
       "lab": "L12",
       "keywords": "hyperbolic PDEs shallow water equations Saint-Venant equations characteristic waves",
-      "file": "sessions/S39.md",
+      "file": "sessions/v2/D40.md",
       "enabled": true,
       "ready": true,
       "labs": [],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S39.md"
     },
     {
       "id": "S40",
@@ -1479,13 +1491,14 @@
       ],
       "lab": "L12",
       "keywords": "finite volume method spatial discretization Courant number CFL numerical stability",
-      "file": "sessions/S40.md",
+      "file": "sessions/v2/D42.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L13"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S40.md"
     },
     {
       "id": "S41",
@@ -1502,13 +1515,14 @@
       ],
       "lab": "L12",
       "keywords": "unstructured mesh subgrid bathymetry mesh orthogonality HEC-RAS mesh",
-      "file": "sessions/S41.md",
+      "file": "sessions/v2/D41.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L13"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S41.md"
     },
     {
       "id": "S42",
@@ -1525,13 +1539,14 @@
       ],
       "lab": "L13",
       "keywords": "boundary conditions inflow hydrograph rating curve wall roughness",
-      "file": "sessions/S42.md",
+      "file": "sessions/v2/D43.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L14"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S42.md"
     },
     {
       "id": "S43",
@@ -1548,13 +1563,14 @@
       ],
       "lab": "L13",
       "keywords": "k-epsilon model k-omega SST dimensionless wall distance y+ eddy viscosity",
-      "file": "sessions/S43.md",
+      "file": "sessions/v2/D44.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L14"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S43.md"
     },
     {
       "id": "S44",
@@ -1571,13 +1587,14 @@
       ],
       "lab": "L13",
       "keywords": "RAS Mapper breaklines full momentum solver stilling basin modeling",
-      "file": "sessions/S44.md",
+      "file": "sessions/v2/D45.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L15"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S44.md"
     },
     {
       "id": "S45",
@@ -1594,13 +1611,14 @@
       ],
       "lab": "L15",
       "keywords": "Volume of Fluid VOF SimFlow interFoam model validation",
-      "file": "sessions/S45.md",
+      "file": "sessions/v2/D45.md",
       "enabled": true,
       "ready": true,
       "labs": [
         "L15"
       ],
-      "release": ""
+      "release": "",
+      "legacyFile": "sessions/S45.md"
     }
   ]
 }

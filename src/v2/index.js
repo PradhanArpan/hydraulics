@@ -19,6 +19,16 @@ import SeparationLab from "./SeparationLab.jsx";
 import JetForceLab from "./JetForceLab.jsx";
 import VelocityTriangle from "./VelocityTriangle.jsx";
 
+// Unit IV: Hydraulic Machines (Turbines & Pumps)
+import TurbineChooser from "./TurbineChooser.jsx";
+import PeltonDesigner from "./PeltonDesigner.jsx";
+import TurbineCutaway from "./TurbineCutaway.jsx";
+import PumpMatcher from "./PumpMatcher.jsx";
+import RecipCrank from "./RecipCrank.jsx";
+
+// Unit V: Computational Hydraulics & CFD
+import MeshLab from "./MeshLab.jsx";
+
 // Lesson Flow v2 widgets, used from markdown as ::widget[<id>]
 export const V2_WIDGETS = {
   // Unit II (Open Channel Flow)
@@ -41,5 +51,15 @@ export const V2_WIDGETS = {
 
   // Unit III (Impact of Jets)
   jet_force_lab: JetForceLab,
-  velocity_triangle: VelocityTriangle
+  velocity_triangle: VelocityTriangle,
+
+  // Unit IV (Hydraulic Machines)
+  turbine_chooser: TurbineChooser,
+  pelton_designer: PeltonDesigner,
+  turbine_cutaway: TurbineCutaway,
+  pump_matcher: PumpMatcher,
+  recip_crank: RecipCrank,
+
+  // Unit V (Computational Hydraulics & CFD)
+  mesh_lab: MeshLab
 };

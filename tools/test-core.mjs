@@ -189,3 +189,64 @@ test("jet impact: moving plates efficiency limits (single 8/27, series 50%)", ()
 });
 
 
+
+// ---- Unit IV: Hydraulic Machines tests ----
+test("hydraulic machines: unit quantities and specific speed", () => {
+  const uq = H.unitQuantities(300, 2.5, 5000, 100);
+  near(uq.Nu, 300 / 10, 1e-6);
+  near(uq.Qu, 2.5 / 10, 1e-6);
+  near(uq.Pu, 5000 / 1000, 1e-6);
+
+  const Ns_turb = H.specificSpeedTurbine(300, 10000, 100);
+  near(Ns_turb, (300 * 100) / Math.pow(100, 1.25), 1e-4);
+  assert.equal(H.classifyTurbine(100, Ns_turb).type, "Francis");
+  assert.equal(H.classifyTurbine(400, 25).type, "Pelton");
+  assert.equal(H.classifyTurbine(20, 450).type, "Kaplan / Propeller");
+});
+
+test("pelton design: sizing wizard generates consistent dimensions", () => {
+  const p = H.peltonDesign(4000, 250, 450, 0.85, 0.98, 0.46);
+  assert.ok(p.V1 > 60 && p.V1 < 75);
+  assert.ok(p.u > 25 && p.u < 35);
+  assert.ok(p.D > 1.0 && p.D < 2.0);
+  assert.ok(p.d > 0.05 && p.d < 0.25);
+  near(p.m, p.D / p.d, 1e-4);
+  assert.equal(p.Z, Math.round(15 + 0.5 * p.m));
+});
+
+test("draft tube & pump impeller: energy conversion matches theory", () => {
+  const dt = H.draftTubeRecovery(8.0, 2.0, 0.80);
+  near(dt.h_rec_th, (64 - 4) / (2 * 9.81), 1e-4);
+  near(dt.h_rec, 0.80 * dt.h_rec_th, 1e-4);
+
+  // Pump backward curved impeller beta2 = 30 deg
+  const pmp = H.pumpImpeller(0.3, 0.03, 1450, 30, 0.04);
+  assert.ok(pmp.u2 > 20 && pmp.u2 < 25);
+  assert.ok(pmp.Vw2 < pmp.u2); // backward curved reduces Vw2
+  assert.ok(pmp.He > 0);
+});
+
+test("pump system matching & cavitation NPSH", () => {
+  const pt = H.pumpSystemOperatingPoint(10, 1000, 30, 500);
+  assert.ok(pt.single.Q > 0);
+  near(pt.single.H, 10 + 1000 * pt.single.Q * pt.single.Q, 1e-4);
+  assert.ok(pt.parallel.Q > pt.single.Q);
+  assert.ok(pt.series.H > pt.single.H);
+
+  const npsh = H.pumpCavitationNPSH(101.3, 2.34, 3.0, 0.5);
+  assert.ok(npsh.NPSHa > 0 && npsh.NPSHa < 10);
+});
+
+// ---- Unit V: Computational Hydraulics tests ----
+test("computational hydraulics: CFL condition and cell Peclet", () => {
+  const cfl1 = H.cflCondition(2.0, 1.0, 10.0, 1.0); // u=2, c=sqrt(9.81*1) ~ 3.13 -> sMax ~ 5.13 -> Cr ~ 0.513 <= 1.0
+  assert.ok(cfl1.isStable);
+  assert.ok(cfl1.Cr < 1.0);
+
+  const cfl2 = H.cflCondition(2.0, 1.0, 10.0, 3.0); // dt=3.0 -> Cr ~ 1.54 > 1.0
+  assert.ok(!cfl2.isStable);
+  assert.ok(cfl2.Cr > 1.0);
+
+  const pe = H.cellPeclet(2.0, 5.0, 0.01);
+  near(pe, (2.0 * 5.0) / 0.01, 1e-6);
+});

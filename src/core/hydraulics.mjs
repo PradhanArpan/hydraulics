@@ -346,3 +346,133 @@ export function jetVelocityTriangle(V1, u, beta2Deg, kFriction = 1.0, rho = 1000
 }
 
 
+
+// ============================================================================
+// UNIT IV: HYDRAULIC MACHINES (CO4)
+// ============================================================================
+
+export function unitQuantities(N, Q, P_kW, H) {
+  const sqrtH = Math.sqrt(Math.max(1e-6, H));
+  const Nu = N / sqrtH;
+  const Qu = Q / sqrtH;
+  const Pu = P_kW / Math.pow(Math.max(1e-6, H), 1.5);
+  return { Nu, Qu, Pu };
+}
+
+export function specificSpeedTurbine(N, P_kW, H) {
+  if (H <= 0) return 0;
+  return (N * Math.sqrt(Math.max(0, P_kW))) / Math.pow(H, 1.25);
+}
+
+export function specificSpeedPump(N, Q_m3s, Hm) {
+  if (Hm <= 0) return 0;
+  return (N * Math.sqrt(Math.max(0, Q_m3s))) / Math.pow(Hm, 0.75);
+}
+
+export function classifyTurbine(H, Ns) {
+  if (H >= 250 || Ns <= 35) {
+    return { type: "Pelton", flow: "Tangential Impulse", rangeNs: "10 – 35", rangeHead: "> 250 m" };
+  } else if (H >= 60 || Ns <= 300) {
+    return { type: "Francis", flow: "Mixed Reaction", rangeNs: "60 – 300", rangeHead: "60 – 250 m" };
+  } else {
+    return { type: "Kaplan / Propeller", flow: "Axial Reaction", rangeNs: "300 – 1000", rangeHead: "< 60 m" };
+  }
+}
+
+export function peltonDesign(P_kW, H, N, eta_o = 0.85, Cv = 0.98, phi = 0.46, m_target = 12) {
+  const g = 9.81;
+  const rho = 1000;
+  const V1 = Cv * Math.sqrt(2 * g * H);
+  const u = phi * Math.sqrt(2 * g * H);
+  const Q = (P_kW * 1000) / (eta_o * rho * g * H);
+  const D = (60 * u) / (Math.PI * N);
+  const a_total = Q / V1;
+  const d_single = Math.sqrt((4 * a_total) / Math.PI);
+  const m_single = D / d_single;
+  
+  // Choose number of jets to approach target jet ratio m ~ 12
+  let n_j = 1;
+  if (m_single < 9) {
+    n_j = Math.min(6, Math.max(1, Math.round(Math.pow(m_target / m_single, 2))));
+  }
+  const d = Math.sqrt((4 * a_total) / (Math.PI * n_j));
+  const m = D / d;
+  const Z = Math.round(15 + 0.5 * m); // Taygun's formula
+  const B = 4.0 * d; // bucket width
+  const L = 2.8 * d; // bucket length
+  const T = 1.0 * d; // bucket depth
+
+  return { V1, u, Q, D, d, n_j, m, Z, B, L, T, a_total };
+}
+
+export function draftTubeRecovery(V3, V4, eta_dt = 0.80, g = 9.81) {
+  const h_rec_th = Math.max(0, (V3 * V3 - V4 * V4) / (2 * g));
+  const h_rec = eta_dt * h_rec_th;
+  const h_loss = (1 - eta_dt) * h_rec_th;
+  return { h_rec_th, h_rec, h_loss };
+}
+
+export function pumpImpeller(D2, b2, N, beta2Deg, Q, g = 9.81) {
+  const u2 = (Math.PI * D2 * N) / 60;
+  const A2 = Math.PI * D2 * b2;
+  const Vf2 = A2 > 0 ? Q / A2 : 0;
+  const beta2Rad = (beta2Deg * Math.PI) / 180;
+  const tanBeta2 = Math.tan(beta2Rad);
+  const Vw2 = tanBeta2 !== 0 ? u2 - Vf2 / tanBeta2 : u2;
+  const He = (Vw2 * u2) / g;
+  const V2 = Math.hypot(Vw2, Vf2);
+  return { u2, Vf2, Vw2, V2, He };
+}
+
+export function pumpSystemOperatingPoint(H_stat, K_sys, H0_pump, A_pump) {
+  // H_pump = H0 - A * Q^2
+  // H_sys = H_stat + K * Q^2
+  // Intersection single: Q^2 = (H0 - H_stat) / (A + K)
+  const calcQ = (H0, effA) => {
+    const diff = H0 - H_stat;
+    if (diff <= 0) return 0;
+    return Math.sqrt(diff / (effA + K_sys));
+  };
+
+  const Q_single = calcQ(H0_pump, A_pump);
+  const H_single = H_stat + K_sys * Q_single * Q_single;
+
+  // Series: 2 identical pumps head doubles -> H0_series = 2*H0, A_series = 2*A
+  const Q_series = calcQ(2 * H0_pump, 2 * A_pump);
+  const H_series = H_stat + K_sys * Q_series * Q_series;
+
+  // Parallel: 2 pumps flow splits -> H = H0 - A*(Q/2)^2 = H0 - (A/4)*Q^2
+  const Q_parallel = calcQ(H0_pump, A_pump / 4);
+  const H_parallel = H_stat + K_sys * Q_parallel * Q_parallel;
+
+  return {
+    single: { Q: Q_single, H: H_single },
+    series: { Q: Q_series, H: H_series },
+    parallel: { Q: Q_parallel, H: H_parallel }
+  };
+}
+
+export function pumpCavitationNPSH(Patm_kPa, Pv_kPa, Hs, hfs, rho = 1000, g = 9.81) {
+  const H_atm = (Patm_kPa * 1000) / (rho * g);
+  const H_v = (Pv_kPa * 1000) / (rho * g);
+  const NPSHa = H_atm - H_v - Hs - hfs;
+  return { H_atm, H_v, NPSHa };
+}
+
+// ============================================================================
+// UNIT V: COMPUTATIONAL HYDRAULICS & CFD (CO5)
+// ============================================================================
+
+export function cflCondition(u, y, dx, dt, g = 9.81) {
+  const c = Math.sqrt(Math.max(1e-6, g * y));
+  const sMax = Math.abs(u) + c;
+  const Cr = dx > 0 ? (sMax * dt) / dx : 0;
+  const dtMax = sMax > 0 ? dx / sMax : 0;
+  const isStable = Cr <= 1.0;
+  return { c, sMax, Cr, dtMax, isStable };
+}
+
+export function cellPeclet(u, dx, nu_t) {
+  if (nu_t <= 0) return Infinity;
+  return (Math.abs(u) * dx) / nu_t;
+}
