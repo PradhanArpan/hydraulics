@@ -1,0 +1,17 @@
+{
+  "name": "CE432P: Hydraulic Engineering",
+  "short_name": "Hydraulics",
+  "description": "Interactive learning portal for CE432P Hydraulic Engineering at CHRIST (Deemed to be University)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f1f3d",
+  "theme_color": "#0f1f3d",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1f3d'/%3E%3Cpath d='M8 22c3-4 5-8 8-8s5 4 8 8c-3 2-5 3-8 3s-5-1-8-3z' fill='%23c8973a'/%3E%3Cpath d='M16 5c-3 5-5 8-5 11a5 5 0 0 0 10 0c0-3-2-6-5-11z' fill='%23f6f7f4'/%3E%3C/svg%3E",
+      "sizes": "32x32 192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
